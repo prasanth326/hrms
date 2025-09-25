@@ -1,0 +1,36 @@
+.signinContainer {
+  width: 350px;
+  height: 220px;
+}
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ gap: 20px;
+
+}
+.inputContainer input {
+    width: 80%;
+    height: 30px;
+    border-color: rgb(203 210 214);
+    gap: 20px;
+    border-style: none;
+    box-shadow: 0px 0px 2px 2px rgb(203 210 214);
+    
+}
+.mainContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.password{
+    display: flex;
+    justify-content: space-between;
+    width: 80%; 
+    align-items: center; 
+}
+button{
+    width: 40%;
+    height: 30px;
+}

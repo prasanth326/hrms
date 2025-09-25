@@ -1,19 +1,44 @@
 import React from "react";
-import Styles from '../Login/Login.module.css';
-
+import logo from "../../assets/logo.png";
+import Styles from "./Signinpage.module.css";
+import Switch from "@mui/material/Switch";
 
 const Signinpage = () => {
+  const [checked, setChecked] = React.useState(true);
+
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
+  };
+
   return (
-    <div>
-      <h2>Single sign On</h2>
-      <p>sign in with your identity provider</p>
-      <button onClick={() => loginClick()} className={Styles.sso} type="submit">
-        SSO Login
-      </button>
-      <p className={Styles.Or}>OR</p>
-      <button onClick={() => handleClick()} type="submit">
-        Sign in with EASPORTS Credentials
-      </button>
+    <div className={Styles.signinContainer}>
+      <div className={Styles.inputContainer}>
+        <input type="email" placeholder="Email/ Emp ID"></input>
+        <input type="password" placeholder="Password"></input>
+        <input type="text" placeholder="Dashboard"></input>
+      </div>
+      <div className={Styles.options}>
+        <label>
+          <Switch
+            checked={checked}
+            onChange={handleChange}
+            slotProps={{ input: { "aria-label": "controlled" } }}
+            sx={{
+              width: "15px",
+              height: "15px",
+              marginTop: "5px",
+              marginLeft: "6px",
+            }}
+          />
+          Remember Me
+        </label>
+      </div>
+      <div className={Styles.mainContainer}>
+        <div className={Styles.password}>
+          <a href="#">Forget Password</a>
+          <button type="submit">Signin</button>
+        </div>
+      </div>
     </div>
   );
 };
