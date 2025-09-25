@@ -9,9 +9,12 @@ body{
    background-color: cadetblue;
    background-image: url("../../assets/easports.png");
    background-repeat: no-repeat;
-   background-size: auto;
+   background-size: cover;
    background-position: center;
    align-items: center;
+}
+.logo{
+    width: 100px;
 }
 .rightLogin{
     height: 500px;
@@ -19,9 +22,9 @@ body{
     padding: 10px;  
     display: flex;
     justify-content: center;
+        background-color: rgb(254 253 254);
 }
 .box{
-    background-color:rgb(254 253 254);
     width: 100%;
     height: 100%;
     display: flex;
@@ -51,8 +54,7 @@ button{
     align-items: flex-start;
 }
 img{
-    width: 80px;
-    height: 90px;
+    width: 100%;
 }
 .Policy{
     display: flex;
@@ -69,10 +71,20 @@ img{
 .Sports{
     display: flex;
     flex-direction: column;
-    /* margin-top: 30px; */
     align-items: center;
 }
 .Or{
+    color: rgb(174 181 185);
+    text-align: center;
+}
+.signinContainer h2,p{
+    text-align: center;
+}
+.Policy a{
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 12px;
+    cursor: pointer;
     color: rgb(174 181 185);
 }
 @media (min-width: 1024px) {

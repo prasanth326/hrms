@@ -1,15 +1,15 @@
 import React from "react";
 import logo from '../../assets/logo.png';
-import Styles from '../SigninPage/Signinpage.module.css'
+import Styles from '../Login/Login.module.css'
 
 
 const Ssologinpage = ({handleClick}) => {
-    const childHandleClick=()=>{
-        handleClick(true)
-    }
+  const childHandleClick=()=>{
+    handleClick(true)
+  }
     
   return (
-    <div>
+    <div className={Styles.signinContainer}>
       <h2>Single sign On</h2>
       <p>sign in with your identity provider</p>
       <button onClick={() => loginClick()} className={Styles.sso} type="submit">

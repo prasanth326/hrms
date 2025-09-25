@@ -1,36 +1,69 @@
 .signinContainer {
-  width: 350px;
-  height: 220px;
+    width: 350px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
-.inputContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
- gap: 20px;
 
+.inputAndSwitchContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .inputContainer input {
     width: 80%;
     height: 30px;
     border-color: rgb(203 210 214);
     gap: 20px;
     border-style: none;
-    box-shadow: 0px 0px 2px 2px rgb(203 210 214);
-    
+    box-shadow: 0px 0px 1px 1px rgb(203 210 214);
+    border-radius: 4px;
+    padding-left: 10px;
 }
-.mainContainer{
+
+.mainContainer {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.password{
+
+.password {
     display: flex;
     justify-content: space-between;
-    width: 80%; 
-    align-items: center; 
+    width: 80%;
+    align-items: center;
 }
-button{
+
+.password button {
     width: 40%;
     height: 30px;
+}
+
+.options {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.options label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10%;
+}
+
+.password a {
+    text-decoration: none;
+    color: rgb(115 119 119);
 }
