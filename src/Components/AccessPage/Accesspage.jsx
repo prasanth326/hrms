@@ -11,6 +11,12 @@ import Style from "./Acesspage.module.css";
 import Flows from "../../assets/Flows.png";
 import calendarcimg from "../../assets/calendarc-img.png";
 import performanceCalender from "../../assets/performance.png";
+import search from "../../assets/srchicon.png";
+import notif from "../../assets/notif.png";
+import clockin from "../../assets/clockin.png";
+import logoaccess from "../../assets/logoaccess.png";
+
+
 const Accesspage = () => {
   const acessPageObject = [
     {
@@ -73,18 +79,29 @@ const Accesspage = () => {
   return (
     <div className={Style.container}>
       <div className={Style.navbar}>
-        <div className={Style.logo}>
-          <img src="logo" alt="logo" />
+        <div className={Style.navbarChild}>
+          <div className={Style.logo}>
+            <img src={logoaccess} alt="logo" />
+          </div>
+          <div className={Style.inputsrch}>
+            <input
+              type="text"
+              placeholder="search by Employee Name, Designation, Department..."
+            >
+
+            </input>
+            <div className={Style.profileIconSrch}><img src={search} alt="search" /></div>
+
+          </div>
+          <div className={Style.profile}>
+            <div className={Style.profileIconclock}><img src={clockin} alt="clockin" /></div>
+            <div className={Style.profileIcon}><img src={notif} alt="notif" /></div>
+            <div className={Style.profileicon}><img src={notif} alt="notif" /></div>
+          </div>
         </div>
-        <div>
-          <input
-            type="text"
-            placeholder="search by Employee Name, Designation, Department..."
-          ></input>
-        </div>
-        <div className={Style.profile}></div>
       </div>
       <div className={Style.dashboardContainer}>
+        <div className={Style.access}><span><p>My Access</p></span></div>
         <div className={Style.dashboard}>
           {acessPageObject.map((card, i) => (
             <div className={Style.card} key={i}>
