@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 import Style from "./Acesspage.module.css";
 
-
 const Accesspage = () => {
   const access = accessPageObject();
   const navigate = useNavigate();
@@ -17,7 +16,7 @@ const Accesspage = () => {
         <div className={Style.dashboard}>
           {access.map((card, i) => (
             <div className={Style.card} key={i}>
-              <div className={Style.imageCard} onClick={()=> navigate(`/${card.title}/${card.id}`)}>
+              <div className={Style.imageCard} onClick={()=> navigate(`/accesspage/${card.title}/${card.id}`)}>
                 <img src={card.img} alt={card.title} />
               </div>
               <p>{card.title}</p>

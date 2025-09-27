@@ -11,7 +11,7 @@ const Ssologinpage = ({handleClick}) => {
     handleClick(true)
   }
   const loginClick=()=>{
- navigate('/accesspage')
+    navigate('/accesspage')
   }    
   return (
     <div className={Styles.signinContainer}>
