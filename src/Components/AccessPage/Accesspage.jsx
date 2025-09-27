@@ -17,7 +17,7 @@ const Accesspage = () => {
         <div className={Style.dashboard}>
           {access.map((card, i) => (
             <div className={Style.card} key={i}>
-              <div className={Style.imageCard} onClick={()=> navigate(`${card.title/card.id}`)}>
+              <div className={Style.imageCard} onClick={()=> navigate(`/${card.title}/${card.id}`)}>
                 <img src={card.img} alt={card.title} />
               </div>
               <p>{card.title}</p>

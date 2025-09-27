@@ -5,7 +5,7 @@ export default function Pagedetailed() {
     const {title,id}= useParams();
   return (
     <div>
-      
+      ssssss{title}{id}
     </div>
   )
 }
