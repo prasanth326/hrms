@@ -48,6 +48,7 @@ button{
     background-color:rgb(254 253 254) ;
     box-shadow: 1px 1px 1px 1px #d8d1d1;
     color: rgb(115 119 119);
+    cursor: pointer;
 }
 .sso{
     display: flex;

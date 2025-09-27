@@ -47,6 +47,7 @@
 .password button {
     width: 40%;
     height: 30px;
+    cursor: pointer;
 }
 
 .options {

@@ -1,18 +1,18 @@
-import React from 'react'
-import './App.css'
-import Login from './Components/Login/Login'
-import Signinpage from './Components/SigninPage/Signinpage'
-import Accesspage from './Components/AccessPage/Accesspage'
+import React from "react";
+import "./App.css";
+import Login from "./Components/Login/Login";
+import Signinpage from "./Components/SigninPage/Signinpage";
+import Accesspage from "./Components/AccessPage/Accesspage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
-
   return (
-    <>
-     <div>
-      {/* <Login/> */}
-      <Accesspage/>
-     </div>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />}/>
+         <Route path="/accesspage" element={<Accesspage />}/>
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

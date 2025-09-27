@@ -1,10 +1,13 @@
 import React from "react";
 import Styles from "./Signinpage.module.css";
 import CustomSwitch from "../CustomSwitch/CustomSwitch";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 
 const Signinpage = () => {
   const [checked, setChecked] = React.useState(true);
+
+  const navigate= useNavigate();
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
@@ -31,7 +34,7 @@ const Signinpage = () => {
           <Button sx={{
             backgroundColor:"rgb(138 133 221)",
             color:"#fff"
-          }} type="submit">Signin</Button>
+          }} type="submit" onClick={()=>navigate("/accesspage")}>Signin</Button>
         </div>
       </div>
     </div>
