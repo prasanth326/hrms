@@ -6,17 +6,25 @@ import Accesspage from "./Components/AccessPage/Accesspage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Pagedetailed from "./Components/PageDetailed/Pagedetailed";
 import SideNavbar from "./Components/SideNavbar/SideNavbar";
+import NavBar from "./Components/NavBar/NavBar";
+import { useLocation } from "react-router-dom";
 
 function App() {
+  const params= useLocation();
+  console.log("params",params);
+  
   return (
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<Login />}/>
-    //     <Route path="/accesspage" element={<Accesspage />}/>
-    //     <Route path="/accesspage/:title/:id" element={<Pagedetailed />}/>
-    //   </Routes>
-    // </Router>
-    <SideNavbar />
+    <>
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/accesspage" element={<Accesspage />} />
+          {/* <Route path="/accesspage/:title/:id" element={<Pagedetailed />} /> */}
+        </Routes>
+        <SideNavbar />
+      </Router>
+    </>
   );
 }
 

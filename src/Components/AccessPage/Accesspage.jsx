@@ -10,7 +10,7 @@ const Accesspage = () => {
 
   return (
     <div className={Style.container}>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className={Style.dashboardContainer}>
         <div className={Style.access}><span><p>My Access</p></span></div>
         <div className={Style.dashboard}>
