@@ -54,7 +54,7 @@ button{
     display: flex;
     align-items: flex-start;
 }
-img{
+.logo img{
     width: 100%;
 }
 .Policy{

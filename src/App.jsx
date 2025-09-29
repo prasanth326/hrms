@@ -9,23 +9,28 @@ import SideNavbar from "./Components/SideNavbar/SideNavbar";
 import NavBar from "./Components/NavBar/NavBar";
 import { useLocation } from "react-router-dom";
 
-function App() {
-  const params= useLocation();
-  console.log("params",params);
-  
+function LayoutApp() {
+  const location = useLocation();
+  const pathLocation = location.pathname === '/accesspage' || location.pathname === '/'
+
   return (
     <>
-      <Router>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/accesspage" element={<Accesspage />} />
-          {/* <Route path="/accesspage/:title/:id" element={<Pagedetailed />} /> */}
-        </Routes>
-        <SideNavbar />
-      </Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/accesspage" element={<Accesspage />} />
+      </Routes>
+      {!pathLocation && <SideNavbar />}
     </>
   );
+}
+
+function App() {
+  return (
+    <Router>
+      <LayoutApp />
+    </Router>
+  )
 }
 
 export default App;
