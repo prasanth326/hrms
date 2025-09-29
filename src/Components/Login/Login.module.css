@@ -32,6 +32,7 @@ body{
     align-items: center;   
     color: rgb(115 119 119);
     border-radius: 3px;
+    justify-content: space-around
 }
 .box h2{
     font-size: 20px;
@@ -80,6 +81,11 @@ button{
 }
 .signinContainer h2,p{
     text-align: center;
+}
+.signinContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .Policy a{
     text-decoration: none;

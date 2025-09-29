@@ -4,6 +4,7 @@ import clockin from "../../assets/clockin.png";
 import logoaccess from "../../assets/logoaccess.png";
 
 import Style from "../AccessPage/Acesspage.module.css";
+import { Link } from "react-router-dom";
 
 
 const NavBar = () => {
@@ -12,7 +13,9 @@ const NavBar = () => {
             <div className={Style.navbar}>
                 <div className={Style.navbarChild}>
                     <div className={Style.logo}>
+                        <Link to="/accesspage" >
                         <img src={logoaccess} alt="logo" />
+                        </Link>
                     </div>
                     <div className={Style.inputsrch}>
                         <input
@@ -24,7 +27,7 @@ const NavBar = () => {
                     </div>
                     <div className={Style.profile}>
                         <div className={Style.profileIconclock}><img src={clockin} alt="clockin" /></div>
-                        <div className={Style.profileIcon}><img src={notif} alt="notif" /></div>
+                        <div className={Style.profileIconnotifi}><img src={notif} alt="notif" /></div>
                         <div className={Style.profileicon}><img src={notif} alt="notif" /></div>
                     </div>
                 </div>

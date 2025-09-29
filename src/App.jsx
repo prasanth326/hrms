@@ -8,19 +8,25 @@ import Pagedetailed from "./Components/PageDetailed/Pagedetailed";
 import SideNavbar from "./Components/SideNavbar/SideNavbar";
 import NavBar from "./Components/NavBar/NavBar";
 import { useLocation } from "react-router-dom";
-
+import ProfilePage from "./Components/Profile/ProfilePage"
 function LayoutApp() {
   const location = useLocation();
   const pathLocation = location.pathname === '/accesspage' || location.pathname === '/'
+  const navlocation = location.pathname=== '/' 
 
   return (
     <>
-      <NavBar />
+      {!navlocation && <NavBar />}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/accesspage" element={<Accesspage />} />
       </Routes>
+      <div className="content">
       {!pathLocation && <SideNavbar />}
+      <Routes>
+        <Route path="/profile" element={<ProfilePage/>}/>
+      </Routes>
+      </div>
     </>
   );
 }

@@ -42,7 +42,8 @@
   height: 80%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 2px;
+  gap: 20px;
+  
 }
 
 .dashboardContainer {
@@ -52,6 +53,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  gap: 30px;
 }
 
 .card {
@@ -89,12 +91,14 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 15px;
 }
 
 .access span {
   width: 80%;
   display: flex;
   justify-content: flex-start;
+
 }
 
 .access span p {
@@ -147,4 +151,13 @@
   border-radius: 100%;
   background-color: white;
   cursor: pointer;
+}
+.profile img{
+  width: 20px;
+}
+.profileIconnotifi img{
+  width: 30px;
+}
+.profileIconSrch img{
+  width: 20px;
 }
