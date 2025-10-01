@@ -23,3 +23,11 @@
     width: 1px;
     background-color: #e3dfdf;
 }
+.leaveBCotainerchat{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.leaveBCotainerchatliveimg img{
+    width: 25px;
+}
