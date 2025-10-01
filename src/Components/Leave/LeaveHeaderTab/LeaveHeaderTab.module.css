@@ -1,0 +1,24 @@
+.leaveHeaderTab{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 1px 1px 1px #e3dfdf;
+    background-color: #ffffff;
+    width: 100%;
+    align-items: center;
+}
+.leaveHeaderTab :nth-child(1){
+    margin-left: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.leaveHeaderTab button{
+    width: 150px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.leaveHeaderTab2{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}

@@ -1,0 +1,16 @@
+.leaveBCotainerMain{
+    background-color: rgb(244 244 244);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.leaveBCotainerMaindiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10px;
+}

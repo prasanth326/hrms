@@ -9,6 +9,7 @@ import SideNavbar from "./Components/SideNavbar/SideNavbar";
 import NavBar from "./Components/NavBar/NavBar";
 import { useLocation } from "react-router-dom";
 import ProfilePage from "./Components/Profile/ProfilePage"
+import LeaveBalance from "./Components/Leave/LeaveBalance/LeaveBalance";
 function LayoutApp() {
   const location = useLocation();
   const pathLocation = location.pathname === '/accesspage' || location.pathname === '/'
@@ -25,6 +26,7 @@ function LayoutApp() {
       {!pathLocation && <SideNavbar />}
       <Routes>
         <Route path="/profile" element={<ProfilePage/>}/>
+        <Route path="/Attendance" element={<LeaveBalance />}/>
       </Routes>
       </div>
     </>

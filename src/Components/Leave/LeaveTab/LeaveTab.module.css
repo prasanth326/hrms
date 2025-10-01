@@ -1,0 +1,15 @@
+.leaveConatiner{
+    display: flex;
+    gap: 25px;
+    height: 100%;
+    align-items: center;
+}
+.leaveConatinerTab{
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.active{
+    border-bottom: 3px solid rgb(151 144 254);
+}
