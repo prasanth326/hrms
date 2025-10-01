@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "./BalanceLeave.module.css"
+import unpaidLeave from "../../../assets/unpaidLeave.png"
 
 export default function BalanceLeave() {
   return (
@@ -79,10 +80,11 @@ export default function BalanceLeave() {
         </div>
         <div className={styles.leaveBalanceBox}>
           <div className={styles.leave1Compdiv}>
-                       <div className={styles.colorr5}></div>
-
+            <div className={styles.colorr5}></div>
             <div className={styles.leave1Comp}>
-              <span className={styles.leaveAddOne}>Icons</span>
+              <span className={styles.leaveAddOne}>
+                <img src={unpaidLeave} alt='unpaidLeave'/>
+              </span>
               <span className={styles.leaveAddComp}>Loss of Pay</span>
             </div>
             <div className={styles.leaveAdd}>

@@ -57,6 +57,10 @@
     font-weight: 600;
 }
 
+.leaveAddOne img{
+    width: 40px;
+}
+
 .leaveAddComp{
     color: rgb(144, 143, 143);
 }
