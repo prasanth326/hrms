@@ -1,0 +1,32 @@
+.attendanceOverview{
+    display: grid;
+
+}
+.pendingLetsgo{
+    display: flex;
+    justify-content: space-around;
+}
+.OvertimeDetailsContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.timeoffWhoisout{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;   
+}
+.OvertimeUpcoming{
+    display: flex;
+    justify-content: space-around;
+}
+.AttendanceLeavewho{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.AttendanceLeave{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

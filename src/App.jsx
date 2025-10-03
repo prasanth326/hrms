@@ -10,6 +10,7 @@ import NavBar from "./Components/NavBar/NavBar";
 import { useLocation } from "react-router-dom";
 import ProfilePage from "./Components/Profile/ProfilePage"
 import LeaveBalance from "./Components/Leave/LeaveBalance/LeaveBalance";
+import AttendanceOverview from "./Components/AttendanceOverview/AttendanceOverview";
 function LayoutApp() {
   const location = useLocation();
   const pathLocation = location.pathname === '/accesspage' || location.pathname === '/'
@@ -27,6 +28,7 @@ function LayoutApp() {
       <Routes>
         <Route path="/profile" element={<ProfilePage/>}/>
         <Route path="/Attendance" element={<LeaveBalance />}/>
+        <Route path="/Attendance/Overview" element={<AttendanceOverview />}/>
       </Routes>
       </div>
     </>
