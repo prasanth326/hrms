@@ -1,30 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from "./BalanceLeave.module.css"
 import unpaidLeave from "../../../assets/unpaidLeave.png"
 
-export default function BalanceLeave() {
+export default function BalanceLeave({ setleavesTabClose, setLeaveDetailsWindow }) {
+  const [open, setOpen] = useState("")
+  const [openB, setOpenB] = useState(false)
+
+  const openBox = (leave) => {
+    setOpen(leave)
+    setOpenB((prev) => !prev)
+  }
+
+  const openTabDetails = () => {
+    setleavesTabClose(true)
+    setLeaveDetailsWindow(open)
+    setOpenB(false)
+  }
   return (
     <div className={styles.leaveCotainer}>
       <div className={styles.leaveCotaineraBal}>Balance as of Today</div>
       <div className={styles.leaveBalanceCotainer}>
         <div className={styles.leaveBalanceBox}>
           <div className={styles.leave1Compdiv}>
-           <div className={styles.colorr}></div>
+            <div className={styles.colorr}></div>
             <div className={styles.leave1Comp}>
               <span className={styles.leaveAddOne}>1</span>
               <span className={styles.leaveAddComp}>Comp off</span>
             </div>
             <div className={styles.leaveAdd}>
               <span className={styles.leaveAddDotAdd}>+</span>
-              <div className={styles.leaveAddDot}><p>...</p></div>
+              <div className={styles.leaveAddDot} onClick={() => { openBox("compOff") }}><p>...</p></div>
             </div>
+            {open === "compOff" && openB && <div className={styles.LeaveDetails}>
+              <div onClick={() => openTabDetails()}>Leave Details</div>
+              <div>Comp off credit list</div>
+            </div>
+            }
           </div>
           <div className={styles.diver}></div>
           <div className={styles.leaveAdd2}></div>
         </div>
         <div className={styles.leaveBalanceBox}>
           <div className={styles.leave1Compdiv}>
-                       <div className={styles.colorr2}></div>
+            <div className={styles.colorr2}></div>
 
             <div className={styles.leave1Comp}>
               <span className={styles.leaveAddOne}>6</span>
@@ -32,8 +50,14 @@ export default function BalanceLeave() {
             </div>
             <div className={styles.leaveAdd}>
               <span className={styles.leaveAddDotAdd}>+</span>
-              <div className={styles.leaveAddDot}><p>...</p></div>
+              <div className={styles.leaveAddDot} onClick={() => { openBox("Casual Leaves") }}><p>...</p></div>
             </div>
+            {open === "Casual Leaves" && openB && <div className={styles.LeaveDetails}>
+              <div onClick={() => openTabDetails()}>Leave Details</div>
+
+              <div>Casual Leaves credit list</div>
+            </div>
+            }
           </div>
           <div className={styles.diver}></div>
           <div className={styles.leaveAdd2}>
@@ -50,8 +74,14 @@ export default function BalanceLeave() {
             </div>
             <div className={styles.leaveAdd}>
               <span className={styles.leaveAddDotAdd}>+</span>
-              <div className={styles.leaveAddDot}><p>...</p></div>
+              <div className={styles.leaveAddDot} onClick={() => { openBox("Earned Leaves") }}><p>...</p></div>
             </div>
+            {open === "Earned Leaves" && openB && <div className={styles.LeaveDetails}>
+              <div onClick={() => openTabDetails()}>Leave Details</div>
+
+              <div>Earned Leaves credit list</div>
+            </div>
+            }
           </div>
           <div className={styles.diver}></div>
           <div className={styles.leaveAdd2}>
@@ -61,7 +91,7 @@ export default function BalanceLeave() {
         </div>
         <div className={styles.leaveBalanceBox}>
           <div className={styles.leave1Compdiv}>
-                       <div className={styles.colorr4}></div>
+            <div className={styles.colorr4}></div>
 
             <div className={styles.leave1Comp}>
               <span className={styles.leaveAddOne}>5</span>
@@ -69,8 +99,14 @@ export default function BalanceLeave() {
             </div>
             <div className={styles.leaveAdd}>
               <span className={styles.leaveAddDotAdd}>+</span>
-              <div className={styles.leaveAddDot}><p>...</p></div>
+              <div className={styles.leaveAddDot} onClick={() => { openBox("Sick Leaves") }}><p>...</p></div>
             </div>
+            {open === "Sick Leaves" && openB && <div className={styles.LeaveDetails}>
+              <div onClick={() => openTabDetails()}>Leave Details</div>
+
+              <div>Sick Leaves credit list</div>
+            </div>
+            }
           </div>
           <div className={styles.diver}></div>
           <div className={styles.leaveAdd2}>
@@ -83,14 +119,20 @@ export default function BalanceLeave() {
             <div className={styles.colorr5}></div>
             <div className={styles.leave1Comp}>
               <span className={styles.leaveAddOne}>
-                <img src={unpaidLeave} alt='unpaidLeave'/>
+                <img src={unpaidLeave} alt='unpaidLeave' />
               </span>
               <span className={styles.leaveAddComp}>Loss of Pay</span>
             </div>
             <div className={styles.leaveAdd}>
               <span className={styles.leaveAddDotAdd}>+</span>
-              <div className={styles.leaveAddDot}><p>...</p></div>
+              <div className={styles.leaveAddDot} onClick={() => { openBox("Loss of Pay") }}><p>...</p></div>
             </div>
+            {open === "Loss of Pay" && openB && <div className={styles.LeaveDetails}>
+              <div onClick={() => openTabDetails()}>Leave Details</div>
+
+              <div>Loss of Pay credit list</div>
+            </div>
+            }
           </div>
           <div className={styles.diver}></div>
           <div className={styles.leaveAddReady}>
