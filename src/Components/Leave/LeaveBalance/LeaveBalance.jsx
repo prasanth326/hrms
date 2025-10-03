@@ -5,7 +5,6 @@ import MyLeavePattern from '../MyLeavePattern/MyLeavePattern'
 import LeaveHeaderTab from '../LeaveHeaderTab/LeaveHeaderTab'
 import { Select } from '@mui/material'
 import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 
@@ -57,6 +56,7 @@ export default function LeaveBalance() {
               </FormControl>
             </Box>
           </div>
+          <div>{leaves}</div>
         </div>
       </div>}
     </div>
