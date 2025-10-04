@@ -1,0 +1,27 @@
+.ContainerDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding:  10px;
+}
+.DateandTime{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+}
+.shiftPolicy{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: space-between;
+}
+.line{
+    height: 1px;
+    width: 100%;
+    background-color: black;
+}
+.clockin img{
+    width: 18px;
+}

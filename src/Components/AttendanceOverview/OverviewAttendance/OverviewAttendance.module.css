@@ -1,3 +1,10 @@
 .Overview{
-    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+}
+.Overview Button{
+    width: 150px;
 }
