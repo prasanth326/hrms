@@ -1,83 +1,78 @@
-.attendanceOverview{
-    display: grid;
-    background-color: rgb(206, 190, 190);
-    gap: 20px;
-    overflow-y: auto;
-   }
-   .Overview{
-    width: 100%;
-    background-color: white;
-   }
-.pendingLetsgo{
+.attendanceOverview {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    flex-direction: column;
     width: 100%;
+    height: 100%;
+    background-color: rgb(220, 218, 218);
+    gap: 20px;
 }
-.pendingRequest{
-    background-color: white;
+
+.overviewAttendance {
+    height: 10%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.pendingOverAttendLeave {
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    width: 100%;
+    gap: 20px;
+}
+
+.pendingOver {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
     width: 70%;
-    height: 200px;
+}
+
+.attendLeave {
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+    width: 100%;
+    gap: 20px;
+}
+
+.letUpWho {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    width: 30%;
+}
+
+.pendingRequest {
+    height: 20%;
+}
+
+.overtimeDetails {
+    height: 40%;
 }
 .letsgotoWork{
-    background-color: white;
-    width: 30%;
-    height: 200px;
+    height: 20%;
 }
-.OvertimeDetailsContainer{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+.upcomingTimeoff{
+    height: 30%;
 }
-.timeoffWhoisout{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;   
+.whoisoutintheTeam{
+    height: 40%;
 }
-.OvertimeUpcoming{
-    display: flex;
-    justify-content: space-around;
+.attendanceMetrics{
     width: 100%;
-    gap: 30px;
-    height: 100px;
-
 }
-.OvertimeDetails{
-    background-color: white;
-    width: 70%;
-    height: 500px;
-}
-.UpcomingTimeoff{
-    background-color: white;
-    width: 30%;
-    height: 500px;
-}
-.AttendanceLeavewho{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.leaveBalance{
     width: 100%;
-    gap: 30px;
-    height: 100px;
 }
-.AttendanceMetrics{
-    background-color: white;
-    width: 50%;
-}
-.LeaveBalance{
-    background-color: white;
-    width: 50%;
-}
-.WhoisoutintheTeam{
-    background-color: white;
-    height: 100px;
-}
-.AttendanceLeave{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    width: 70%;
-}
-.timeoffWhoisout{
-    width: 30%;
+.pendingRequest,
+.overtimeDetails,
+.attendanceMetrics,
+.leaveBalance,
+.letsgotoWork,
+.upcomingTimeoff,
+.whoisoutintheTeam {
+    background-color: #fff;
 }

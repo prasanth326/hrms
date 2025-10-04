@@ -12,28 +12,34 @@ import styles from "./AttendanceOverview.module.css";
 const AttendanceOverview = () => {
   return (
     <div className={styles.attendanceOverview}>
-     <div className={styles.Overview}><OverviewAttendance /></div>
-      <div className={styles.pendingLetsgo}>
-       <div className={styles.pendingRequest}><PendingRequest /></div> 
-        <div className={styles.letsgotoWork}><LetsgotoWork /></div>
-      </div>
-      <div className={styles.OvertimeDetailsContainer}>
-        <div className={styles.OvertimeUpcoming}>
-          <div className={styles.OvertimeDetails}>
+      <div className={styles.overviewAttendance}> <OverviewAttendance /></div>
+      <div className={styles.pendingOverAttendLeave}>
+        <div className={styles.pendingOver}>
+          <div className={styles.pendingRequest}>
+            <PendingRequest />
+          </div>
+          <div className={styles.overtimeDetails}>
             <OvertimeDetails />
           </div>
-          <div className={styles.UpcomingTimeoff}>
-            <UpcomingTimeoff />
+          <div className={styles.attendLeave}>
+            <div className={styles.attendanceMetrics}>
+              <AttendanceMetrics />
+            </div>
+            <div className={styles.leaveBalance}>
+              <LeaveBalance />
+            </div>
           </div>
         </div>
 
-        <div className={styles.AttendanceLeavewho}>
-          <div className={styles.AttendanceLeave}>
-           <div className={styles.AttendanceMetrics}><AttendanceMetrics /></div> 
-           <div className={styles.LeaveBalance}><LeaveBalance /></div>
+        <div className={styles.letUpWho}>
+          <div className={styles.letsgotoWork}>
+            <LetsgotoWork />
           </div>
-          <div className={styles.timeoffWhoisout}>
-           <div className={styles.WhoisoutintheTeam}> <WhoisoutintheTeam /></div>
+          <div className={styles.upcomingTimeoff}>
+            <UpcomingTimeoff />
+          </div>
+          <div className={styles.whoisoutintheTeam}>
+            <WhoisoutintheTeam />
           </div>
         </div>
       </div>
