@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import styles from "./UpcomingTimeoff.module.css"
 
 const UpcomingTimeoff = () => {
   return (
-    <div>
+    <div className={styles.UpcomingTimeoff}>
       UpcomingTimeoff
     </div>
   )

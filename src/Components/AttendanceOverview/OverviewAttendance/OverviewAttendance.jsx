@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import styles from './OverviewAttendance.module.css'
 
 const OverviewAttendance = () => {
   return (
-    <div>
+    <div className={styles.Overview}>
       Overview
     </div>
   )

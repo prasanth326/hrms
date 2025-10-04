@@ -12,28 +12,28 @@ import styles from "./AttendanceOverview.module.css";
 const AttendanceOverview = () => {
   return (
     <div className={styles.attendanceOverview}>
-      <OverviewAttendance />
+     <div className={styles.Overview}><OverviewAttendance /></div>
       <div className={styles.pendingLetsgo}>
-        <PendingRequest />
-        <LetsgotoWork />
+       <div className={styles.pendingRequest}><PendingRequest /></div> 
+        <div className={styles.letsgotoWork}><LetsgotoWork /></div>
       </div>
       <div className={styles.OvertimeDetailsContainer}>
         <div className={styles.OvertimeUpcoming}>
-          <div>
+          <div className={styles.OvertimeDetails}>
             <OvertimeDetails />
           </div>
-          <div>
+          <div className={styles.UpcomingTimeoff}>
             <UpcomingTimeoff />
           </div>
         </div>
 
         <div className={styles.AttendanceLeavewho}>
           <div className={styles.AttendanceLeave}>
-            <AttendanceMetrics />
-            <LeaveBalance />
+           <div className={styles.AttendanceMetrics}><AttendanceMetrics /></div> 
+           <div className={styles.LeaveBalance}><LeaveBalance /></div>
           </div>
           <div className={styles.timeoffWhoisout}>
-            <WhoisoutintheTeam />
+           <div className={styles.WhoisoutintheTeam}> <WhoisoutintheTeam /></div>
           </div>
         </div>
       </div>

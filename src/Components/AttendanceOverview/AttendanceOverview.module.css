@@ -1,10 +1,28 @@
 .attendanceOverview{
     display: grid;
-
-}
+    background-color: rgb(206, 190, 190);
+    gap: 20px;
+    overflow-y: auto;
+   }
+   .Overview{
+    width: 100%;
+    background-color: white;
+   }
 .pendingLetsgo{
     display: flex;
     justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+}
+.pendingRequest{
+    background-color: white;
+    width: 70%;
+    height: 200px;
+}
+.letsgotoWork{
+    background-color: white;
+    width: 30%;
+    height: 200px;
 }
 .OvertimeDetailsContainer{
     display: flex;
@@ -19,14 +37,47 @@
 .OvertimeUpcoming{
     display: flex;
     justify-content: space-around;
+    width: 100%;
+    gap: 30px;
+    height: 100px;
+
+}
+.OvertimeDetails{
+    background-color: white;
+    width: 70%;
+    height: 500px;
+}
+.UpcomingTimeoff{
+    background-color: white;
+    width: 30%;
+    height: 500px;
 }
 .AttendanceLeavewho{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 100%;
+    gap: 30px;
+    height: 100px;
+}
+.AttendanceMetrics{
+    background-color: white;
+    width: 50%;
+}
+.LeaveBalance{
+    background-color: white;
+    width: 50%;
+}
+.WhoisoutintheTeam{
+    background-color: white;
+    height: 100px;
 }
 .AttendanceLeave{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 30px;
+    width: 70%;
+}
+.timeoffWhoisout{
+    width: 30%;
 }
