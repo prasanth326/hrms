@@ -1,9 +1,20 @@
-import React from 'react'
+import React from 'react';
+import emptyOvertime from  '../../../assets/emptyOvertime.png';
+import styles from "./OvertimeDetails.module.css"
+
 
 const OvertimeDetails = () => {
   return (
-    <div>
-      OvertimeDetails
+    <div className={styles.container}>
+    <div className={styles.Details}>OvertimeDetails</div>
+    <div className={styles.OvertimeDetails}>
+      <div className={styles.imagediv}>
+        <img src={emptyOvertime} alt="image" />
+         </div>
+         <div>
+          <p>No overtime recorded for the selected period</p>
+         </div>
+    </div>
     </div>
   )
 }
