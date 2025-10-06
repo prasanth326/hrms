@@ -13,9 +13,8 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 100%;
 }
 .pendingimageContainer img{
-     width: 100px;
+    width: 100px;
     height: 100px;
 }

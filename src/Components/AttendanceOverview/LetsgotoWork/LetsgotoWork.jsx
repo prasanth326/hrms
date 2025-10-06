@@ -10,12 +10,12 @@ const LetsgotoWork = () => {
       <div className={Styles.LetsgetoWork}>Let's get to Work</div>
       <div className={Styles.DateandTime}>
         <div>24th sep, 2025</div>
-        <div>timer</div>
+        <div>00:00:00</div>
       </div>
       <div className={Styles.line}></div>
       <div className={Styles.shiftPolicy}>
-        <div>shift</div>
-        <div>view policy</div>
+        <div>Shift 10:00 - 19:00</div>
+        <div><a href="#">View Policy</a></div>
       </div>
       <div className={Styles.clockin}>
         <Button variant="contained">

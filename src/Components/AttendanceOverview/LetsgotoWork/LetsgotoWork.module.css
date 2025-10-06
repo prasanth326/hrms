@@ -1,27 +1,46 @@
-.ContainerDiv{
+.ContainerDiv {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    padding:  10px;
+    justify-content: space-between;
+    height: 100%;
 }
-.DateandTime{
+
+.DateandTime {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 40px;
 }
-.shiftPolicy{
+
+.shiftPolicy {
     display: flex;
     flex-direction: row;
     gap: 40px;
     justify-content: space-between;
 }
-.line{
+
+.line {
     height: 1px;
     width: 100%;
-    background-color: black;
+    background-color: rgb(194, 194, 194);
 }
-.clockin img{
+
+.clockin img {
     width: 18px;
+}
+
+.clockin button {
+    width: 100%;
+}
+
+.shiftPolicy :nth-child(1) {
+    color: rgb(194, 194, 194);
+    font-size: 14px;
+}
+
+.shiftPolicy :nth-child(2) a{
+    text-decoration: none;
+    color: rgb(13, 116, 234);
 }
