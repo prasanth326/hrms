@@ -1,0 +1,98 @@
+.itemStepper {
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    color: #222;
+    padding: 10px;
+}
+
+.teamTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.teamStepperItem {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.teamStepperLine {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.teamStepperDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dotGreen {
+    background-color: #2ecc71;
+}
+
+.dotOrange {
+    background-color: #f5a623;
+}
+
+.teamStepperConnector {
+    width: 2px;
+    border-left: 2px dashed #ccc;
+    margin-top: 4px;
+    height: 80px;
+}
+
+.teamStepperContent {
+    flex-grow: 1;
+    padding-bottom: 10px;
+}
+
+.teamDate {
+    font-weight: 600;
+    margin: 0;
+    text-align: start;
+}
+
+.teamMembers {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.teamMemberCircle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e9f0fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #3c4a64;
+    font-size: 0.9rem;
+    margin-right: -4px;
+}
+
+.itemMessage {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: start;
+}
+
+.Line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.Divider {
+    width: 98%;
+    height: 1px;
+    background-color: rgb(195, 195, 195);
+}

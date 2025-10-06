@@ -6,7 +6,7 @@ import styles from "./OvertimeDetails.module.css"
 const OvertimeDetails = () => {
   return (
     <div className={styles.container}>
-    <div className={styles.Details}>OvertimeDetails</div>
+    <div className={styles.Details}>Overtime Details</div>
     <div className={styles.OvertimeDetails}>
       <div className={styles.imagediv}>
         <img src={emptyOvertime} alt="image" />

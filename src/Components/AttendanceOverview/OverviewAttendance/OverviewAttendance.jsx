@@ -7,7 +7,7 @@ const OverviewAttendance = () => {
   return (
     <div className={styles.Overview}>
       <div>
-        <p> Overview</p>
+        <p className={styles.Overviewtext}> Overview</p>
       </div>
       <div>
         <div><Button variant="contained">+&nbsp;&nbsp;Request &#136;</Button></div>

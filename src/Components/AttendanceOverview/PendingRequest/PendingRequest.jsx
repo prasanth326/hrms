@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './PendingRequest.module.css';
-import emptyOvertime from  '../../../assets/emptyOvertime.png'
+import emptyOvertime from  '../../../assets/Vector2.png'
 
 const PendingRequest = () => {
   return (

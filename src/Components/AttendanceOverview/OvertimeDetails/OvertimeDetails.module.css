@@ -6,10 +6,10 @@
 }
 .imagediv img{
     width: 80px;
-    height: 100px;
-}
+ }
 .Details{
     padding: 10px;
+    font-weight: 600;
 }
 .container{
     display: flex;
