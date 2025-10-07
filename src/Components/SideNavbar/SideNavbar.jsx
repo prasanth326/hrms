@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./SideNavbar.module.css";
 import profile from "../../assets/profile.png";
 import Employee_life_cycle from "../../assets/Employee_life_cycle.png";
@@ -6,10 +6,26 @@ import compensation from "../../assets/compensation.png";
 import benifits1 from "../../assets/benifits1.png";
 import attendance1 from "../../assets/attendance1.png";
 import performance2 from "../../assets/performance2.png";
+import chevronRight from "../../assets/chevronRight.png";
 import travel from "../../assets/travel.png";
 import { Link } from "react-router-dom";
 
 const SideNavbar = () => {
+  const [showExtra, SetShowExtra] = useState("");
+  const [showExtraBl, SetShowExtraBl] = useState(false);
+  const [active, setActive] = useState("")
+
+  const showExtraFn = (extra) => {
+    SetShowExtra(extra)
+    SetShowExtraBl((prev) => !prev)
+  }
+  const showExtrnSubfn = (sub) => {
+    setActive(sub)
+  }
+
+  useEffect(() => {
+    if (showExtra === "TimeAndAttendance") setActive('overview')
+  }, [showExtra])
   return (
     <div className={styles.sidebar}>
       <div className={styles.logo}>
@@ -49,9 +65,21 @@ const SideNavbar = () => {
           <img src={benifits1} alt="benifits1" />
           <span>Benefits</span>
         </Link>
-        <Link to="/Attendance">
-          <img src={attendance1} alt="attendance1" />
-          <span>Time & Attendance</span>
+        <Link to="/Attendance/overview">
+          <div className={styles.chevronRightDivContainer}>
+            <div className={`${styles.chevronRightDiv} ${showExtra === "TimeAndAttendance" ? styles.avtiveTab : ""}`} onClick={() => showExtraFn("TimeAndAttendance")}>
+              <div className={styles.chevronRightDivimg} >
+                <img src={attendance1} alt="attendance1" />
+                <span>Time & Attendance</span>
+              </div>
+              <span className={styles.chevronRight}><img src={chevronRight} alt="chevronRight" /></span>
+            </div>
+            {showExtra === "TimeAndAttendance" && showExtraBl ? <ul className={` ${showExtra === "TimeAndAttendance" ? styles.extraUiShow : styles.extraUi} `}>
+              <Link to="/Attendance/overview" onClick={() => showExtrnSubfn("overview")} className={`${active === "overview" ? styles.activeSub : ""}`}>Overview</Link>
+              <Link>Attendence</Link>
+              <Link to="/Attendance/leave" onClick={() => showExtrnSubfn("leave")} className={`${active === "leave" ? styles.activeSub : ""}`}>Leave</Link>
+            </ul> : null}
+          </div>
         </Link>
         <Link to="/Performance">
           <img src={performance2} alt="performance2" />

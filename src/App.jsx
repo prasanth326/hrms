@@ -27,7 +27,7 @@ function LayoutApp() {
       {!pathLocation && <SideNavbar />}
       <Routes>
         <Route path="/profile" element={<ProfilePage/>}/>
-        <Route path="/Attendance" element={<LeaveBalance />}/>
+        <Route path="/Attendance/leave" element={<LeaveBalance />}/>
         <Route path="/Attendance/Overview" element={<AttendanceOverview />}/>
       </Routes>
       </div>

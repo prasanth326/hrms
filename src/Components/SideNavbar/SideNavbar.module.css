@@ -71,3 +71,58 @@ p {
     background-color: rgb(232, 226, 226, 0.2);
     text-align: center;
 }
+
+.chevronRight img {
+    width: 10px;
+    margin-right: 15px;
+}
+
+.chevronRightDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.extraUi {
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+.extraUiShow {
+    max-height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.chevronRight {
+    display: flex;
+    justify-content: center;
+}
+
+.chevronRightDivContainer {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+
+.extraUiShow li {
+    list-style: none;
+}
+
+.chevronRightDivimg {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.avtiveTab {
+    background-color: rgb(102, 102, 232);
+}
+
+.chevronRightDivContainer .activeSub{
+    color:  rgb(102, 102, 232);;
+}
