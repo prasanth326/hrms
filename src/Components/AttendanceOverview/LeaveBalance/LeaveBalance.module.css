@@ -1,3 +1,52 @@
 .LeaveBalance{
     font-weight: 600;
+    width: 100%;
+    background-image: url("../../../assets/Clippathgroup.png");
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+ margin-bottom: 10px;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card h2{
+    font-size: 20px;
+}
+.card button{
+    border: none;
+    width: fit-content;
+    background: transparent;
+    box-shadow: none;
+    color: black;
+    font-weight: bold;
+}
+.LeaveBalancecards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.balanceitems{
+    height: 100px;
+    padding: 10px;
+box-shadow: 0px 1px 1px 0px gray;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.balanceitems .count{
+    font-size: 20px;
+}
+.balanceitems .leave{
+    font-size: 14px;
+    color: rgb(162, 158, 158);
+}
+.count img{
+    width: 40px;
 }
