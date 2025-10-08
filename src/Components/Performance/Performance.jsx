@@ -3,35 +3,34 @@ import styles from "./Performance.module.css";
 import listview from "../../assets/listview.png";
 
 const Performance = () => {
-  const [buttons, setButtons] = useState("ALL");
-  const [active, setActive]= useState(false)
+  const [buttons, setButtons] = useState("");
+  
   const activeButton = (act) => {
     setButtons(act);
-    setActive((prev)=>!prev)
   };
-  useEffect(()=>{
-    if(buttons==="ALL") setActive(true)
-  },[buttons])
+  useEffect(() => {
+    setButtons("All")
+  }, [])
 
   return (
     <div className={styles.Performance}>
       <div className={styles.PerformanceOpen}>
         <div> Open Tasks</div>
         <div className={styles.buttonsdiv}>
-          <div className={`${styles.buttons} ${active && buttons === "All" ? styles.activebtn: ""}`} onClick={() => activeButton("All")}>
+          <div className={`${styles.buttons} ${buttons === "All" ? styles.activebtn : ""}`} onClick={() => activeButton("All")}>
             ALL-1
           </div>
           <div
-            className={`${styles.buttons} ${active && buttons === "OVERDUE" ? styles.activebtn: ""}`}
+            className={`${styles.buttons} ${buttons === "OVERDUE" ? styles.activebtn : ""}`}
             onClick={() => activeButton("OVERDUE")}
           >
             OVERDUE
           </div>
-          <div className={`${styles.buttons} ${active && buttons === "TIMES" ? styles.activebtn: ""}`} onClick={() => activeButton("TIMES")}>
+          <div className={`${styles.buttons} ${buttons === "TIMES" ? styles.activebtn : ""}`} onClick={() => activeButton("TIMES")}>
             DUE TIMES WEEK-10
           </div>
           <div
-            className={`${styles.buttons} ${active && buttons === "filter" ? styles.activebtn: ""}`}
+            className={`${styles.buttons} ${buttons === "filter" ? styles.activebtn : ""}`}
             onClick={() => activeButton("filter")}
           >
             <img src={listview} alt="listview" />
