@@ -15,25 +15,6 @@
     justify-content: space-between;
     background-color: rgb(255, 255, 255);
 }
-.buttonsdiv{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    padding: 10px;
-}
-.buttons{
-  /* border: 1px solid black; */
-  border-radius: 10px;
-  height: 30%;
-  display: flex;
-  align-items: center;
-  padding: 5px;
-  box-shadow: 1px 1px 1px 0px rgb(228, 227, 227);
-}
-.filtericon img{
-    width: 80%;
-    height: 30px;
-}
 
 .PerformanceOpenTask {
     display: flex;
@@ -89,7 +70,4 @@
      background-color: #fff;
     box-shadow: 0px 2px 6px 0px #d4d7d8;
    border-radius: 10px;
-}
-.activebtn{
-    background-color: rgb(98, 98, 176);
 }
