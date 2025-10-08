@@ -89,6 +89,12 @@ const SideNavbar = () => {
           <img src={travel} alt="travel" />
           <span>Reimbursement</span>
         </Link>
+        <Link to="/Interviews" className={`${styles.chevronRightDiv} ${showExtra === "Interviews" ? styles.avtiveTab : ""}`} onClick={() => showExtraFn("Interviews")}>
+          <div className={styles.chevronRightDivimg}>
+            <img src={travel} alt="travel" />
+            <span>Interviews</span>
+          </div>
+        </Link>
       </ul>
     </div>
   );

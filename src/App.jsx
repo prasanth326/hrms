@@ -11,10 +11,11 @@ import { useLocation } from "react-router-dom";
 import ProfilePage from "./Components/Profile/ProfilePage"
 import LeaveBalance from "./Components/Leave/LeaveBalance/LeaveBalance";
 import AttendanceOverview from "./Components/AttendanceOverview/AttendanceOverview";
+import Interviews from "./Components/Interviews/Interviews";
 function LayoutApp() {
   const location = useLocation();
   const pathLocation = location.pathname === '/accesspage' || location.pathname === '/'
-  const navlocation = location.pathname=== '/' 
+  const navlocation = location.pathname === '/'
 
   return (
     <>
@@ -24,12 +25,13 @@ function LayoutApp() {
         <Route path="/accesspage" element={<Accesspage />} />
       </Routes>
       <div className="content">
-      {!pathLocation && <SideNavbar />}
-      <Routes>
-        <Route path="/profile" element={<ProfilePage/>}/>
-        <Route path="/Attendance/leave" element={<LeaveBalance />}/>
-        <Route path="/Attendance/Overview" element={<AttendanceOverview />}/>
-      </Routes>
+        {!pathLocation && <SideNavbar />}
+        <Routes>
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/Attendance/leave" element={<LeaveBalance />} />
+          <Route path="/Attendance/Overview" element={<AttendanceOverview />} />
+          <Route path="/Interviews" element={<Interviews />} />
+        </Routes>
       </div>
     </>
   );

@@ -3,7 +3,7 @@
     height: 100%;
     background-color: #1a2945;
     display: grid;
-    grid-template-rows: 2fr 0.5fr 6fr;
+    grid-template-rows: 1fr 0.2fr 6fr;
 }
 
 .Menu {
@@ -121,8 +121,9 @@ p {
 
 .avtiveTab {
     background-color: rgb(102, 102, 232);
+    width: 95%;
 }
 
-.chevronRightDivContainer .activeSub{
-    color:  rgb(102, 102, 232);;
+.chevronRightDivContainer .activeSub {
+    color: rgb(102, 102, 232);
 }
