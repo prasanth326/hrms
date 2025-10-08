@@ -12,6 +12,7 @@ import ProfilePage from "./Components/Profile/ProfilePage"
 import LeaveBalance from "./Components/Leave/LeaveBalance/LeaveBalance";
 import AttendanceOverview from "./Components/AttendanceOverview/AttendanceOverview";
 import Interviews from "./Components/Interviews/Interviews";
+import Performance from "./Components/Performance/Performance";
 function LayoutApp() {
   const location = useLocation();
   const pathLocation = location.pathname === '/accesspage' || location.pathname === '/'
@@ -31,6 +32,7 @@ function LayoutApp() {
           <Route path="/Attendance/leave" element={<LeaveBalance />} />
           <Route path="/Attendance/Overview" element={<AttendanceOverview />} />
           <Route path="/Interviews" element={<Interviews />} />
+         <Route path="/Performance" element={<Performance />} />
         </Routes>
       </div>
     </>

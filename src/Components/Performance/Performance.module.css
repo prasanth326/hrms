@@ -1,0 +1,95 @@
+.Performance {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(237 232 232);
+    gap: 10px;
+}
+
+.PerformanceOpen {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+}
+.buttonsdiv{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 10px;
+}
+.buttons{
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 1px 1px 1px 0px rgb(228, 227, 227);
+}
+.filtericon img{
+    width: 80%;
+    height: 30px;
+}
+
+.PerformanceOpenTask {
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    width: 100%;
+    gap: 10px;
+    /* overflow-y: scroll; */
+}
+
+.Performancecard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    width: 70%;
+}
+
+.Feedback {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+}
+
+.SmartSuggestions{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    width: 30%;
+}
+
+.GoalPlan {
+    height: 30%;
+}
+
+.Suggestions{
+    height: 30%;
+    padding: 20px;
+}
+.Activity{
+    height: 30%;
+}
+.Suggestions{
+    height: 40%;
+    padding: 10px;
+}
+.GoalPlan,
+.Suggestions,
+.Feedback,
+.Activity{
+     background-color: #fff;
+    box-shadow: 0px 2px 6px 0px #d4d7d8;
+   border-radius: 10px;
+}
+.activebtn{
+    background-color: rgb(98, 98, 176);
+}
