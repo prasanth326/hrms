@@ -1,0 +1,43 @@
+.Feedbackcard{
+    width: 500px;
+}
+.Feedback{
+   display: flex;
+   align-items: center; 
+   gap: 30px;
+}
+.Feedback img{
+    height: 50px;
+    width: 50px;
+}
+.FeedbackTitle{
+    font-size: 17px;
+    font-weight: bold;
+}
+.Feedbackbuttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.Feedbackbuttons .buttondivs{
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 10px;
+    /* margin: 0 2px; */
+}
+.Feedbackvalues{
+    display: flex;
+    justify-content: space-around;
+}
+.leftside, .rightside {
+    display: flex;
+    gap: 10px;
+}
+.values{
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(72, 72, 168);
+}
+.bottomdiv{
+    text-align: center;
+}

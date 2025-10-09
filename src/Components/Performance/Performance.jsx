@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Performance.module.css";
 import OpenTask from "./OpenTask/OpenTask";
 import GoalPlan from "./GoalPlan/GoalPlan";
+import Feedback from "./Feedback/Feedback";
 
 const Performance = () => {
   return (
@@ -11,8 +12,8 @@ const Performance = () => {
         <div className={styles.Performancecard}>
           <div className={styles.GoalPlan}><GoalPlan/></div>
           <div className={styles.Feedback}>
-            <div className={styles.attendanceMetrics}>Feedback</div>
-            <div className={styles.leaveBalance}>Latest News</div>
+            <div className={styles.FeedbackCard}><Feedback/></div>
+            <div className={styles.Latestnews}>Latest News</div>
           </div>
         </div>
 
