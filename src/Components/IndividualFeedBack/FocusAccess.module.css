@@ -1,0 +1,35 @@
+.focusAccess{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.focusAccessBoxes{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.focusAccessBox1{
+    background-color: #ffffff;
+    height: 220px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.focusAccessBox1decribe{
+    border: 1px solid rgb(216, 214, 214);
+    height: 100px;
+}
+
+.focusAccessBox1stardiv{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.focusAccessBox1com{
+    font-weight: 600;
+}

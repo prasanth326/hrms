@@ -13,6 +13,7 @@ import LeaveBalance from "./Components/Leave/LeaveBalance/LeaveBalance";
 import AttendanceOverview from "./Components/AttendanceOverview/AttendanceOverview";
 import Interviews from "./Components/Interviews/Interviews";
 import Performance from "./Components/Performance/Performance";
+import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
 function LayoutApp() {
   const location = useLocation();
   const pathLocation = location.pathname === '/accesspage' || location.pathname === '/'
@@ -42,7 +43,8 @@ function LayoutApp() {
 function App() {
   return (
     <Router>
-      <LayoutApp />
+      {/* <LayoutApp /> */}
+      <IndividualFeedBack />
     </Router>
   )
 }

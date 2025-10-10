@@ -1,0 +1,100 @@
+.individualFeedBack {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 100vh;
+}
+
+.individualFeedBackLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+}
+
+.userDetails {
+    width: 100%;
+    height: 14%;
+    background-color: #ffffff;
+}
+
+.tabAndResume {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #ffffff;
+    height: 70%;
+    padding: 10px;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+}
+.tabs2 {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(199, 195, 195);
+    width: fit-content;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.tabsName {
+    background-color: rgb(199, 195, 195);
+}
+
+.tabpdf {
+    border: 1px solid rgb(199, 195, 195);
+}
+
+.resume {
+    border: 1px solid rgb(199, 195, 195);
+    height: 100%;
+    width: 100%;
+}
+
+.btns {
+    display: flex;
+    gap: 10px;
+}
+
+.btns1Green,
+.btns1Red {
+    border: 1px solid;
+    border-radius: 100px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btns1Green {
+    border-color: rgb(29, 191, 29);
+    color: rgb(29, 191, 29);
+}
+
+.btns1Red {
+    border-color: rgb(191, 34, 29);
+    color: rgb(191, 34, 29);
+}
+
+.individualFeedBackRight {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.scorecardtextdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btnactiveGreen {
+    background-color: rgb(29, 191, 29);
+    color: #ffffff;
+}
+
+.btnactiveRed {
+    background-color: rgb(191, 34, 29);
+    color: #ffffff;
+}
