@@ -1,0 +1,47 @@
+.LatestNewsContainer {
+  width: 320px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.LatestNews {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.LatestNews img {
+  width: 40px;
+}
+.LatestNewsTitle{
+    font-weight: bold;
+}
+.Activities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Activities .NoActivities {
+  font-weight: bold;
+  font-size: 14px;
+}
+.Activities .NoNotes {
+  font-weight: 200;
+  font-size: 13px;
+}
+.buttondiv{
+    display: flex;
+    gap: 30px;
+}
+.buttondiv button {
+    width: 100px;
+    border-radius: 5px;
+}
+.buttondiv .Viewall{
+    background-color: rgb(48, 64, 157);
+    color: white;
+}
+.buttondiv .Addnew{
+    color: rgb(48, 64, 157);
+}

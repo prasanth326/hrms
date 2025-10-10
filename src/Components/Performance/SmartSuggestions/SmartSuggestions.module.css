@@ -1,0 +1,38 @@
+.SmartSuggestionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: skyblue;
+  color: white;
+  padding: 10px;
+}
+
+.SmartSuggestions {
+  display: flex;
+  align-items: center;
+}
+.SuggestionsFeedback {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.SuggestionsToday {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.SuggestionsToday .ACt {
+  width: 80px;
+  color: rgb(48, 64, 157);
+}
+.pagination{
+    display: flex;
+    justify-content: space-between;
+}
+.paginationright{
+    display: flex;
+    gap: 10px;
+}
+.paginationarrow{
+    cursor: pointer;
+}

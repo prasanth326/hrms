@@ -43,8 +43,8 @@ function LayoutApp() {
 function App() {
   return (
     <Router>
-      {/* <LayoutApp /> */}
-      <IndividualFeedBack />
+      <LayoutApp />
+      {/* <IndividualFeedBack /> */}
     </Router>
   )
 }
