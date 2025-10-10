@@ -72,13 +72,13 @@ const SmartSuggestions = () => {
       ))}
       <div className={styles.pagination}>
         <div className={styles.paginationleft}>
-          <div>1/3</div>
+          <div>{currentPage}/3</div>
         </div>
         <div className={styles.paginationright}>
-          <div className={styles.paginationarrow} onClick={() => prevbtn()}  styles={{pointerEvent: currentPage===1 ? "none": "auto",opacity: currentPage===1 ? 0.5 : 1}}>
+          <div className={styles.paginationarrow} onClick={() => prevbtn()} style={{ pointerEvents: currentPage === 1 ? "none" : "auto", opacity: currentPage === 1 ? 0.5 : 1 }}>
             &lt;
           </div>
-          <div className={styles.paginationarrow} onClick={() => nextbtn()} styles={{pointerEvent: currentPage===3 ? "none": "auto",opacity: currentPage===3 ? 0.5 : 1}}>
+          <div className={styles.paginationarrow} onClick={() => nextbtn()} style={{ pointerEvents: currentPage === 3 ? "none" : "auto", opacity: currentPage === 3 ? 0.5 : 1 }}>
             &gt;
           </div>
         </div>
