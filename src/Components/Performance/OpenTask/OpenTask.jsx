@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./OpenTask.module.css";
 import listview from "../../../assets/listview.png";
+import benifits1 from "../../../assets/benifits1.png"
 
 const OpenTask = () => {
   const [buttons, setButtons] = useState("");
@@ -14,7 +15,7 @@ const OpenTask = () => {
   return (
     <div className={styles.OpenTaskContainer}>
       <div className={styles.OpenTask}>
-        <div> Open Tasks</div>
+        <div  className={styles.OpenTaskdiv}><img src={benifits1}/> <div>Open Tasks</div></div>
         <div className={styles.buttonsdiv}>
           <div
             className={`${styles.buttons} ${

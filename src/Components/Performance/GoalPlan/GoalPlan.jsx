@@ -25,44 +25,44 @@ export default function GoalPlan() {
           <div className={styles.imgbeniand}>            
             <div className={styles.imgbeni}>
               <div><img src={benifits1} /></div>
-              <div>0</div>
+              <div  className={styles.imgbeni0}>0</div>
             </div>
-            <div>Completed</div>
+            <div className={styles.imgbeni0s}>Completed</div>
           </div>
           <div className={styles.imgbeniand}>            
           <div className={styles.imgbeni}>
             <div><img src={benifits1} /></div>
-            <div>0</div>
+            <div className={styles.imgbeni0}>0</div>
           </div>
-            <div>In Progress</div>
-          </div>
-          <div className={styles.imgbeniand}>            
-          <div className={styles.imgbeni}>
-            <div><img src={benifits1} /></div>
-            <div>0</div>
-          </div>
-            <div>On Hold</div>
+            <div className={styles.imgbeni0s}>In Progress</div>
           </div>
           <div className={styles.imgbeniand}>            
           <div className={styles.imgbeni}>
             <div><img src={benifits1} /></div>
-            <div>0</div>
+            <div className={styles.imgbeni0}>0</div>
           </div>
-            <div>On Rsld</div>
+            <div className={styles.imgbeni0s}>On Hold</div>
+          </div>
+          <div className={styles.imgbeniand}>            
+          <div className={styles.imgbeni}>
+            <div><img src={benifits1} /></div>
+            <div className={styles.imgbeni0}>0</div>
+          </div>
+            <div className={styles.imgbeni0s}>On Rsld</div>
           </div>
           <div className={styles.imgbeniand}>            
             <div className={styles.imgbeni}>
               <div><img src={benifits1} /></div>
-              <div>0</div>
+              <div className={styles.imgbeni0}>0</div>
             </div>
-            <div>Delayed</div>
+            <div className={styles.imgbeni0s}>Delayed</div>
           </div>
           <div className={styles.imgbeniand}>            
             <div className={styles.imgbeni}>
               <div><img src={benifits1} /></div>
-              <div>0</div>
+              <div className={styles.imgbeni0}>0</div>
             </div>
-              <div>Not Satled</div>
+              <div  className={styles.imgbeni0s}>Not Satled</div>
           </div>
         </div>
       </div>

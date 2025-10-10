@@ -81,7 +81,7 @@ const SideNavbar = () => {
             </ul> : null}
           </div>
         </Link>
-        <Link to="/Performance">
+        <Link to="/Performance" className={`${styles.chevronRightDiv2} ${showExtra === "Performance" ? styles.avtiveTab : ""}`}   onClick={() => showExtraFn("Performance")}>
           <img src={performance2} alt="performance2" />
           <span>Performance</span>
         </Link>

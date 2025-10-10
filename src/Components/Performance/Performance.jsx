@@ -10,9 +10,9 @@ import Activity from "./Activity/Activity";
 const Performance = () => {
   return (
     <div className={styles.Performance}>
-      <div className={styles.PerformanceOpen}><OpenTask/></div>
       <div className={styles.PerformanceOpenTask}>
         <div className={styles.Performancecard}>
+          <div className={styles.PerformanceOpen}><OpenTask/></div>
           <div className={styles.GoalPlan}><GoalPlan/></div>
           <div className={styles.Feedback}>
             <div className={styles.FeedbackCard}><Feedback/></div>
