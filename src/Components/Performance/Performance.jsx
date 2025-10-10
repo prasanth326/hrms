@@ -5,6 +5,7 @@ import GoalPlan from "./GoalPlan/GoalPlan";
 import Feedback from "./Feedback/Feedback";
 import LatestNews from "./LatestNews/LatestNews";
 import SmartSuggestions from "./SmartSuggestions/SmartSuggestions";
+import Activity from "./Activity/Activity";
 
 const Performance = () => {
   return (
@@ -21,7 +22,7 @@ const Performance = () => {
 
         <div className={styles.SmartSuggestions}>
           <div className={styles.Suggestions}><SmartSuggestions/></div>
-          <div className={styles.Activity}>Activity</div>
+          <div className={styles.Activity}><Activity/></div>
         </div>
       </div>
     </div>

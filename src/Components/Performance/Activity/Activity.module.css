@@ -1,0 +1,49 @@
+.ActivityContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+.Activity {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.ActivityTitledays{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ActivityTitle{
+    font-weight: bold;
+}
+.lastdays{
+    font-size: 12px;
+}
+.Activity img{
+  width: 40px;
+  height: 40px;
+}
+.ActivityImage {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+.ActivityImage img {
+  width: 250px;
+}
+.ActivityFound{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.noactivitiesfound{
+    font-size: 15px;
+    font-weight: 800;
+}
+.noactivities{
+    font-weight:400;
+    font-size: 13px;
+}
