@@ -4,7 +4,7 @@ import Login from "./Components/Login/Login";
 import Signinpage from "./Components/SigninPage/Signinpage";
 import Accesspage from "./Components/AccessPage/Accesspage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Pagedetailed from "./Components/PageDetailed/Pagedetailed";
+// import Pagedetailed from "./Components/PageDetailed/Pagedetailed";
 import SideNavbar from "./Components/SideNavbar/SideNavbar";
 import NavBar from "./Components/NavBar/NavBar";
 import { useLocation } from "react-router-dom";
@@ -13,7 +13,7 @@ import LeaveBalance from "./Components/Leave/LeaveBalance/LeaveBalance";
 import AttendanceOverview from "./Components/AttendanceOverview/AttendanceOverview";
 import Interviews from "./Components/Interviews/Interviews";
 import Performance from "./Components/Performance/Performance";
-import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
+// import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
 function LayoutApp() {
   const location = useLocation();
   const pathLocation = location.pathname === '/accesspage' || location.pathname === '/'
