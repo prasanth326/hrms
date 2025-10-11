@@ -8,16 +8,20 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SideNavbar from "./Components/SideNavbar/SideNavbar";
 import NavBar from "./Components/NavBar/NavBar";
 import { useLocation } from "react-router-dom";
-import ProfilePage from "./Components/Profile/ProfilePage"
+import ProfilePage from "./Components/Profile/ProfilePage";
 import LeaveBalance from "./Components/Leave/LeaveBalance/LeaveBalance";
 import AttendanceOverview from "./Components/AttendanceOverview/AttendanceOverview";
 import Interviews from "./Components/Interviews/Interviews";
 import Performance from "./Components/Performance/Performance";
+import InterviewMainpage from "./Components/InterviewMainpage/InterviewMainpage";
+import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
 // import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
+
 function LayoutApp() {
   const location = useLocation();
-  const pathLocation = location.pathname === '/accesspage' || location.pathname === '/'
-  const navlocation = location.pathname === '/'
+  const pathLocation =
+    location.pathname === "/accesspage" || location.pathname === "/";
+  const navlocation = location.pathname === "/";
 
   return (
     <>
@@ -32,8 +36,13 @@ function LayoutApp() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/Attendance/leave" element={<LeaveBalance />} />
           <Route path="/Attendance/Overview" element={<AttendanceOverview />} />
-          <Route path="/Interviews" element={<Interviews />} />
-         <Route path="/Performance" element={<Performance />} />
+          <Route path="/Interviews" element={<InterviewMainpage />} />
+          <Route path="/Performance" element={<Performance />} />
+          <Route path="/Interviews/candidate" element={<Interviews />} />
+          <Route
+            path="/Interviews/individualFeedBack"
+            element={<IndividualFeedBack />}
+          />
         </Routes>
       </div>
     </>
@@ -46,7 +55,7 @@ function App() {
       <LayoutApp />
       {/* <IndividualFeedBack /> */}
     </Router>
-  )
+  );
 }
 
 export default App;

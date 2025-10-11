@@ -1,0 +1,22 @@
+.interviewMainpage {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 10px;
+}
+
+.image2 {
+    text-align: end;
+}
+
+.image img{
+    width: 200px;
+}
+.image2 img{
+    width: 200px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}

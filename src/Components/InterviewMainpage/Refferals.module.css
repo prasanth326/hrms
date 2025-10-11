@@ -1,0 +1,39 @@
+.refferalsContainer {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 1px 1px 1px rgb(211, 211, 211);
+  background: linear-gradient(
+    90deg,
+    rgba(200, 243, 247, 1) 0%,
+    rgba(200, 243, 247, 1) 40%,
+    rgba(203, 230, 168, 1) 100%
+  );
+
+  padding: 10px 10px 0 10px;
+}
+.refferalsparent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.titleimage {
+  display: flex;
+  gap: 10px;
+}
+.titleimagep {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.refferalsparent2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  width: 100%;
+  padding: 10px;
+}
+
+.titleimage img {
+  width: 25px;
+}
