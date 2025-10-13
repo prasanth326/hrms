@@ -15,7 +15,11 @@ import Interviews from "./Components/Interviews/Interviews";
 import Performance from "./Components/Performance/Performance";
 import InterviewMainpage from "./Components/InterviewMainpage/InterviewMainpage";
 import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
+<<<<<<< HEAD
 import AssessmentHistory from "./Components/Performance/AssessmentHistory/AssessmentHistory";
+=======
+import { Compensation } from "./Components/Compensation/Compensation";
+>>>>>>> refs/remotes/origin/main
 // import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
 
 function LayoutApp() {
@@ -44,6 +48,8 @@ function LayoutApp() {
             path="/Interviews/individualFeedBack"
             element={<IndividualFeedBack />}
           />
+         <Route path="/compensation" element={<Compensation />} />
+
         </Routes>
       </div>
     </>

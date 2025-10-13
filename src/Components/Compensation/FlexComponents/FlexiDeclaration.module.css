@@ -1,0 +1,28 @@
+.flexContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.PayAmount{
+    border: 1px solid gray;
+    padding: 8px;
+    background-color: rgb(234, 229, 229);
+    border-radius: 10px;
+}
+.flexi{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.flexTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.Closed{
+    background-color: orange;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+}
