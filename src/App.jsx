@@ -15,6 +15,7 @@ import Interviews from "./Components/Interviews/Interviews";
 import Performance from "./Components/Performance/Performance";
 import InterviewMainpage from "./Components/InterviewMainpage/InterviewMainpage";
 import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
+import AssessmentHistory from "./Components/Performance/AssessmentHistory/AssessmentHistory";
 // import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
 
 function LayoutApp() {
@@ -52,8 +53,9 @@ function LayoutApp() {
 function App() {
   return (
     <Router>
-      <LayoutApp />
+      {/* <LayoutApp /> */}
       {/* <IndividualFeedBack /> */}
+      <AssessmentHistory />
     </Router>
   );
 }
