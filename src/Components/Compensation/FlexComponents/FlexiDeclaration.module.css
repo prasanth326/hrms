@@ -5,9 +5,9 @@
     gap: 20px;
 }
 .PayAmount{
-    border: 1px solid gray;
+    border: 1px solid rgb(208, 208, 208);
     padding: 8px;
-    background-color: rgb(234, 229, 229);
+    background-color: rgb(247 248 250);;
     border-radius: 10px;
 }
 .flexi{

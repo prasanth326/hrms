@@ -1,9 +1,33 @@
-.AnnualAndMonthlyContainerdiv {
+.AnnualAndMonthlyContainerdiv table{
+  width: 100%;
 }
 .AnnualAndMonthlyContainer {
-  border: 1px solid gray;
-  padding: 20px;
+  border: 1px solid #d8d8d8;
+border-radius: 10px;
 }
-.tableContainer {
+.tableContainer th{
 text-align: start;
+padding: 10px;
+}
+
+.tableContainer{
+  background: rgb(244 245 249);
+}
+
+.AnnualAndMonthlyContainer tbody :nth-child(5),
+.AnnualAndMonthlyContainer tbody :nth-child(7){
+  background-color: rgb(242 248 254);
+}
+
+.AnnualAndMonthlyContainer tbody{
+  border-spacing: inherit;
+}
+
+.AnnualAndMonthlyContainer tr{
+  padding: 10px;
+}
+
+.AnnualAndMonthlyContainer tbody td{
+  padding: 20px;
+
 }
