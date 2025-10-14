@@ -3,11 +3,11 @@ import { FlexiDeclaration } from './FlexiDeclaration'
 import { AnnualAndMonthly } from './AnnualAndMonthly'
 import styles from "./FlexComponents.module.css"
 
-export const FlexComponents = () => {
+export const FlexComponents = ({showValues}) => {
   return (
     <div className={styles.FlexComponents}>
-      <FlexiDeclaration/>
-      <AnnualAndMonthly/>
+      <FlexiDeclaration showValues={showValues}/>
+      <AnnualAndMonthly showValues={showValues}/>
     </div>
   )
 }

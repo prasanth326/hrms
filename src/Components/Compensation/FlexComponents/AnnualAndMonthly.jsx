@@ -1,19 +1,19 @@
 import React from "react";
 import styles from "./AnnualAndMonthly.module.css";
 
-export const AnnualAndMonthly = () => {
+export const AnnualAndMonthly = ({showValues}) => {
   const AnnualFlexi = [
-    { Earnings: "Basic", monthly: "5000", annually: "200000" },
-    { Earnings: "HRA", monthly: "5000", annually: "200000" },
-    { Earnings: "Other Allownces", monthly: "5000", annually: "200000" },
-    { Earnings: "Provident Fund", monthly: "5000", annually: "200000" },
-    { Earnings: "CTC", monthly: "5000", annually: "200000" },
+    { Earnings: "Basic", monthly: "4000", annually: "200000" },
+    { Earnings: "HRA", monthly: "6000", annually: "200000" },
+    { Earnings: "Other Allownces", monthly: "8000", annually: "200000" },
+    { Earnings: "Provident Fund", monthly: "12000", annually: "200000" },
+    { Earnings: "CTC", monthly: "15000", annually: "200000" },
     {
       Earnings: "Variable Pay Package(IN Total CTC",
-      monthly: "5000",
+      monthly: "16000",
       annually: "200000",
     },
-    { Earnings: "Total CTC", monthly: "5000", annually: "200000" },
+    { Earnings: "Total CTC", monthly: "18000", annually: "200000" },
   ];
   return (
     <div className={styles.AnnualAndMonthlyContainerdiv}>
@@ -31,8 +31,8 @@ export const AnnualAndMonthly = () => {
             {AnnualFlexi.map((items) => (
               <tr>
                 <td>{items.Earnings}</td>
-                <td>{items.monthly}</td>
-                <td>{items.annually}</td>
+                <td>{showValues?items.monthly: "*****"}</td>
+                <td>{showValues?items.annually: "*****"}</td>
               </tr>
             ))}
           </tbody>

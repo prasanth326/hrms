@@ -1,0 +1,91 @@
+.firstdiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(229, 238, 238);
+  padding: 10px;
+}
+.ItDeclarationsContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.Financial {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+}
+.Financial p {
+  text-align: start;
+}
+.FinancialYear {
+  font-weight: bold;
+}
+.NoFinancialYear {
+  font-weight: 400;
+}
+.comparebuttons {
+  display: flex;
+  gap: 8px;
+}
+.comparebuttons button {
+  width: 180px;
+  height: 40px;
+}
+.FinancialYear span {
+  margin-left: 10px;
+  background-color: orange;
+  border: 1px solid orange;
+  border-radius: 5px;
+  color: white;
+  font-weight: 400;
+  font-size: 13px;
+  padding: 0 5px 0 5px;
+}
+.HouseParty {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.TotalFinancial {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+}
+.Others {
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+.activebtn {
+  color: white;
+  background-color: #8a80fb;
+}
+.NoFinancialYear span {
+  font-weight: bold;
+}
+.section span {
+  font-weight: 600;
+  color: rgb(173, 171, 171);
+}
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: rgb(173, 171, 171);
+}
+.Notenegative {
+  background-color: rgb(227, 200, 151);
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: fit-content;
+  font-size: 14px;
+}
+.viewversions {
+  color: rgb(144 134 255);
+}
+.viewversions span {
+  color: black;
+}

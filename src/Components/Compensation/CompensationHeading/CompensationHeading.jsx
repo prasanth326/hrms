@@ -38,9 +38,8 @@ const IOSSwitch = styled((props) => (
     },
 }));
 
-const CompensationHeading = () => {
+const CompensationHeading = ({showValues, setShowValues}) => {
     const [financialYear, setFinancialYear] = useState("2025-26");
-    const [showValues, setShowValues] = useState(false);
 
     const handleFinancialYearChange = (event) => {
         setFinancialYear(event.target.value);
