@@ -1,0 +1,25 @@
+.paySlipsContainer{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-top: 10px;
+}
+
+.paySlipsYear{
+    display: flex;
+    justify-content: space-between;
+}
+
+.paySlipsYearContainer{
+    display: flex;
+    gap:10px;
+    align-items: center;
+}
+
+.paySlipsYearText{
+    font-weight: 600;
+}
+
+.paySlipsYearContainer p{
+        font-weight: 600;
+}
