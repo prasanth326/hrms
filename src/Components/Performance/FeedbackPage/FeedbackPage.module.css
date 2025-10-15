@@ -1,0 +1,85 @@
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+}
+
+.tabs span {
+  cursor: pointer;
+  padding-bottom: 4px;
+}
+
+.active {
+  border-bottom: 2px solid black;
+  font-weight: bold;
+}
+
+.requestBtn {
+  background-color: #7a5cff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.statsSection {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.statCard {
+  flex: 1;
+  padding: 16px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.statCard h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.contentSection {
+  margin-top: 40px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.subtitle {
+  color: #666;
+  margin: 8px 0 20px;
+}
+
+.outlineBtn {
+  border: 1px solid #888;
+  background: transparent;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.emptyState img{
+    width: 250px;
+}

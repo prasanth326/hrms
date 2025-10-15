@@ -17,6 +17,13 @@ import InterviewMainpage from "./Components/InterviewMainpage/InterviewMainpage"
 import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
 import AssessmentHistory from "./Components/Performance/AssessmentHistory/AssessmentHistory";
 import { Compensation } from "./Components/Compensation/Compensation";
+import KeyResults from "./Components/Performance/keyResults/KeyResults";
+import MyGoal from "./Components/Performance/MyGoal/MyGoal";
+import GoalReview from "./Components/Performance/GoalReview/GoalReview";
+import Hrdocsdocument from "./Components/Performance/Hrdocsdocument/Hrdocsdocument";
+import FeedbackPage from "./Components/Performance/FeedbackPage/FeedbackPage";
+import TabsTabs from "./Components/Performance/TabsTabs/TabsTabs";
+import PerformanceHistory from "./Components/Performance/TabsTabs/PerformanceHistory";
 // import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
 
 function LayoutApp() {
@@ -46,6 +53,12 @@ function LayoutApp() {
             element={<IndividualFeedBack />}
           />
          <Route path="/compensation" element={<Compensation />} />
+         <Route path="/Performance/keyResults" element={<KeyResults />} />
+         <Route path="/Performance/myGoal" element={<MyGoal />} />
+         <Route path="/Performance/Review" element={<GoalReview />} />
+         <Route path="/Performance/MSF" element={<Hrdocsdocument />} />
+          <Route path="/Performance/Feedback" element={<FeedbackPage />} />
+                    <Route path="/Performance/Assessment" element={<PerformanceHistory />} />
 
         </Routes>
       </div>

@@ -1,0 +1,19 @@
+.GoalReview{
+    width: 100%;
+    height: 60%;
+}
+
+.goalReview img{
+    width: 500px;
+}
+
+.goalReview{
+     width: 100%;
+     display: flex
+;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+}

@@ -1,0 +1,273 @@
+ .page {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #ffffff;
+  color: #222;
+  min-height: 100vh;
+  padding: 18px;
+}
+
+ .container {
+  max-width: 1200px;
+  margin: 6px auto;
+}
+
+ .ph-tabs {
+  display: flex;
+  gap: 6px;
+  padding: 8px;
+  background: #f6f8fa;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.ph-tab {
+  border: none;
+  background: transparent;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #666;
+}
+
+.ph-tab--active {
+  background: #e9f0fb;
+  color: #1b5ed7;
+  box-shadow: inset 0 -2px 0 rgba(27,94,215,0.08);
+}
+
+ .contentCard {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #eef1f6;
+  padding: 14px;
+  box-shadow: 0 1px 2px rgba(20,20,20,0.02);
+}
+
+ .headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.headerTitle h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+ .heroSearch {
+  display: flex;
+  align-items: center;
+  background: #f7f9fb;
+  border-radius: 8px;
+  padding: 6px 10px;
+  gap: 8px;
+  min-width: 320px;
+  border: 1px solid #edf2f6;
+}
+
+.heroSearch input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  width: 260px;
+}
+
+ .tableWrap {
+  margin-top: 14px;
+  overflow: auto;
+}
+
+ .tableHeader {
+  width: 100%;
+}
+
+ .searchActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  gap: 8px;
+  border: 1px solid #edf2f6;
+  min-width: 420px;
+}
+
+.searchBox input {
+  border: none;
+  outline: none;
+  width: 280px;
+  font-size: 14px;
+}
+
+ .topIcons {
+  display: flex;
+  gap: 6px;
+}
+
+.iconBtn {
+  border: none;
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 1px 0 rgba(16,22,36,0.02);
+  cursor: pointer;
+}
+
+ .table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.table thead tr {
+  background: #fafbfc;
+  border-bottom: 1px solid #eef1f6;
+}
+
+.table thead th {
+  text-align: left;
+  padding: 14px 12px;
+  font-weight: 600;
+  color: #5b6470;
+  font-size: 13px;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #f3f5f7;
+}
+
+.row td {
+  padding: 14px 12px;
+  vertical-align: middle;
+}
+
+ .expandCell {
+  width: 36px;
+  text-align: center;
+}
+.expandCell button{
+  background-color: transparent;
+  box-shadow: none;
+  width: fit-content;
+ }
+
+.expandBtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+ .nameCell .nameText {
+  font-weight: 600;
+  color: #1f2b3a;
+}
+
+ .infoIcon {
+  margin-left: 6px;
+  vertical-align: middle;
+  color: #888;
+}
+
+/* actions cell */
+.actionsCell {
+  text-align: center;
+}
+
+.rowAction {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* expanded row content */
+.expandedRow td {
+  background: #fbfcfe;
+  padding: 12px;
+}
+
+.expandedContent {
+  font-size: 13px;
+  color: #4b5560;
+}
+
+/* no records row */
+.noRecords {
+  text-align: center;
+  padding: 40px;
+  color: #8b96a6;
+}
+
+/* footer meta */
+.footerMeta {
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recordsCount {
+  color: #475569;
+  font-weight: 600;
+}
+
+/* pagination */
+.pagination {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid #f1f4f8;
+}
+
+.perPageSelect {
+  margin: 0 8px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  border: 1px solid #e6eef6;
+}
+
+.pageBtn {
+  border: none;
+  background: #f7f9fb;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pageIndicator {
+  margin: 0 10px;
+  min-width: 28px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* helper */
+.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.sortArrow {
+  margin-left: 6px;
+  font-size: 12px;
+  color: #7a8696;
+}

@@ -81,9 +81,26 @@ const SideNavbar = () => {
             </ul> : null}
           </div>
         </Link>
-        <Link to="/Performance" className={`${styles.chevronRightDiv2} ${showExtra === "Performance" ? styles.avtiveTab : ""}`}   onClick={() => showExtraFn("Performance")}>
-          <img src={performance2} alt="performance2" />
-          <span>Performance</span>
+        <Link to="/Performance" >
+          <div className={styles.chevronRightDivContainer}>
+            <div className={`${styles.chevronRightDiv} ${showExtra === "Performance" ? styles.avtiveTab : ""}`} onClick={() => showExtraFn("Performance")}>
+              <div className={styles.chevronRightDivimg} >
+                <img src={performance2} alt="performance2" />
+                <span>Performance</span>
+              </div>
+              <span className={styles.chevronRight}><img src={chevronRight} alt="chevronRight" /></span>
+            </div>
+            {showExtra === "Performance" && showExtraBl ? <ul className={` ${showExtra === "Performance" ? styles.extraUiShow : styles.extraUi} `}>
+              <Link to="/Performance/overview" onClick={() => showExtrnSubfn("overview")} className={`${active === "overview" ? styles.activeSub : ""}`}>Overview</Link>
+              <Link to="/Performance/myGoal" onClick={() => showExtrnSubfn("GoalsPlan")} className={`${active === "GoalsPlan" ? styles.activeSub : ""}`}>Goals Plan</Link>
+              <Link to="/Performance/keyResults" onClick={() => showExtrnSubfn("keyResults")} className={`${active === "keyResults" ? styles.activeSub : ""}`}>Goals / key Results Area Explorer</Link>
+              <Link to="/Performance/Review" onClick={() => showExtrnSubfn("Review")} className={`${active === "Review" ? styles.activeSub : ""}`}>Review</Link>
+              <Link to="/Performance/MSF" onClick={() => showExtrnSubfn("MSF")} className={`${active === "MSF" ? styles.activeSub : ""}`}>MSF</Link>
+              <Link to="/Performance/Feedback" onClick={() => showExtrnSubfn("Feedback")} className={`${active === "Feedback" ? styles.activeSub : ""}`}>Feedback</Link>
+              <Link to="/Performance/Assessment" onClick={() => showExtrnSubfn("Assessment")} className={`${active === "Assessment" ? styles.activeSub : ""}`}>Assessment History</Link>
+              <Link to="/Performance/MSFHistory" onClick={() => showExtrnSubfn("MSFHistory")} className={`${active === "MSFHistory" ? styles.activeSub : ""}`}>MSF History</Link>
+            </ul> : null}
+          </div>
         </Link>
         <Link to="/Reimbursement">
           <img src={travel} alt="travel" />
