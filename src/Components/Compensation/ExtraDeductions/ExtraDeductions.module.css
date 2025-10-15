@@ -1,0 +1,43 @@
+.Deductionstablebox {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.Deductions h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Deductions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Deductions button {
+  height: 35px;
+  width: fit-content;
+  padding: 10px;
+  cursor: pointer;
+}
+.Deductionstable {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  border: 1px solid #e5e7eb;
+  background-color: rgb(243, 240, 240);
+  padding: 8px 0;
+  font-size: 14px;
+}
+.Deductionsimg {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Deductionsimg img {
+  width: 100%;
+}

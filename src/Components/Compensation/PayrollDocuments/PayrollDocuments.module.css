@@ -1,0 +1,73 @@
+.search {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+.search input {
+  width: 30%;
+}
+.righticons {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  font-size: 20px;
+}
+.divider {
+  height: 35px;
+  background-color: black;
+  width: 1px;
+}
+.search img {
+  width: 30px;
+}
+.PayrollDocumentstab {
+  width: 100%;
+}
+.PayrollDocumentstablebox {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: flex-start;
+  text-align: center;
+}
+.PayrollDocuments h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.PayrollDocuments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PayrollDocumentstable {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border: 1px solid #e5e7eb;
+  background-color: rgb(243, 240, 240);
+  padding: 5px 0;
+  font-size: 14px;
+  gap: 10px;
+}
+.PayrollDocumentsimg {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.PayrollDocumentsimg img {
+  width: 100%;
+}
+.Payroll {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}

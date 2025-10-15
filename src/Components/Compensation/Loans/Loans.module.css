@@ -1,0 +1,42 @@
+.Loanstablebox {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  text-align: center;
+}
+.Loans h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Loans {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Loans button {
+  height: 35px;
+  width: fit-content;
+  padding: 10px;
+  cursor: pointer;
+}
+.Loanstable {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  border: 1px solid #e5e7eb;
+  background-color: rgb(243, 240, 240);
+  padding: 8px 0;
+  font-size: 14px;
+}
+.Loansimg {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Loansimg img {
+  width: 100%;
+}
