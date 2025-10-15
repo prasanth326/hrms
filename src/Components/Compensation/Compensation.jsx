@@ -8,6 +8,7 @@ import { PaySlips } from "./PaySlips/PaySlips";
 import { ExtraDeductions } from "./ExtraDeductions/ExtraDeductions";
 import { Loans } from "./Loans/Loans";
 import { PayrollDocuments } from "./PayrollDocuments/PayrollDocuments";
+import { ExtraPayments } from "./ExtraPayments/ExtraPayments";
 
 export const Compensation = () => {
   const [activeTab, setActiveTab] = useState("");
@@ -32,6 +33,7 @@ export const Compensation = () => {
       )}
       {activeTab === "Pay Slips" && <PaySlips showValues={showValues} />}
       {activeTab === "Extra Deductions" && <ExtraDeductions />}
+      {activeTab === "Extra Payments" && <ExtraPayments showValues={showValues}/>}
       {activeTab === "Loans" && <Loans />}
       {activeTab === "Payroll Documents" && <PayrollDocuments />}
     </div>

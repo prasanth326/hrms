@@ -1,0 +1,15 @@
+.ExtraPayments{
+    display: flex;
+    flex-direction: column;
+}
+.ExtraPaymentstable{
+    width: 100%;
+}
+.ExtraPaymentstable table{
+    width: 100%;
+    text-align: center;
+}
+.ExtraPaymentstable thead{
+        background-color: gray;
+
+}
