@@ -24,12 +24,15 @@
   cursor: pointer;
 }
 .Loanstable {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  border: 1px solid #e5e7eb;
-  background-color: rgb(243, 240, 240);
-  padding: 8px 0;
-  font-size: 14px;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    border: 1px solid #e5e7eb;
+    background-color: rgb(243, 240, 240);
+    padding: 8px 0;
+    font-size: 14px;
+    place-items: anchor-center;
+    align-items: center;
+    width: 100%;
 }
 .Loansimg {
   width: 250px;
