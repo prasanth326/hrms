@@ -1,11 +1,12 @@
 .Deductionstablebox {
   background-color: #fff;
-  border: 1px solid #e5e7eb;
+  border-left: 1px solid #e5e7eb;
+  border-top: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
   display: flex;
   flex-direction: column;
   gap: 50px;
-  align-items: center;
-  justify-content: center;
+   justify-content: center;
   text-align: center;
 }
 .Deductions h2 {
@@ -33,11 +34,11 @@
   font-size: 14px;
 }
 .Deductionsimg {
-  width: 250px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.Deductionsimg img {
-  width: 100%;
+.Deductionsimg img{
+  width: 225px;
 }
