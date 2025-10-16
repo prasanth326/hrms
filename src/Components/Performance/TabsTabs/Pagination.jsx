@@ -1,10 +1,34 @@
 import React from "react";
 import styles from "./PerformanceHistory.module.css";
 
-export const Pagination = ({ page, setPage, perPage, setPerPage, total }) => {
+export const Pagination = ({ page, setPage, perPage, setPerPage, total, pageItems }) => {
   const totalPages = Math.max(1, Math.ceil(total / perPage));
   return (
     <div className={styles.pagination}>
+
+<div className={styles.footerMeta}>
+        <div className={styles.recordsCount}>
+          {total} Records
+        </div>
+      </div> 
+      <div className={styles.center}>
+        <button
+          onClick={() => setPage((p) => Math.max(1, p - 1))}
+          className={styles.pageBtn}
+        >
+          ◀
+        </button>
+        <div className={styles.pageIndicator}>{page}</div>
+        <button
+          onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+          className={styles.pageBtn}
+        >
+          ▶
+        </button>
+      </div>
+
+
+
       <div className={styles.left}>
         Show
         <select
@@ -22,26 +46,6 @@ export const Pagination = ({ page, setPage, perPage, setPerPage, total }) => {
           ))}
         </select>
         per page
-      </div>
-
-      <div className={styles.center}>
-        <button
-          onClick={() => setPage((p) => Math.max(1, p - 1))}
-          className={styles.pageBtn}
-        >
-          ◀
-        </button>
-        <div className={styles.pageIndicator}>{page}</div>
-        <button
-          onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-          className={styles.pageBtn}
-        >
-          ▶
-        </button>
-      </div>
-
-      <div className={styles.right}>
-        {`of ${totalPages}`}
       </div>
     </div>
   );

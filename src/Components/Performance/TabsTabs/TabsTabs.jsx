@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./TabsTabs.module.css"
 
 const tabList = [
   "Performance History",
@@ -10,12 +11,13 @@ const tabList = [
 ];
 
 export const TabsTabs = ({ active, setActive }) => {
+
   return (
-    <div className="ph-tabs">
+    <div className={styles.tabbtnns}>
       {tabList.map((t) => (
         <button
           key={t}
-          className={`ph-tab ${active === t ? "ph-tab--active" : ""}`}
+          className={`${styles.phtab} ${active === t ? styles.phtabactive : ""}`}
           onClick={() => setActive(t)}
           type="button"
         >

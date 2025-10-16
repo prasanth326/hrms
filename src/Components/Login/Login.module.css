@@ -41,7 +41,7 @@ body{
 .box p{
     font-size: 14px;
 }
-button{
+.signinContainer button,.mainContainer button{
     font-size: 14px;
     border: none;
     padding: 12px;

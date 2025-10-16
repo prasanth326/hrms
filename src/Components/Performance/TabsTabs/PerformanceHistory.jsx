@@ -26,11 +26,12 @@ import SearchIcon from "@mui/icons-material/Search";
 
 export const PerformanceHistory = () => {
   const [activeTab, setActiveTab] = useState("Performance History");
-  const [searchText, setSearchText] = useState("");
+  const [searchText, _setSearchText] = useState("");
   const [sortAsc, setSortAsc] = useState(false);  
   const [page, setPage] = useState(1);
   const [perPage, setPerPage] = useState(10);
   const [expandedMap, setExpandedMap] = useState({});
+  const [pageItems,setPageItems] = useState("")
 
   const data = useMemo(() => MOCK_DATA, []);
 
@@ -46,31 +47,16 @@ export const PerformanceHistory = () => {
     r.reviewCycleName.toLowerCase().includes((searchText || "").toLowerCase().trim())
   ).length;
 
+  const getPageItems = (data) =>{
+    setPageItems(data)
+  }
+
   return (
     <div className={styles.page}>
       <div className={styles.container}>
         <TabsTabs active={activeTab} setActive={setActiveTab} />
 
         <div className={styles.contentCard}>
-          <div className={styles.headerRow}>
-            <div className={styles.headerTitle}>
-              <h2>Performance History</h2>
-            </div>
-
-            <div className={styles.searchRow}>
-              <div className={styles.heroSearch}>
-                <SearchIcon fontSize="small" />
-                <input
-                  placeholder="Search Review Cycle Name"
-                  value={searchText}
-                  onChange={(e) => {
-                    setSearchText(e.target.value);
-                    setPage(1);
-                  }}
-                />
-              </div>
-            </div>
-          </div>
 
           <PerformanceTable
             data={data}
@@ -81,6 +67,7 @@ export const PerformanceHistory = () => {
             perPage={perPage}
             onToggleExpand={onToggleExpand}
             expandedMap={expandedMap}
+            getPageItems={getPageItems}
           />
 
           <Pagination
@@ -89,6 +76,7 @@ export const PerformanceHistory = () => {
             perPage={perPage}
             setPerPage={setPerPage}
             total={totalFiltered}
+            pageItems={pageItems}
           />
         </div>
       </div>

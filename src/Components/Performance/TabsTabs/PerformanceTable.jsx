@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -43,6 +43,7 @@ export const PerformanceTable = ({
   perPage,
   onToggleExpand,
   expandedMap,
+  getPageItems
 }) => {
    const filtered = useMemo(() => {
     const q = (searchText || "").toLowerCase().trim();
@@ -61,6 +62,13 @@ export const PerformanceTable = ({
   const start = (page - 1) * perPage;
   const pageItems = filtered.slice(start, start + perPage);
 
+  const getPageItemsfn=()=>{
+    getPageItems(total)
+  }
+
+  useEffect(()=>{
+    getPageItemsfn()
+  },[])
   return (
     <div className={styles.tableWrap}>
       <div className={styles.tableHeader}>
@@ -151,22 +159,15 @@ export const PerformanceTable = ({
               );
             })}
 
-            {pageItems.length === 0 && (
-              <tr>
-                <td colSpan={7} className={styles.noRecords}>
-                  No records found
-                </td>
-              </tr>
-            )}
           </tbody>
         </table>
       </div>
 
-      <div className={styles.footerMeta}>
+      {/* <div className={styles.footerMeta}>
         <div className={styles.recordsCount}>
           {total} Records
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,0 +1,16 @@
+.tabbtnns button{
+    background: transparent;
+    border: none;
+    box-shadow: 2px 1px 1px 0px #bebaba;
+    padding: 10px;
+    width: 100%;
+}
+.tabbtnns{
+    width: 100%;
+    display:flex
+}
+
+.phtabactive{
+    color: rgb(59, 169, 248);
+    background-color: rgb(120, 191, 242);
+}
