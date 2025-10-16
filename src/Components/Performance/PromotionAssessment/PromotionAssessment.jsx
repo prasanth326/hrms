@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./PromotionAssessment.module.css";
 import SearchIcon from "@mui/icons-material/Search";
 import FilterListIcon from "@mui/icons-material/FilterList";
@@ -49,13 +48,11 @@ export const PromotionAssessment = ({ searchText }) => {
               <th style={{ width: 96 }}>Actions</th>
             </tr>
           </thead>
-          {/* <tbody> */}
-            <div className={styles.imagediv}>
-              <img src={Clipath} />
-              <p>There are no records to display</p>
-            </div>
-          {/* </tbody> */}
         </table>
+        <div className={styles.imagediv}>
+          <img src={Clipath} />
+          <p>There are no records to display</p>
+        </div>
       </div>
     </div>
   );

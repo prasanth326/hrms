@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./CompetencyAssessment.module.css";
+import styles from "./PotentialAssessment.module.css";
 import SearchIcon from "@mui/icons-material/Search";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -7,7 +7,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 import Clipath from "../../../assets/Clipath.png";
 
-export const CompetencyAssessment = ({ searchText }) => {
+export const PotentialAssessment = ({ searchText }) => {
   return (
     <div className={styles.CompetencyAssessment}>
       <div className={styles.searchActions}>
@@ -49,13 +49,11 @@ export const CompetencyAssessment = ({ searchText }) => {
               <th style={{ width: 96 }}>Actions</th>
             </tr>
           </thead>
-          {/* <tbody> */}
-            <div className={styles.imagediv}>
-              <img src={Clipath} />
-              <p>There are no records to display</p>
-            </div>
-          {/* </tbody> */}
         </table>
+          <div className={styles.imagediv}>
+            <img src={Clipath} />
+            <p>There are no records to display</p>
+          </div>
       </div>
     </div>
   );

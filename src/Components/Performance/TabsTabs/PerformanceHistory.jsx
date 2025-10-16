@@ -4,9 +4,9 @@ import PerformanceTable from "./PerformanceTable";
 import Pagination from "./Pagination";
 import styles from "./PerformanceHistory.module.css";
 import SearchIcon from "@mui/icons-material/Search";
-import { CompetencyAssessment } from "../Competency Assessment/CompetencyAssessment";
-import { PotentialAssessment } from "../Potential Assessment/PotentialAssessment";
-import { PromotionAssessment } from "../Promotion Assessment/PromotionAssessment";
+import { CompetencyAssessment } from "../CompetencyAssessment/CompetencyAssessment";
+import { PotentialAssessment } from "../PotentialAssessment/PotentialAssessment";
+import { PromotionAssessment } from "../PromotionAssessment/PromotionAssessment";
 
 const MOCK_DATA = [
   {
@@ -90,7 +90,13 @@ export const PerformanceHistory = () => {
         {activeTab === "Potential Assessment" && (
           <PotentialAssessment searchText={searchText} />
         )}
-         {activeTab === "Potential Assessment" && (
+         {activeTab === "Promotion Assessment" && (
+          <PromotionAssessment searchText={searchText} />
+        )}
+        {activeTab === "N Grid Framework" && (
+          <PromotionAssessment searchText={searchText} />
+        )}
+        {activeTab === "Review Parameter Assessment" && (
           <PromotionAssessment searchText={searchText} />
         )}
       </div>
