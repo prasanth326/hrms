@@ -4,8 +4,11 @@ import PerformanceTable from "./PerformanceTable";
 import Pagination from "./Pagination";
 import styles from "./PerformanceHistory.module.css";
 import SearchIcon from "@mui/icons-material/Search";
+import { CompetencyAssessment } from "../Competency Assessment/CompetencyAssessment";
+import { PotentialAssessment } from "../Potential Assessment/PotentialAssessment";
+import { PromotionAssessment } from "../Promotion Assessment/PromotionAssessment";
 
- const MOCK_DATA = [
+const MOCK_DATA = [
   {
     id: "1",
     reviewCycleName: "Performance Review Cycle-July 2025",
@@ -22,16 +25,16 @@ import SearchIcon from "@mui/icons-material/Search";
     competenciesOverallRating: "--",
     performanceReview: "--",
   },
- ];
+];
 
 export const PerformanceHistory = () => {
   const [activeTab, setActiveTab] = useState("Performance History");
   const [searchText, _setSearchText] = useState("");
-  const [sortAsc, setSortAsc] = useState(false);  
+  const [sortAsc, setSortAsc] = useState(false);
   const [page, setPage] = useState(1);
   const [perPage, setPerPage] = useState(10);
   const [expandedMap, setExpandedMap] = useState({});
-  const [pageItems,setPageItems] = useState("")
+  const [pageItems, setPageItems] = useState("");
 
   const data = useMemo(() => MOCK_DATA, []);
 
@@ -44,41 +47,52 @@ export const PerformanceHistory = () => {
   };
 
   const totalFiltered = data.filter((r) =>
-    r.reviewCycleName.toLowerCase().includes((searchText || "").toLowerCase().trim())
+    r.reviewCycleName
+      .toLowerCase()
+      .includes((searchText || "").toLowerCase().trim())
   ).length;
 
-  const getPageItems = (data) =>{
-    setPageItems(data)
-  }
+  const getPageItems = (data) => {
+    setPageItems(data);
+  };
 
   return (
     <div className={styles.page}>
       <div className={styles.container}>
         <TabsTabs active={activeTab} setActive={setActiveTab} />
+        {activeTab === "Performance History" && (
+          <div className={styles.contentCard}>
+            <PerformanceTable
+              data={data}
+              searchText={searchText}
+              sortAsc={sortAsc}
+              toggleSort={toggleSort}
+              page={page}
+              perPage={perPage}
+              onToggleExpand={onToggleExpand}
+              expandedMap={expandedMap}
+              getPageItems={getPageItems}
+            />
 
-        <div className={styles.contentCard}>
-
-          <PerformanceTable
-            data={data}
-            searchText={searchText}
-            sortAsc={sortAsc}
-            toggleSort={toggleSort}
-            page={page}
-            perPage={perPage}
-            onToggleExpand={onToggleExpand}
-            expandedMap={expandedMap}
-            getPageItems={getPageItems}
-          />
-
-          <Pagination
-            page={page}
-            setPage={setPage}
-            perPage={perPage}
-            setPerPage={setPerPage}
-            total={totalFiltered}
-            pageItems={pageItems}
-          />
-        </div>
+            <Pagination
+              page={page}
+              setPage={setPage}
+              perPage={perPage}
+              setPerPage={setPerPage}
+              total={totalFiltered}
+              pageItems={pageItems}
+            />
+          </div>
+        )}
+        {activeTab === "Competency Assessment" && (
+          <CompetencyAssessment searchText={searchText} />
+        )}
+        {activeTab === "Potential Assessment" && (
+          <PotentialAssessment searchText={searchText} />
+        )}
+         {activeTab === "Potential Assessment" && (
+          <PromotionAssessment searchText={searchText} />
+        )}
       </div>
     </div>
   );

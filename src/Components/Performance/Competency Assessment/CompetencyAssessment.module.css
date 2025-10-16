@@ -1,0 +1,80 @@
+.searchActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  gap: 8px;
+  border: 1px solid #edf2f6;
+  min-width: 420px;
+}
+
+.searchBox input {
+  border: none;
+  outline: none;
+  width: 280px;
+  font-size: 14px;
+}
+
+.topIcons {
+  display: flex;
+}
+
+.iconBtn {
+  border: none;
+  background: #fff;
+  padding: 8px;
+  box-shadow: 0 1px 0 rgba(16, 22, 36, 0.02);
+  cursor: pointer;
+  border: 1px solid rgb(228, 228, 228);
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.table thead tr {
+  background: #fafbfc;
+  border-bottom: 1px solid #eef1f6;
+}
+
+.table thead th {
+  text-align: left;
+  padding: 14px 12px;
+  font-weight: 600;
+  color: #5b6470;
+  font-size: 13px;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #f3f5f7;
+}
+
+.row td {
+  padding: 14px 12px;
+  vertical-align: middle;
+}
+.CompetencyAssessment .imagediv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  
+}
+.imagediv img {
+  width: 500px;
+}
+.tableContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
