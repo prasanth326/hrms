@@ -36,3 +36,9 @@
     font-weight: 300;
     color: gray;
 }
+
+.summaryparent{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
