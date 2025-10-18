@@ -51,6 +51,24 @@ export default function ReimbursementSummary() {
           <p>Total Expenses</p>
         </div>
       </div>
+      <div className={styles.pendingItemsparent}>  
+        {summary.map((items, i) => (
+          <div className={styles.pendingItems}>
+            <div className={styles.pendingItemsClock}>
+              <div  className={styles.pendingItemsClockImag}>
+                <img src={items.image} />
+              </div>
+              <div  className={styles.pendingItemsClockCount}>{items.num}</div>
+              
+              <div  className={styles.pendingItemsDivider}></div>
+              <div  className={styles.pendingItemsRupee}>{items.inr}.</div>
+            </div>
+            <div className={styles.pendingItemsClockText}>
+              {items.msg}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
