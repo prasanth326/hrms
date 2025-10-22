@@ -1,50 +1,87 @@
 .TagExpensecontainer {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
 }
 
 .TagExpensecontainerdiv {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(188, 222, 240);
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(238 244 253);
+  padding: 10px;
 }
 
 .imagecontainer img {
-    width: 20px;
-    display: flex;
+  width: 20px;
+  display: flex;
+  cursor: pointer;
+}
+.expensestobe {
+  font-size: 12px;
+}
+.requestdate {
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .imagecontainer {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .TagExpensetable {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .TagExpensetablediv {
-    display: grid;
-    grid-template-columns: 5fr 1fr;
-    gap: 10px;
-    padding: 10px;
+  display: grid;
+  grid-template-columns: 5fr 1.3fr;
+  gap: 10px;
+  padding: 10px;
 }
 
 .expensetable tr {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .expensetable table {
-    width: 100%;
+  width: 100%;
+  background-color: rgb(232 236 242);
+  padding: 10px;
+  font-size: 14px;
+  color: gray;
 }
 
-.previewimg img{
-    width: 200px;
+.previewimg img {
+  width: 150px;
+}
+.previewimg p {
+  color: gray;
+  font-size: 14px;
+}
+.previewDiv {
+  background-color: rgb(238 244 253);
+  border-bottom: 1px solid rgb(208, 223, 245);
+  display: flex; 
+  align-items: center;
+  padding: 10px;
+}
+.preview {
+  border: 1px solid rgb(214, 229, 252) ;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.previewimg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }

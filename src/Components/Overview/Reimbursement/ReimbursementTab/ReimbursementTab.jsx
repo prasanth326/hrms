@@ -52,7 +52,7 @@ export default function ReimbursementTab({ openTagexpense, setopenTagexpense }) 
           </div>
         </div>
       ) : (
-        <TagExpenseButton />
+        <TagExpenseButton setopenTagexpense={setopenTagexpense}/>
       )}
     </>
   );
