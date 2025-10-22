@@ -54,8 +54,20 @@ const SideNavbar = () => {
           <span>Profile</span>
         </Link>
         <Link to="/flow">
-          <img src={Employee_life_cycle} alt="Employee_life_cycle" />
-          <span>Flow</span>
+           <div className={styles.chevronRightDivContainer}>
+            <div className={`${styles.chevronRightDiv} ${showExtra === "Flow" ? styles.avtiveTab : ""}`} onClick={() => showExtraFn("Flow")}>
+              <div className={styles.chevronRightDivimg} >
+                <img src={Employee_life_cycle} alt="Flow" />
+                <span>Flow</span>
+              </div>
+              <span className={styles.chevronRight}><img src={chevronRight} alt="chevronRight" /></span>
+            </div>
+            {showExtra === "Flow" && showExtraBl ? <ul className={` ${showExtra === "Flow" ? styles.extraUiShow : styles.extraUi} `}>
+              <Link to="/Flow/flowRequest" onClick={() => showExtrnSubfn("flowRequest")} className={`${active === "flowRequest" && showExtra === "Flow" ? styles.activeSub : ""}`}>Flow Request</Link>
+              <Link to="/Flow/Confirmation" onClick={() => showExtrnSubfn("Confirmation")} className={`${active === "Confirmation" && showExtra === "Flow" ? styles.activeSub : ""}`}>Confirmation</Link>
+              <Link to="/Flow/Separation" onClick={() => showExtrnSubfn("Separation")} className={`${active === "Separation" && showExtra === "Flow" ? styles.activeSub : ""}`}>Separation</Link>
+            </ul> : null}
+          </div>
         </Link>
         <Link to="/Compensation">
           <img src={compensation} alt="compensation" />
@@ -102,9 +114,21 @@ const SideNavbar = () => {
             </ul> : null}
           </div>
         </Link>
-        <Link to="/Reimbursement">
-          <img src={travel} alt="travel" />
-          <span>Reimbursement</span>
+        <Link to="/Reimbursement/overview">
+          <div className={styles.chevronRightDivContainer}>
+            <div className={`${styles.chevronRightDiv} ${showExtra === "Reimbursement" ? styles.avtiveTab : ""}`} onClick={() => showExtraFn("Reimbursement")}>
+              <div className={styles.chevronRightDivimg} >
+                <img src={travel} alt="Reimbursement" />
+                <span>Reimbursement</span>
+              </div>
+              <span className={styles.chevronRight}><img src={chevronRight} alt="chevronRight" /></span>
+            </div>
+            {showExtra === "Reimbursement" && showExtraBl ? <ul className={` ${showExtra === "Reimbursement" ? styles.extraUiShow : styles.extraUi} `}>
+              <Link to="/Reimbursement/overview" onClick={() => showExtrnSubfn("overview")} className={`${active === "overview" && showExtra === "Reimbursement" ? styles.activeSub : ""}`}>Overview</Link>
+              <Link to="/Reimbursement/Reimbursement" onClick={() => showExtrnSubfn("Reimbursement")} className={`${active === "Reimbursement" && showExtra === "Reimbursement" ? styles.activeSub : ""}`}>Reimbursement</Link>
+              <Link to="/Reimbursement/Advances" onClick={() => showExtrnSubfn("Advances")} className={`${active === "Advances" ? styles.activeSub : ""}`}>Advances</Link>
+            </ul> : null}
+          </div>
         </Link>
         <Link to="/Interviews" className={`${styles.chevronRightDiv} ${showExtra === "Interviews" ? styles.avtiveTab : ""}`} onClick={() => showExtraFn("Interviews")}>
           <div className={styles.chevronRightDivimg}>

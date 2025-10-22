@@ -34,7 +34,7 @@ export default function OverView() {
                 <img src={greenclock} />
                 <p>Notifications</p>
               </div>
-              <div className={styles.days}>Last 30days</div>
+              <div className={styles.days}>Last 30 days</div>
             </div>
             <div className={styles.viewall}>
               <Button variant="outlined">VIEW ALL</Button>

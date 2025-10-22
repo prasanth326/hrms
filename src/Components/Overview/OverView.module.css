@@ -1,3 +1,6 @@
+.OverallContainer{
+  background-color: rgb(240, 240, 240);
+}
 .OverviewContainer {
   display: flex;
   justify-content: space-between;
@@ -8,9 +11,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10px;
+padding: 10px 10px 0 10px;
   box-sizing: border-box;
-
+  align-items: center;
+background-color: #fff;
+    box-shadow: 2px 1px 4px 1px #c0c0c0
 }
 .Reimbursement {
   display: grid;
@@ -76,7 +81,7 @@
 .days {
   color: rgb(137, 135, 135);
 }
-.OverallContainerdiv button {
+.OverviewContainerbuttons button {
   border: 1px solid #1976d2;
   height: 40px;
   
@@ -92,5 +97,5 @@
 }
 .summary{
     color: #1976d2;
-    border-bottom: 1px solid #1976d2;
+    border-bottom: 2px solid #1976d2;
 }

@@ -26,6 +26,8 @@ import TabsTabs from "./Components/Performance/TabsTabs/TabsTabs";
 import PerformanceHistory from "./Components/Performance/TabsTabs/PerformanceHistory";
 import MsfHistory from "./Components/Performance/MSFHistory/MsfHistory";
 import OverView from "./Components/Overview/OverView";
+import Confirmation from "./Components/Flow/Confirmation/Confirmation";
+import Reimbursement from "./Components/Overview/Reimbursement/Reimbursement";
 // import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
 
 function LayoutApp() {
@@ -65,8 +67,9 @@ function LayoutApp() {
             element={<PerformanceHistory />}
           />
           <Route path="/Performance/MsfHistory" element={<MsfHistory />} />
-                    <Route path="/Reimbursement/Overview" element={<OverView />} />
-
+          <Route path="/Reimbursement/overview" element={<OverView />} />
+          <Route path="/Flow/Confirmation" element={<Confirmation />} />
+          <Route path="/Reimbursement/Reimbursement" element={<Reimbursement />} />
         </Routes>
       </div>
     </>
@@ -77,8 +80,6 @@ function App() {
   return (
     <Router>
       <LayoutApp />
-      {/* <IndividualFeedBack /> */}
-      {/* <AssessmentHistory /> */}
     </Router>
   );
 }
