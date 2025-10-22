@@ -1,0 +1,35 @@
+.TagExpensecontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+justify-content: center;
+}
+.TagExpensecontainerdiv{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(188, 222, 240);
+}
+.imagecontainer img{
+    width: 20px;
+    display: flex;
+}
+.imagecontainer{
+    display: flex;
+    align-items: center ;
+}
+.TagExpensetable{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.TagExpensetablediv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+.expensetable tr{
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+}

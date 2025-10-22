@@ -10,6 +10,7 @@ import upload from "../../../assets/upload.png"
 
 import styles from "./Reimbursement.module.css"
 import { Button } from '@mui/material';
+import ReimbursementTab from './ReimbursementTab/ReimbursementTab';
 
 export default function Reimbursement() {
     const [activeTab, setActiveTab] = useState("")
@@ -29,6 +30,7 @@ export default function Reimbursement() {
                 <div className={`${styles.expences} ${activeTab === "REIMBURSMENTS" ? styles.active : ""}`} onClick={() => setActiveTab("REIMBURSMENTS")}>REIMBURSMENTS</div>
                 <div className={`${styles.expences} ${activeTab === "ADVANCES" ? styles.active : ""}`} onClick={() => setActiveTab("ADVANCES")}>ADVANCES</div>
             </div>
+            {activeTab==="EXPENCES"? 
             <div className={styles.createNewandPreview}>
                 <div className={styles.createNew}>
                     <h2>Create New Expense</h2>
@@ -111,6 +113,8 @@ export default function Reimbursement() {
                     </div>
                 </div>
             </div>
+          : ""}
+          {activeTab === "REIMBURSMENTS" ? <ReimbursementTab/> :""}
         </div>
     )
 }
