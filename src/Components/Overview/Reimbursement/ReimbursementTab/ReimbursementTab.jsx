@@ -4,8 +4,7 @@ import { Button } from "@mui/material";
 import styles from "./ReimbursementTab.module.css";
 import expensesemptystate from "../../../../assets/expensesemptystate.png";
 import TagExpenseButton from "./TagExpenseButton/TagExpenseButton";
-export default function ReimbursementTab() {
-  const [openTagexpense, setopenTagexpense] = useState(false);
+export default function ReimbursementTab({ openTagexpense, setopenTagexpense }) {
   return (
     <>
       {!openTagexpense ? (
@@ -53,7 +52,7 @@ export default function ReimbursementTab() {
           </div>
         </div>
       ) : (
-        <TagExpenseButton/>
+        <TagExpenseButton />
       )}
     </>
   );
