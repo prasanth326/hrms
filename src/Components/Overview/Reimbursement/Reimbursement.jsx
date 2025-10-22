@@ -15,6 +15,8 @@ import ReimbursementTab from './ReimbursementTab/ReimbursementTab';
 export default function Reimbursement() {
     const [activeTab, setActiveTab] = useState("")
     const [openTagexpense, setopenTagexpense] = useState(false);
+        const [openNewExpense, setOpenNewExpense] = useState(false);
+
 
     const [age, setAge] = React.useState('');
 
@@ -116,7 +118,7 @@ export default function Reimbursement() {
                     </div>
                 </div>
                 : ""}
-            {activeTab === "REIMBURSMENTS" ? <ReimbursementTab setopenTagexpense={setopenTagexpense} openTagexpense={openTagexpense} /> : ""}
+            {activeTab === "REIMBURSMENTS" ? <ReimbursementTab setopenTagexpense={setopenTagexpense} openTagexpense={openTagexpense} setOpenNewExpense={setOpenNewExpense} openNewExpense={openNewExpense}/> : ""}
         </div>
     )
 }

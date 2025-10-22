@@ -4,10 +4,11 @@ import { Button } from "@mui/material";
 import styles from "./ReimbursementTab.module.css";
 import expensesemptystate from "../../../../assets/expensesemptystate.png";
 import TagExpenseButton from "./TagExpenseButton/TagExpenseButton";
-export default function ReimbursementTab({ openTagexpense, setopenTagexpense }) {
+import CreateExpanse from "./CreateExpanse/CreateExpanse";
+export default function ReimbursementTab({ openTagexpense, setopenTagexpense, setOpenNewExpense, openNewExpense }) {
   return (
     <>
-      {!openTagexpense ? (
+      {!openTagexpense && !openNewExpense ? (
         <div className={styles.ReimbursementContainer}>
           <div className={styles.ReimbursementTab}>
             <div className={styles.leftsidediv}>
@@ -38,7 +39,8 @@ export default function ReimbursementTab({ openTagexpense, setopenTagexpense }) 
               >
                 TAG EXPENSE
               </Button>
-              <Button variant="contained" className={styles.createexpense}>
+              <Button variant="contained" className={styles.createexpense} onClick={() => setOpenNewExpense(true)}
+              >
                 + CREATE EXPENSE
               </Button>
             </div>
@@ -51,8 +53,8 @@ export default function ReimbursementTab({ openTagexpense, setopenTagexpense }) 
             </p>
           </div>
         </div>
-      ) : (
-        <TagExpenseButton setopenTagexpense={setopenTagexpense}/>
+      ) : openNewExpense && !openTagexpense ? <CreateExpanse setOpenNewExpense={setOpenNewExpense}/> : (
+        <TagExpenseButton setopenTagexpense={setopenTagexpense} />
       )}
     </>
   );

@@ -1,0 +1,134 @@
+.reimbursementTabs .active {
+    color: rgb(65, 65, 253);
+    border-bottom: 1px solid rgb(65, 65, 253);
+    padding: 10px;
+        cursor: pointer;
+
+ }
+
+.expences {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.reimbursementTabs {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border-bottom: 1px solid rgb(185, 185, 185);
+    width: 40%;
+        cursor: pointer;
+
+}
+
+.reimbursementConatiner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.createNew {
+    width: 100%;
+    border: 1px solid rgb(185, 185, 185);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.expenceAndData{
+    display: flex;
+    gap: 20px;
+}
+
+.expenceAndDataLable{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.Box{
+    width: 250px;
+}
+
+.expenceUpload{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.expenceBrowswer{
+    border: 1px solid rgb(155, 208, 236);
+    background-color: rgb(201, 230, 246);
+    border-radius: 40px;
+    width: fit-content;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex
+;
+}
+.expenceImageUploadBrowswer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid rgb(210, 210, 210);
+    padding: 20px;
+}
+
+.expenceImage{
+    background-color: aliceblue;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.createNewandPreview{
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+.preview{
+    border: 1px solid rgb(0, 162, 255);
+}
+
+.previewDiv{
+    border: 1px solid  rgb(0, 162, 255);
+    padding: 10px;
+}
+
+.previewimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    color: rgb(105, 105, 105);
+}
+.previewimg img{
+    width: 150px;
+}
+.expenceImage img{
+width: 20px;
+}
+.expenceUploadfile{
+    font-size: 12px;
+}
+
+.expenceBrowswerbtn{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 5px;
+}
+
+.backbtn{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
