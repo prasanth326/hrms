@@ -1,40 +1,50 @@
-.TagExpensecontainer{
+.TagExpensecontainer {
     display: flex;
     flex-direction: column;
     gap: 10px;
-justify-content: center;
+    justify-content: center;
 }
-.TagExpensecontainerdiv{
+
+.TagExpensecontainerdiv {
     display: flex;
     justify-content: space-between;
     background-color: rgb(188, 222, 240);
 }
-.imagecontainer img{
+
+.imagecontainer img {
     width: 20px;
     display: flex;
 }
-.imagecontainer{
+
+.imagecontainer {
     display: flex;
-    align-items: center ;
+    align-items: center;
 }
-.TagExpensetable{
+
+.TagExpensetable {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
 }
-.TagExpensetablediv{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+
+.TagExpensetablediv {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    gap: 10px;
     padding: 10px;
 }
-.expensetable tr{
-   display: flex;
-   justify-content: space-between;
-   width: 100%;
+
+.expensetable tr {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.expensetable table{
+.expensetable table {
     width: 100%;
+}
+
+.previewimg img{
+    width: 200px;
 }
