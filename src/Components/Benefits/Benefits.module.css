@@ -1,0 +1,34 @@
+
+.financialOverview {
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+}
+
+.financialYear {
+  margin-right: 15px;
+      display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.financialYear img{
+    width: 30px;
+}
+
+
+.financialYear select{
+    border: none;
+}
+.financialYear select option {
+  font-weight: 700;
+  color: #000;
+}

@@ -1,0 +1,65 @@
+.MyRequestsContainerdiv{
+    display: flex;
+    flex-direction: column;
+    gap: 40px
+}
+
+
+.MyRequestsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.Clamedon {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.Clamedontxt {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.Clamedontxt select, .Clamedontxt1 select{
+  border-color: lightgray;
+  width: 120px;
+  height: 40px;
+  outline: none;
+  border-radius: 5px;
+}
+.Clamedontxt p, .Clamedontxt1 p{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: rgb(84, 82, 82);
+}
+.MyRequests p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.Clamedontxt1 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.tableExpense{
+display: grid;
+  grid-template-columns: 6fr 1fr;
+  background-color: rgb(240, 238, 238);
+  border-radius: 2px;
+  padding: 10px;
+}
+.tableExpense th{
+    color: rgb(76, 75, 75);
+    font-size: 14px;
+    font-weight: 500;
+}
+.tableExpenseimg{
+    display: flex;
+flex-direction: column;
+gap: 30px;
+align-items: center;
+margin-top: 20px;
+}
+.tableExpenseimg img{
+    width: 300px;
+}

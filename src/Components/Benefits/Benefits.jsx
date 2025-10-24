@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Switch, FormControlLabel } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import filter from "../../../assets/filter.png"
-import styles from "./CompensationHeading.module.css";
+import filter from "../../assets/filter.png"
+import styles from "./Benefits.module.css";
 import { Select, MenuItem } from "@mui/material";
+import MyRequests from "./BenefitsTab/BenefitsTab";
+import BenefitsTab from "./BenefitsTab/BenefitsTab";
 
 const IOSSwitch = styled((props) => (
     <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -38,7 +40,7 @@ const IOSSwitch = styled((props) => (
     },
 }));
 
-const CompensationHeading = ({showValues, setShowValues}) => {
+const Benefits = ({showValues, setShowValues}) => {
     const [financialYear, setFinancialYear] = useState("2025-26");
 
     const handleFinancialYearChange = (event) => {
@@ -52,7 +54,7 @@ const CompensationHeading = ({showValues, setShowValues}) => {
     return (
         <div className={styles.financialOverview}>
             <div className={styles.header}>
-                <h1>Compensation</h1>
+                <h1>Benefits</h1>
 
                 <div className={styles.filters}>
                     <div className={styles.financialYear}>
@@ -78,32 +80,11 @@ const CompensationHeading = ({showValues, setShowValues}) => {
                             <MenuItem value="2027-28">2027-28</MenuItem>
                         </Select>
                     </div>  
-
-                    <div className={styles.showValues}>
-                        <FormControlLabel
-                            label="Show Values"
-                            labelPlacement="start"
-                            control={
-                                <IOSSwitch
-                                    checked={showValues}
-                                    onChange={toggleShowValues}
-                                />
-                            }
-                            sx={{
-                                marginLeft: "10px",
-                                color: "#475569",
-                                fontWeight: 500,
-                                gap: "8px",
-                                ".MuiFormControlLabel-label": {
-                                    fontSize: "0.95rem",
-                                },
-                            }}
-                        />
-                    </div>
                 </div>
             </div>
+            <BenefitsTab/>
         </div>
     );
 };
 
-export default CompensationHeading;
+export default Benefits;
