@@ -30,6 +30,7 @@ import Confirmation from "./Components/Flow/Confirmation/Confirmation";
 import Reimbursement from "./Components/Overview/Reimbursement/Reimbursement";
 import Benefits from "./Components/Benefits/Benefits";
 import Attendence from "./Components/TimeManagemnet/Attendence/Attendence";
+import Documents from "./Components/Profile/Documents/Documents";
 // import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
 
 function LayoutApp() {
@@ -48,7 +49,9 @@ function LayoutApp() {
       <div className="content">
         {!pathLocation && <SideNavbar />}
         <Routes>
-          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/profile/Overview" element={<ProfilePage />} />
+          <Route path="/profile/Documents" element={<Documents />} />
+
           <Route path="/Attendance/leave" element={<LeaveBalance />} />
           <Route path="/Attendance/Overview" element={<AttendanceOverview />} />
           <Route path="/Interviews" element={<InterviewMainpage />} />

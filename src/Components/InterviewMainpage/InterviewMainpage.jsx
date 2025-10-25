@@ -12,7 +12,6 @@ export default function InterviewMainpage() {
       <div className={style.image}>
         <img src={emptyOvertime} alt="emptyOvertime" />
       </div>
-
       <div className={style.content}>
         <div className={style.greet}>
           <div>Good Afternoon</div>
@@ -22,12 +21,41 @@ export default function InterviewMainpage() {
           <Priorities />
         </div>
         <div className={style.refferals}>
-            <Refferals/>
+          <Refferals />
         </div>
-        <div className={style.birthday}></div>
-      </div>
-      <div className={style.image2}>
-        <img src={emptyOvertime} alt="emptyOvertime" />
+        <div className={style.birthday}>
+          <div className={style.birthdaytitle}>
+            <img></img>
+            <p>Birthday Buddies (1)</p>
+            <p className={style.days}>Next 7 days</p>
+          </div>
+          <div className={style.cards1}>
+            <div className={style.cards}></div>
+            <div className={style.cards}></div>
+            <div className={style.cards}></div>{" "}
+            <div className={style.cards}></div>{" "}
+          </div>
+        </div>
+        <div className={style.work}>
+          <div className={style.worktitle}>
+            <img></img>
+            <p>Work Anniversaries (6)</p>
+            <p className={style.days}>Next 7 days</p>
+          </div>
+          <div className={style.cards2}>
+            <div className={style.cards}></div>
+            <div className={style.cards}></div>
+            <div className={style.cards}></div>{" "}
+            <div className={style.cards}></div>{" "}
+            <div className={style.cards}></div>{" "}
+            <div className={style.cards}></div>{" "}
+          </div>
+        </div>
+        <div className={style.hires}>
+          <div className={style.newhires}>
+            <p>New Hires (0)</p>
+          </div>
+        </div>
       </div>
     </div>
   );
