@@ -130,7 +130,7 @@ const SideNavbar = () => {
             </ul> : null}
           </div>
         </Link>
-        <Link to="/Interviews/individualFeedBack" >
+        <Link to="/Interviews" >
           <div className={styles.chevronRightDivContainer}>
             <div className={`${styles.chevronRightDiv} ${showExtra === "Interviews" ? styles.avtiveTab : ""}`} onClick={() => showExtraFn("Interviews")}>
               <div className={styles.chevronRightDivimg} >
@@ -140,7 +140,7 @@ const SideNavbar = () => {
               <span className={styles.chevronRight}><img src={chevronRight} alt="chevronRight" /></span>
             </div>
             {showExtra === "Interviews" && showExtraBl ? <ul className={` ${showExtra === "Interviews" ? styles.extraUiShow : styles.extraUi} `}>
-              <Link to="/Interviews/individualFeedBack" onClick={() => showExtrnSubfn("Interviews")} className={`${active === "Interviews" && showExtra === "Interviews" ? styles.activeSub : ""}`}>individual FeedBack</Link>
+              <Link to="/Interviews" onClick={() => showExtrnSubfn("Interviews")} className={`${active === "Interviews" && showExtra === "Interviews" ? styles.activeSub : ""}`}>individual FeedBack</Link>
               <Link to="/Interviews/candidate" onClick={() => showExtrnSubfn("candidate")} className={`${active === "candidate" && showExtra === "candidate" ? styles.activeSub : ""}`}>candidate</Link>
             </ul> : null}
           </div>

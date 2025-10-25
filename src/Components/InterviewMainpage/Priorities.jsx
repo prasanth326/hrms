@@ -1,10 +1,16 @@
 import React from "react";
 
 import calendarcImg from "../../assets/calendarc-img.png";
+import { useNavigate } from "react-router-dom";
 
 import styles from "./Priorities.module.css";
 
 export default function Priorities() {
+  const navigate = useNavigate()
+
+  const navigateto=()=>{
+    navigate("/Interviews/individualFeedBack")
+  }
   return (
     <div className={styles.prioritiesparent}>
       <div className={styles.prioritiesContainer}></div>
@@ -25,25 +31,25 @@ export default function Priorities() {
           <div className={styles.pendingContainer1}>
             <div className={styles.pendingContainerdiv}>
               <img src={calendarcImg} alt="calendarc-img" />
-              <button >Submit Feedback</button>
+              <button onClick={navigateto}>Submit Feedback</button>
             </div>
             <div className={styles.pendingDivder}></div>
 
             <div className={styles.pendingContainerdiv}>
               <img src={calendarcImg} alt="calendarc-img" />
-              <button>Submit Feedback</button>
+              <button onClick={navigateto}>Submit Feedback</button>
             </div>
             <div className={styles.pendingDivder}></div>
 
             <div className={styles.pendingContainerdiv}>
               <img src={calendarcImg} alt="calendarc-img" />
-              <button>Submit Feedback</button>
+              <button onClick={navigateto}>Submit Feedback</button>
             </div>
             <div className={styles.pendingDivder}></div>
 
             <div className={styles.pendingContainerdiv}>
               <img src={calendarcImg} alt="calendarc-img" />
-              <button>Submit Feedback</button>
+              <button onClick={navigateto}>Submit Feedback</button>
             </div>
           </div>
         </div>
