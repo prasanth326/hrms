@@ -1,0 +1,220 @@
+.leaveHeaderTab {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 1px 1px 1px #e3dfdf;
+    background-color: #ffffff;
+    width: 100%;
+    align-items: center;
+}
+
+.leaveHeaderTab :nth-child(1) {
+    /* margin-left: 10px; */
+    /* font-size: 1rem; */
+    /* font-weight: 600; */
+}
+
+.leaveHeaderTab button {
+    width: 150px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.leaveHeaderTab2 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.leaveBCotainer {
+    box-shadow: 1px 1px 1px 1px #e3dfdf;
+    background-color: #ffffff;
+    width: 100%;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr .2fr 6fr;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.leaveBCotainer1 {
+    padding-left: 10px;
+}
+
+.leaveBCotainer2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.diver {
+    height: 30px;
+    width: 1px;
+    background-color: #e3dfdf;
+}
+
+.leaveBCotainerchat {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.leaveBCotainerchatliveimg img {
+    width: 25px;
+}
+
+.leaveBCotainer2parent {
+    display: flex;
+    gap: 20px;
+}
+
+.leaveBCotainerchatlive,
+.leaveBCotainerchatlive {
+    color: rgb(161, 161, 161);
+}
+
+.calender {
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    font-family: "Inter", sans-serif;
+    overflow: hidden;
+}
+.headerParent{
+    width: 100%;
+    background-color: #f7f7f7;
+        border-bottom: 1px solid #e0e0e0;
+
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    width:20%;
+}
+
+.header h2 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.navBtn {
+    cursor: pointer;
+}
+
+.navBtn img {
+    width: 20px;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: 600;
+    color: #555;
+    border-bottom: 1px solid #e0e0e0;
+    background: #fafafa;
+}
+
+.weekdays div {
+    padding: 12px 0;
+}
+
+.daysGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    min-height: 600px;
+}
+
+.day {
+    position: relative;
+    border: 1px solid #eee;
+    padding: 6px;
+    min-height: 180px;
+    transition: background 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.day:hover {
+    background: #fafafa;
+}
+
+.otherMonth {
+    color: #aaa;
+    background: #f9f9f9f9;
+}
+
+.weekend {
+    background: repeating-linear-gradient(-45deg, #f4f4f4, #fafafa 8px, #fafafa 8px, #fafafa 16px);
+}
+
+.date {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.events {
+    background: #e9f7ef;
+    border-left: 4px solid #34a853;
+    margin-bottom: 4px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.eventTitle {
+    display: block;
+    font-weight: 500;
+    color: #333;
+}
+
+.eventTime {
+    color: #777;
+    font-size: 11px;
+}
+
+.imgday img{
+    width: 15px;
+}
+
+.datePresent{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.leavebtnselect{
+    position: relative;
+}
+.btnselect{
+    width: 250px;
+    height: fit-content;
+    box-shadow: 1px 2px 2px 2px rgb(196, 196, 196);
+    position: absolute;
+    z-index: 4;
+    background-color: #ffffff;
+    right: 10px;
+    border-radius: 5px;
+}
+
+.btnselect p{
+    padding: 10px;
+    text-align: start;
+    cursor: pointer;
+}
+
+.btnselect p:hover{
+    background-color: #e9f7ef;
+}
+
+
+.attendenceDiver{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(225, 225, 225);
+}

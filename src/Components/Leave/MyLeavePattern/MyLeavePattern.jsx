@@ -14,6 +14,7 @@ export default function MyLeavePattern() {
                 </div>
                 <div> &#136;</div>
             </div>
+
         </div>
     )
 }

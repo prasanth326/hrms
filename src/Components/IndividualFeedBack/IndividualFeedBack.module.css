@@ -14,7 +14,6 @@
 
 .userDetails {
     width: 100%;
-    height: 14%;
     background-color: #ffffff;
 }
 
@@ -31,29 +30,46 @@
     display: flex;
     flex-direction: row;
 }
+
 .tabs2 {
-    display: flex;
+    display: grid;
     flex-direction: row;
     border: 1px solid rgb(199, 195, 195);
     width: fit-content;
-    padding: 2px;
     border-radius: 2px;
+    grid-template-columns: 1fr 1fr;
+    cursor: pointer;
 }
 
 .tabsName {
     background-color: rgb(199, 195, 195);
+    padding: 10px;
 }
 
 .tabpdf {
     border: 1px solid rgb(199, 195, 195);
 }
 
-.resume {
+.tabspdf {
+    padding: 10px;
+}
+
+.resume2 {
     border: 1px solid rgb(199, 195, 195);
     height: 100%;
     width: 100%;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    font-weight: 600;
 }
-
+.resume {
+        border: 1px solid rgb(199, 195, 195);
+    height: 100%;
+    width: 100%;
+}
 .btns {
     display: flex;
     gap: 10px;
@@ -97,4 +113,18 @@
 .btnactiveRed {
     background-color: rgb(191, 34, 29);
     color: #ffffff;
+}
+
+.userDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.userDetails1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

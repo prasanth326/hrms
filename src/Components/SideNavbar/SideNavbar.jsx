@@ -88,7 +88,7 @@ const SideNavbar = () => {
             </div>
             {showExtra === "TimeAndAttendance" && showExtraBl ? <ul className={` ${showExtra === "TimeAndAttendance" ? styles.extraUiShow : styles.extraUi} `}>
               <Link to="/Attendance/overview" onClick={() => showExtrnSubfn("overview")} className={`${active === "overview" ? styles.activeSub : ""}`}>Overview</Link>
-              <Link>Attendence</Link>
+              <Link to="/Attendance/attendence" onClick={() => showExtrnSubfn("attendance")} className={`${active === "attendance" ? styles.activeSub : ""}`}>Attendence</Link>
               <Link to="/Attendance/leave" onClick={() => showExtrnSubfn("leave")} className={`${active === "leave" ? styles.activeSub : ""}`}>Leave</Link>
             </ul> : null}
           </div>
@@ -130,10 +130,19 @@ const SideNavbar = () => {
             </ul> : null}
           </div>
         </Link>
-        <Link to="/Interviews" className={`${styles.chevronRightDiv} ${showExtra === "Interviews" ? styles.avtiveTab : ""}`} onClick={() => showExtraFn("Interviews")}>
-          <div className={styles.chevronRightDivimg}>
-            <img src={travel} alt="travel" />
-            <span>Interviews</span>
+        <Link to="/Interviews/individualFeedBack" >
+          <div className={styles.chevronRightDivContainer}>
+            <div className={`${styles.chevronRightDiv} ${showExtra === "Interviews" ? styles.avtiveTab : ""}`} onClick={() => showExtraFn("Interviews")}>
+              <div className={styles.chevronRightDivimg} >
+                <img src={travel} alt="Interviews" />
+                <span>Interviews</span>
+              </div>
+              <span className={styles.chevronRight}><img src={chevronRight} alt="chevronRight" /></span>
+            </div>
+            {showExtra === "Interviews" && showExtraBl ? <ul className={` ${showExtra === "Interviews" ? styles.extraUiShow : styles.extraUi} `}>
+              <Link to="/Interviews/individualFeedBack" onClick={() => showExtrnSubfn("Interviews")} className={`${active === "Interviews" && showExtra === "Interviews" ? styles.activeSub : ""}`}>individual FeedBack</Link>
+              <Link to="/Interviews/candidate" onClick={() => showExtrnSubfn("candidate")} className={`${active === "candidate" && showExtra === "candidate" ? styles.activeSub : ""}`}>candidate</Link>
+            </ul> : null}
           </div>
         </Link>
       </ul>

@@ -29,6 +29,7 @@ import OverView from "./Components/Overview/OverView";
 import Confirmation from "./Components/Flow/Confirmation/Confirmation";
 import Reimbursement from "./Components/Overview/Reimbursement/Reimbursement";
 import Benefits from "./Components/Benefits/Benefits";
+import Attendence from "./Components/TimeManagemnet/Attendence/Attendence";
 // import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
 
 function LayoutApp() {
@@ -74,8 +75,8 @@ function LayoutApp() {
             path="/Reimbursement/Reimbursement"
             element={<Reimbursement />}
           />
-                    <Route path="/Benefits" element={<Benefits />} />
-
+          <Route path="/Benefits" element={<Benefits />} />
+          <Route path="/Attendance/attendence" element={<Attendence />} />
         </Routes>
       </div>
     </>
