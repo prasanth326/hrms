@@ -1,0 +1,16 @@
+.QRCodeCanvas{
+    margin-top: 10px;
+}
+
+.QRCodeCanvasdiv{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 30%;
+ }
+
+ .QRCodeCanvasdivQr{
+    color: rgb(147, 92, 250);
+    font-weight: 500;
+ }

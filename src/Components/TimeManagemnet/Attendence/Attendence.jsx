@@ -11,6 +11,8 @@ import styles from './Attendence.module.css';
 import { useState } from 'react';
 import SideModal from '../SideModal/SideModal';
 import SideModalAttendence from '../SideModalAttendence/SideModalAttendence';
+import SideShiftBar from '../SideShiftBar/SideShiftBar';
+import AddGoals from '../AddGoals/AddGoals';
 
 const events = {
     "2025-10-02": [
@@ -65,6 +67,7 @@ export default function Attendence() {
     const [openSelect, setOpenSelect] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
     const [isOpenAtt, setIsOpenAtt] = useState(false)
+    const [isOpenShift, setIsOpenShift] = useState(false)
 
 
     const monthStart = new Date(
@@ -103,10 +106,10 @@ export default function Attendence() {
                 <div className={styles.leavebtnselect}>
                     <Button variant="contained" onClick={() => { setOpenSelect((prev) => !prev) }}>+ Request &#136;</Button>
                     {openSelect && <div className={styles.btnselect}>
-                        <p onClick={()=>setIsOpenAtt(true)}>Attendence Adjustment</p>
+                        <p onClick={() => setIsOpenAtt(true)}>Attendence Adjustment</p>
                         <p>Clockin</p>
-                        <p>Shift Change</p>
-                        <p onClick={()=>setIsOpen(true)}>Work from home</p>
+                        <p onClick={() => setIsOpenShift(true)}>Shift Change</p>
+                        <p onClick={() => setIsOpen(true)}>Work from home</p>
                         <div className={styles.attendenceDiver}></div>
                         <p>Leave</p>
                     </div>
@@ -184,9 +187,12 @@ export default function Attendence() {
                 </div>
             </div>
             <SideModal isOpen={isOpen} onClose={() => setIsOpen(false)} title="Work From Home Request">
-             </SideModal>
+            </SideModal>
             <SideModalAttendence isOpen={isOpenAtt} onClose={() => setIsOpenAtt(false)} title="Attendence Adjustment">
-             </SideModalAttendence>
+            </SideModalAttendence>
+            <SideShiftBar isOpen={isOpenShift} onClose={() => setIsOpenShift(false)} title="Attendence Adjustment">
+            </SideShiftBar>
+
         </div>
     )
 }

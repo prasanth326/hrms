@@ -9,6 +9,7 @@ import { ExtraDeductions } from "./ExtraDeductions/ExtraDeductions";
 import { Loans } from "./Loans/Loans";
 import { PayrollDocuments } from "./PayrollDocuments/PayrollDocuments";
 import { ExtraPayments } from "./ExtraPayments/ExtraPayments";
+import TaxSheet from "./TaxSheet/TaxSheet";
 
 export const Compensation = () => {
   const [activeTab, setActiveTab] = useState("");
@@ -36,6 +37,7 @@ export const Compensation = () => {
       {activeTab === "Extra Payments" && <ExtraPayments showValues={showValues}/>}
       {activeTab === "Loans" && <Loans />}
       {activeTab === "Payroll Documents" && <PayrollDocuments />}
+      {activeTab === "Tax Sheet" && <TaxSheet showValues={showValues}/>}
     </div>
   );
 };

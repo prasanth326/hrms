@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./FeedbackPage.module.css";
 import summaryempty from "../../../assets/summaryempty.png"
 import RequestFeedBack from "../KeyResults/RequestFeedBack/RequestFeedBack";
+import ReqModal from "../KeyResults/RequestFeedBack/ReqModal/ReqModal";
 
 const FeedbackPage = () => {
   const stats = [
@@ -12,6 +13,7 @@ const FeedbackPage = () => {
   ];
 
   const [showRF, setShowRF] = useState(false)
+  const [isOpenModal, setIsOpenModal] = useState(false)
 
   return (
     <div className={styles.container}>
@@ -25,7 +27,7 @@ const FeedbackPage = () => {
                 <span>Responses</span>
                 <span>Contributions</span>
               </div>
-              <button className={styles.requestBtn}>Request Feedback ▾</button>
+              <button className={styles.requestBtn} onClick={()=>{setIsOpenModal(true)}}>Request Feedback ▾</button>
             </header>
 
             <section className={styles.statsSection}>
@@ -50,6 +52,7 @@ const FeedbackPage = () => {
             </section>
           </div>
       }
+       {isOpenModal&& <ReqModal isOpen={isOpenModal}  onClose={() => setIsOpenModal(false)} />}
     </div>
   );
 };

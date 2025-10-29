@@ -214,3 +214,34 @@
 .pillarweibtn2 button:hover{
 background-color: transparent;
 }
+
+.showAllSubGoalstoggle{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.showAllSubGoalstoggle p{
+    color: rgb(185, 185, 185);
+    font-size: 12px;
+}
+
+.showAllSubGoalsbtn{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.showAllSubGoals{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.showAllSubGoalsbtndrp select{
+    width: 150px;
+    height: 30px;
+    border-color: rgb(189, 189, 189);
+    border-radius: 4px;
+}

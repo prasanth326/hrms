@@ -2,16 +2,25 @@ import search from "../../assets/srchicon.png";
 import notif from "../../assets/notif.png";
 import clockin from "../../assets/clockin.png";
 import logoaccess from "../../assets/logoaccess.png";
+import menu from "../../assets/menu.png";
+
+import { useNavigate } from "react-router-dom";
 
 import Style from "../AccessPage/Acesspage.module.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Button } from "@mui/material";
-import styles from "./NavBar.module.css";
 
-const NavBar = () => {
+import styles from "./NavBar.module.css";
+import DashBoardSideBar from "../DashBoardSideBar/DashBoardSideBar";
+
+const NavBar = ({ qrlocation }) => {
   const [showNoti, setShowNoti] = useState(false);
   const [showPro, setShowPro] = useState(false);
+  const [showDashboard, setShowDashBoard] = useState(false);
+
+
+  const navigate = useNavigate()
 
   const handleNoti = () => {
     setShowNoti((prev) => !prev);
@@ -23,14 +32,24 @@ const NavBar = () => {
     setShowNoti(false);
   };
 
+  const handleQr = () => {
+    navigate("/QrCode")
+    setShowPro(false)
+  }
+
   return (
     <div className={Style.container}>
       <div className={Style.navbar}>
         <div className={Style.navbarChild}>
           <div className={Style.logo}>
-            <Link to="/accesspage">
-              <img src={logoaccess} alt="logo" />
-            </Link>
+            {
+              qrlocation ? 
+                <img src={menu} alt="menu" onClick={()=>{setShowDashBoard(true)}}/> : 
+                <Link to="/accesspage">
+                  <img src={logoaccess} alt="logo" />
+                </Link>
+            }
+
           </div>
           <div className={Style.inputsrch}>
             <input
@@ -76,7 +95,7 @@ const NavBar = () => {
               <div className={styles.profileicon2BTN}>
                 <Button variant="contained">VIEW PROFILE</Button>
               </div>
-              <div className={styles.MobileQR}>
+              <div className={styles.MobileQR} onClick={() => handleQr(true)}>
                 <img />
                 <p>Mobile QR Code</p>
               </div>
@@ -88,6 +107,10 @@ const NavBar = () => {
           </div>
         </div>
       ) : null}
+
+      {
+        <DashBoardSideBar isOpen={showDashboard}  onClose={() => setShowDashBoard(false)}/>
+      }
     </div>
   );
 };

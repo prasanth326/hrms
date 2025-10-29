@@ -3,6 +3,7 @@ import styles from "./RequestFeedBack.module.css"
 import { Switch, FormControlLabel } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import OverallRemark from '../OverallRemark/OverallRemark';
+import ReqModal from './ReqModal/ReqModal';
 
 
 export default function RequestFeedBack() {
@@ -82,6 +83,8 @@ export default function RequestFeedBack() {
             setSelected([...selected, goal])
         }
     }
+
+
     return (
         <div className={styles.container}>
             <aside className={styles.sidebar}>
@@ -103,7 +106,7 @@ export default function RequestFeedBack() {
             </aside>
             {activeQns === "Questions" &&
                 <main className={styles.main}>
-                    <div className={styles.header}>
+                    <div className={styles.header} onClick={()=>{setOpenModalForm(true)}}>
                         <h2>Request Feedback</h2>
                     </div>
                     <section className={styles.section}>
