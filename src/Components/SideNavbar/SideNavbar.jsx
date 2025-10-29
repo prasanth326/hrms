@@ -116,7 +116,7 @@ const SideNavbar = () => {
             ) : null}
           </div>
         </Link>
-        <Link to="/flow">
+        <Link to="/Flow/flowRequest">
           <div className={styles.chevronRightDivContainer}>
             <div
               className={`${styles.chevronRightDiv} ${

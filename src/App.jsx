@@ -1,10 +1,7 @@
-import React from "react";
 import "./App.css";
 import Login from "./Components/Login/Login";
-import Signinpage from "./Components/SigninPage/Signinpage";
 import Accesspage from "./Components/AccessPage/Accesspage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Pagedetailed from "./Components/PageDetailed/Pagedetailed";
 import SideNavbar from "./Components/SideNavbar/SideNavbar";
 import NavBar from "./Components/NavBar/NavBar";
 import { useLocation } from "react-router-dom";
@@ -15,14 +12,12 @@ import Interviews from "./Components/Interviews/Interviews";
 import Performance from "./Components/Performance/Performance";
 import InterviewMainpage from "./Components/InterviewMainpage/InterviewMainpage";
 import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
-import AssessmentHistory from "./Components/Performance/AssessmentHistory/AssessmentHistory";
 import { Compensation } from "./Components/Compensation/Compensation";
 import KeyResults from "./Components/Performance/keyResults/KeyResults";
 import MyGoal from "./Components/Performance/MyGoal/MyGoal";
 import GoalReview from "./Components/Performance/GoalReview/GoalReview";
 import Hrdocsdocument from "./Components/Performance/Hrdocsdocument/Hrdocsdocument";
 import FeedbackPage from "./Components/Performance/FeedbackPage/FeedbackPage";
-import TabsTabs from "./Components/Performance/TabsTabs/TabsTabs";
 import PerformanceHistory from "./Components/Performance/TabsTabs/PerformanceHistory";
 import MsfHistory from "./Components/Performance/MSFHistory/MsfHistory";
 import OverView from "./Components/Overview/OverView";
@@ -34,6 +29,8 @@ import Documents from "./Components/Profile/Documents/Documents";
 import EmploymentDetails from "./Components/Profile/EmploymentDetails/EmploymentDetails";
 import PersonalDetails from "./Components/Profile/PersonalDetails/PersonalDetails";
 // import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
+import QRcodePage from "./Components/QRcode/QRcodePage";
+import FlowRequest from "./Components/Flow/FlowRequest/FlowRequest";
 
 function LayoutApp() {
   const location = useLocation();
@@ -41,14 +38,16 @@ function LayoutApp() {
     location.pathname === "/accesspage" || location.pathname === "/";
   const navlocation = location.pathname === "/";
 
+  const qrlocation = location.pathname === "/QrCode"
+
   return (
     <>
-      {!navlocation && <NavBar />}
+      {!navlocation && <NavBar qrlocation={qrlocation}/>}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/accesspage" element={<Accesspage />} />
       </Routes>
-      <div className="content">
+      {!qrlocation && <div className="content">
         {!pathLocation && <SideNavbar />}
         <Routes>
           <Route path="/profile/Overview" element={<ProfilePage />} />
@@ -85,8 +84,13 @@ function LayoutApp() {
           />
           <Route path="/Benefits" element={<Benefits />} />
           <Route path="/Attendance/attendence" element={<Attendence />} />
+          <Route path="/Flow/flowRequest" element={<FlowRequest />} />
+
         </Routes>
-      </div>
+      </div>}
+      <Routes>
+        <Route path="/QrCode" element={<QRcodePage />} />
+      </Routes>
     </>
   );
 }
