@@ -31,6 +31,8 @@ import Reimbursement from "./Components/Overview/Reimbursement/Reimbursement";
 import Benefits from "./Components/Benefits/Benefits";
 import Attendence from "./Components/TimeManagemnet/Attendence/Attendence";
 import Documents from "./Components/Profile/Documents/Documents";
+import EmploymentDetails from "./Components/Profile/EmploymentDetails/EmploymentDetails";
+import PersonalDetails from "./Components/Profile/PersonalDetails/PersonalDetails";
 // import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
 
 function LayoutApp() {
@@ -51,6 +53,9 @@ function LayoutApp() {
         <Routes>
           <Route path="/profile/Overview" element={<ProfilePage />} />
           <Route path="/profile/Documents" element={<Documents />} />
+          <Route path="/profile/EmploymentDetails" element={<EmploymentDetails />} />
+                    <Route path="/profile/PersonalDetails" element={<PersonalDetails />} />
+
 
           <Route path="/Attendance/leave" element={<LeaveBalance />} />
           <Route path="/Attendance/Overview" element={<AttendanceOverview />} />

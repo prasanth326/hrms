@@ -1,20 +1,20 @@
 import React from 'react';
-import styles from "./ProfilePage.module.css"
+import styles from "./PersonalDetails.module.css"
 
-const ProfilePage = () => {
+const  PersonalDetails= () => {
   return (
     <div className={styles.Container}>
-      <h2>Over View</h2>
+      <h2>Personal Details</h2>
       <div className={styles.biographical}>
         <h3>Biographical</h3>
         <div className={styles.biographicalContainer}>
           <div className={styles.details}>
             <p className={styles.detailsp}>First Name</p>
-            <p className={styles.detailspd}>Pranitha</p>
+            <p className={styles.detailspd}></p>
           </div>
           <div className={styles.details}>
             <p className={styles.detailsp}>Middle Name</p>
-            <p className={styles.detailspd}>Patel</p>
+            <p className={styles.detailspd}>NA</p>
           </div>
           <div className={styles.details}>
             <p className={styles.detailsp}>Last Name</p>
@@ -22,19 +22,19 @@ const ProfilePage = () => {
           </div>
           <div className={styles.details}>
             <p className={styles.detailsp}>Gander</p>
-            <p className={styles.detailspd}>Female</p>
+            <p className={styles.detailspd}>NA</p>
           </div>
           <div className={styles.details}>
             <p className={styles.detailsp}>Show Date of Birth Year</p>
-            <p className={styles.detailspd}>2001</p>
+            <p className={styles.detailspd}>No</p>
           </div>
           <div className={styles.details}>
             <p className={styles.detailsp}>Date Of Birth</p>
-            <p className={styles.detailspd}>19-Oct-2001</p>
+            <p className={styles.detailspd}></p>
           </div>
           <div className={styles.details}>
             <p className={styles.detailsp}>Date of Birth Access</p>
-            <p className={styles.detailspd}>Self</p>
+            <p className={styles.detailspd}></p>
           </div>
           <div className={styles.details}>
             <p className={styles.detailsp}>Marital Status</p>
@@ -42,15 +42,15 @@ const ProfilePage = () => {
           </div>
           <div className={styles.details}>
             <p className={styles.detailsp}>Marital Status Since</p>
-            <p className={styles.detailspd}>****</p>
+            <p className={styles.detailspd}>NA</p>
           </div>
           <div className={styles.details}>
             <p className={styles.detailsp}>Marriage Anniversary Access</p>
-            <p className={styles.detailspd}>Self</p>
+            <p className={styles.detailspd}>NA</p>
           </div>
           <div className={styles.details}>
             <p className={styles.detailsp}>Mobile Access</p>
-            <p className={styles.detailspd}>****</p>
+            <p className={styles.detailspd}>Yes</p>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@ const ProfilePage = () => {
           </div>
           <div className={styles.details}>
             <p className={styles.detailsp}>Office Mobile Access</p>
-            <p className={styles.detailspd}>Self</p>
+            <p className={styles.detailspd}>Everyone</p>
           </div>
           <div className={styles.details}>
             <p className={styles.detailsp}>Office Mobile No.</p>
@@ -115,4 +115,4 @@ const ProfilePage = () => {
   )
 }
 
-export default ProfilePage
+export default PersonalDetails
