@@ -1,0 +1,17 @@
+.advanceTab{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+.advanceTab img{
+    width: 300px;
+}
+.advanceTabtext1{
+    font-size: 20px;
+
+}
+.advanceTabtext2{
+    font-size: small;
+    color: rgb(104, 103, 103);
+}

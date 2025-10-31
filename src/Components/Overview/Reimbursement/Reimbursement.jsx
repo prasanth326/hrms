@@ -7,11 +7,12 @@ import Select from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
 import no_bills from "../../../assets/no_bills.png";
 import upload from "../../../assets/upload.png";
-import backbtn from "../../../assets/backbtn.png"
+import backbtn from "../../../assets/backbtn.png";
 import styles from "./Reimbursement.module.css";
 import { Button } from "@mui/material";
 import ReimbursementTab from "./ReimbursementTab/ReimbursementTab";
 import CreateExpanseEmpty from "./ReimbursementTab/CreateExpanseEmpty/CreateExpanseEmpty";
+import AdvanceTab from "../AdvanceTab/AdvanceTab";
 
 export default function Reimbursement() {
   const [activeTab, setActiveTab] = useState("");
@@ -171,6 +172,7 @@ export default function Reimbursement() {
       ) : (
         ""
       )}
+      {activeTab === "ADVANCES" ? <AdvanceTab /> : ""}
     </div>
   );
 }
