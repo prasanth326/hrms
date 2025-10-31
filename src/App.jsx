@@ -86,9 +86,7 @@ function LayoutApp() {
           <Route path="/Benefits" element={<Benefits />} />
           <Route path="/Attendance/attendence" element={<Attendence />} />
           <Route path="/Flow/flowRequest" element={<FlowRequest />} />
-                    <Route path="/Flow/Separation" element={<Separation />} />
-
-
+          <Route path="/Flow/Separation" element={<Separation />} />
         </Routes>
       </div>}
       <Routes>
