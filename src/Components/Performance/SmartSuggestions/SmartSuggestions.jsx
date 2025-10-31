@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import benifits1 from "../../../assets/benifits1.png";
 import styles from "./SmartSuggestions.module.css";
 import Feedback from "../Feedback/Feedback";
+import smartsuggestions from "../../../assets/smartsuggestions.png"
 
 const SmartSuggestions = () => {
   const [currentPage, setCurrentpage] = useState(1);
@@ -22,29 +23,26 @@ const SmartSuggestions = () => {
   const data = [
     {
       id: 1,
-      image: benifits1,
-      title: "SmartSuggestions",
+      image: smartsuggestions,
+      title: "Smart Suggestions",
       feedback: "Feedback",
-      feedbackmsge: "You have not received feedback to come",
-      day: "today?",
+      feedbackmsge: "You have not given Feedback to anyone in the last 30days, would you like to give Feedback to someone today?",
       action: "ACT",
     },
     {
       id: 2,
-      image: benifits1,
-      title: "Suggestions",
+      image: smartsuggestions,
+      title: "Smart Suggestions",
       feedback: "Feedback",
-      feedbackmsge: "You have not received feedback to come",
-      day: "today?",
+      feedbackmsge: "You have not received Feedback to anyone in the last 30days, would you like to request Feedback to someone today?",
       action: "ACT",
     },
     {
       id: 3,
-      image: benifits1,
-      title: "SmartIdeas",
+      image: smartsuggestions,
+      title: "Smart Suggestions",
       feedback: "Feedback",
-      feedbackmsge: "You have not received feedback to come",
-      day: "today?",
+      feedbackmsge: "You have not registered a Notes in the last 30days, would you like to  register today?",
       action: "ACT",
     },
   ];
@@ -59,7 +57,7 @@ const SmartSuggestions = () => {
             <div className={styles.SuggestionsTitle}>{value.title}</div>
           </div>
           <div className={styles.SuggestionsFeedback}>
-            <div>{value.feedback}</div>
+            <div className={styles.Feedback}>{value.feedback}</div>
             <div>{value.feedbackmsge}</div>
           </div>
           <div className={styles.SuggestionsToday}>

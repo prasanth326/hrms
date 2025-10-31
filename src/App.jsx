@@ -31,6 +31,7 @@ import PersonalDetails from "./Components/Profile/PersonalDetails/PersonalDetail
 // import IndividualFeedBack from "./Components/IndividualFeedBack/IndividualFeedBack";
 import QRcodePage from "./Components/QRcode/QRcodePage";
 import FlowRequest from "./Components/Flow/FlowRequest/FlowRequest";
+import Separation from "./Components/Flow/Separation/Separation";
 
 function LayoutApp() {
   const location = useLocation();
@@ -85,6 +86,8 @@ function LayoutApp() {
           <Route path="/Benefits" element={<Benefits />} />
           <Route path="/Attendance/attendence" element={<Attendence />} />
           <Route path="/Flow/flowRequest" element={<FlowRequest />} />
+                    <Route path="/Flow/Separation" element={<Separation />} />
+
 
         </Routes>
       </div>}

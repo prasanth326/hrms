@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .biographicalContainer{
   display: grid;
   grid-template-columns:  repeat(4, 1fr);
@@ -38,4 +37,23 @@
 
 .detailspd{
   font-size: 1rem;
+}
+@media (max-width: 1024px) {
+  .biographicalContainer{
+  display: grid;
+  grid-template-columns:  repeat(2, 1fr);
+  grid-gap: 40px;
+}
+.details{
+  font-size: 0.95rem;
+}
+}
+@media (max-width: 768px) {
+  .biographicalContainer{
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+.details{
+  align-items: flex-start; 
+}
 }

@@ -1,0 +1,36 @@
+.imageofseparation {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+  background-color: rgb(230, 237, 241);
+  border-radius: 5px;
+}
+.imageofseparation img {
+  width: 500px;
+}
+.Separationtitle {
+  font-weight: bold;
+  font-size: 25px;
+  box-shadow: 0 1px 1px 0px rgb(210 204 204 / 60%);
+  padding: 10px;
+}
+.Separation {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.invitename {
+  border: 1px solid rgb(169, 164, 164);
+  padding: 6px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(166, 140, 236);
+}
+.invite {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}

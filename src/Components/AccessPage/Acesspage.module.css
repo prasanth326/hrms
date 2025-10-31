@@ -195,3 +195,10 @@
   width: 100%;
   background-color: rgb(245 246 246);
 }
+@media (max-width: 320px) {
+  .dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+}
