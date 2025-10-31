@@ -126,3 +126,9 @@ p {
 .chevronRightDivContainer .activeSub {
     color: rgb(102, 102, 232);
 }
+
+@media (max-width:720px) {
+    .sidebar {
+        display: none;
+    }
+}
