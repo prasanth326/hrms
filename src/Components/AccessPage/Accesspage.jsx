@@ -16,19 +16,24 @@ const Accesspage = () => {
     if (nav === "Attendance") {
       navigate("/Attendance/attendence")
     }
-    else if (nav === "performance") {
+    else if (nav === "Performance") {
       navigate("/Performance")
     }
-    else if (nav === "performance") {
-      navigate("/Performance")
+    else if (nav === "Reimbursement") {
+      navigate("/Reimbursement/overview")
     }
-    else if (nav === "performance") {
-      navigate("/Performance")
+    else if (nav === "Flows") {
+      navigate("/Flow/flowRequest")
     }
-    else if (nav === "performance") {
-      navigate("/Performance")
+    else if (nav === "Calendar") {
+      navigate("/Attendance/attendence")
     }
-
+    else if (nav === "Compensation") {
+      navigate("/Compensation")
+    }
+    else if (nav === "Time Management") {
+      navigate("/Attendance/overview")
+    }
   }
 
   return (

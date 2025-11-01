@@ -50,7 +50,7 @@ function LayoutApp() {
       </Routes>
       {!qrlocation && <div className="content">
         {!pathLocation && <SideNavbar />}
-        <Routes>
+        <Routes className="flowroute">
           <Route path="/profile/Overview" element={<ProfilePage />} />
           <Route path="/profile/Documents" element={<Documents />} />
           <Route path="/profile/EmploymentDetails" element={<EmploymentDetails />} />

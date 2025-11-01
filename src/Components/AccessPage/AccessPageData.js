@@ -30,12 +30,12 @@ export default function accessPageObject() {
         {
             id:4,
             img: compensation2,
-            title: "Employees",
+            title: "Compensation",
         },
         {
             id:5,
             img: attendance,
-            title: "Attendance",
+            title: "Time Management",
         },
         {
             id:6,
@@ -45,7 +45,7 @@ export default function accessPageObject() {
         {
             id:7,
             img: calendarcimg,
-            title: "HR Documents",
+            title: "Calendar",
         },
         {
             id:8,
@@ -60,7 +60,7 @@ export default function accessPageObject() {
         {
             id:10,
             img: performanceCalender,
-            title: "performance",
+            title: "Performance",
         },
     ];
 } 

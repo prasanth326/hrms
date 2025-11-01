@@ -78,7 +78,7 @@ export default function FlowRequest() {
 const [activebn,setActievbn]=useState(btn[1].name)
 
     return (
-        <div>
+        <div className={styles.flow}>
             <div className={styles.Buttonnn}>
                 <Button variant='outlined'>+ INITATE</Button>
             </div>

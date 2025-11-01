@@ -34,3 +34,12 @@
   width: 100%;
   justify-content: center;
 }
+@media (max-width: 720px) {
+  .imageofseparation img {
+    width: 100%;
+  }
+  .imageofseparation {
+    display: flex;
+    justify-content:center;
+  }
+}

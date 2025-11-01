@@ -1,102 +1,105 @@
 .confirmation {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .confirmationWork {
-    font-size: 1rem;
-    width: 100%;
-    margin-left: 20%;
-    margin-top: 20px;
+  font-size: 1rem;
+  width: 100%;
+  margin-left: 20%;
+  margin-top: 20px;
 }
 
 .dateProb {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    justify-content: space-between;
-    color: rgb(145, 145, 145);
-    padding: 0 10px;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  justify-content: space-between;
+  color: rgb(145, 145, 145);
+  padding: 0 10px;
 }
 
 .statusLast {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .statusLastParent {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    justify-content: space-between;
-    color: rgb(145, 145, 145);
-        padding: 0 10px;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  justify-content: space-between;
+  color: rgb(145, 145, 145);
+  padding: 0 10px;
 }
 
 .tableParent {
-    width: 100%;
+  width: 100%;
 }
 
 .tableParent table {
-    width: 100%;
+  width: 100%;
 }
 
 .tableParent thead {
-    background-color: rgb(203, 203, 203);
+  background-color: rgb(203, 203, 203);
 }
 
 .tableParent thead tr {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
 }
 
 .tableParent thead tr div {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .tableParent tbody tr {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    border-bottom: 1px solid rgb(236, 236, 236);
-    padding: 10px 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(236, 236, 236);
+  padding: 10px 0;
 }
-.recommended{
-    color: rgb(20, 20, 20);
+.recommended {
+  color: rgb(20, 20, 20);
 }
 .statusevenadmin {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .statuseven {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .rightstauts {
-    display: flex;
-    gap: 4px;
+  display: flex;
+  gap: 4px;
 }
 
 .tableParent img {
-    width: 20px;
+  width: 20px;
 }
 
 .statusarrow img {
-    width: 20px;
-    height: 30px;
+  width: 20px;
+  height: 30px;
 }
 
 .rightstauts img {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 720px) {
+  .confirmation {
+    overflow: scroll;
+    width: 100%;
+  }
 }
