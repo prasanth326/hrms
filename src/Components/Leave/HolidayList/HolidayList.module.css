@@ -58,9 +58,13 @@
 
 .tableHoliday {
     width: 100%;
+    overflow: scroll;
 }
 
 .tableHoliday tbody tr td {
     text-align: center;
     padding: 10px;
+}
+.tableHolidaydiv{
+        overflow: scroll;
 }

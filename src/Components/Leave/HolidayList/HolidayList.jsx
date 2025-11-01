@@ -25,7 +25,7 @@ export default function HolidayList() {
                 </div>
             </div>
 
-            <div>
+            <div className={styles.tableHolidaydiv}>
 
                 <table className={styles.tableHoliday}>
                     <thead>
