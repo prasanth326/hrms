@@ -1,0 +1,282 @@
+.itemStepper {
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    color: #222;
+    padding: 10px;
+}
+
+.teamTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.teamStepperItem {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.teamStepperLine {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.teamStepperDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dotGreen {
+    background-color: #2ecc71;
+}
+
+.dotOrange {
+    background-color: #f5a623;
+}
+
+.teamStepperConnector {
+    width: 2px;
+    border-left: 2px dashed #ccc;
+    margin-top: 4px;
+    height: 80px;
+}
+
+.teamStepperContent {
+    flex-grow: 1;
+    padding-bottom: 10px;
+}
+
+.teamDate {
+    font-weight: 600;
+    margin: 0;
+    text-align: start;
+}
+
+.teamMembers {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.teamMemberCircle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e9f0fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #3c4a64;
+    font-size: 0.9rem;
+    margin-right: -4px;
+}
+
+.itemMessage {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: start;
+}
+
+.Line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.Divider {
+    width: 98%;
+    height: 1px;
+    background-color: rgb(195, 195, 195);
+}
+
+
+
+.leaveBalanceCotainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+
+}
+
+.leaveCotainer {
+    width: 100%;
+}
+
+.leaveBalanceBox {
+    box-shadow: 1px 1px 1px 1px #e3dfdf;
+    background-color: #ffffff;
+    height: 200px;
+    display: grid;
+    grid-template-rows: 2fr .5fr 2fr;
+    border-radius: 10px;
+}
+
+.leave1Comp {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+
+}
+
+.leaveAdd {
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+    padding-top: 10px;
+
+
+}
+
+.leaveAddDot {
+    width: 10px;
+    cursor: pointer;
+}
+
+.leaveAddDot p {
+    transform: rotate(90deg);
+    margin-left: 20px;
+    margin-top: -12px;
+}
+
+.diver {
+    width: 100%;
+    height: 1px;
+    background-color: #e3dfdf;
+
+}
+
+.leaveAddOne {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.leaveAddOne img {
+    width: 40px;
+}
+
+.leaveAddComp {
+    color: rgb(144, 143, 143);
+}
+
+.leaveAddDotAdd,
+.leaveAddDot {
+    background-color: rgb(87, 226, 117);
+    font-size: 0.9rem;
+    height: 18px;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.leave1Compdiv {
+    display: flex;
+    flex-direction: row;
+    width: 96%;
+    padding-top: 20px;
+    position: relative;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px rgb(177, 177, 177);
+}
+
+.already {
+    display: flex;
+    flex-direction: column;
+}
+
+.leaveAddReady {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 10px;
+}
+
+.colorr {
+    background-color: rgb(189, 82, 167);
+    min-width: .25rem;
+    height: 3.25rem;
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.colorr2 {
+    background-color: rgb(111, 113, 217);
+    min-width: .25rem;
+    height: 3.25rem;
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.colorr3 {
+    background-color: rgb(150, 178, 61);
+    min-width: .25rem;
+    height: 3.25rem;
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.colorr4 {
+    background-color: rgb(94, 135, 211);
+    min-width: .25rem;
+    height: 3.25rem;
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.colorr5 {
+    background-color: rgb(54, 222, 230);
+    min-width: .25rem;
+    height: 3.25rem;
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.leaveAdd2 {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.leaveCotaineraBal {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 45px 0;
+}
+
+.LeaveDetails {
+    position: absolute;
+    box-shadow: 1px 1px 4px 1px #e3dfdf;
+    background-color: #ffffff;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    top: 55%;
+    right: 10px;
+}
+
+.LeaveDetails div {
+    cursor: pointer;
+}
+
+@media screen and (max-width:720px) {
+    .leaveBalanceCotainer {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+}
+
+@media screen and (max-width:720px) {
+    .itemStepper {
+        padding: 0;
+    }
+}

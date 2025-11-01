@@ -7,6 +7,8 @@ import { Select } from '@mui/material'
 import Box from '@mui/material/Box';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
+import HolidayList from '../HolidayList/HolidayList'
+import LeaveHistory from '../LeaveHistory/LeaveHistory'
 
 export default function LeaveBalance() {
   const [leaveTab, setLeaveTab] = useState("Leave Balance");
@@ -25,10 +27,10 @@ export default function LeaveBalance() {
     <div className={styles.leaveBCotainerMain}>
       <LeaveHeaderTab setLeaveTab={setLeaveTab} leaveTab={leaveTab} />
       <div className={styles.leaveBCotainerMaindiv}>
-        <MyLeavePattern />
+       {leaveTab === "Leave Balance" && <MyLeavePattern /> }
         {leaveTab === "Leave Balance" && <BalanceLeave setLeaveDetailsWindow={setLeaveDetailsWindow} setleavesTabClose={setleavesTabClose} />}
-        {leaveTab === "Holiday List" && "Holiday List"}
-        {leaveTab === "History" && "History"}
+        {leaveTab === "Holiday List" && <HolidayList />}
+        {leaveTab === "History" && <LeaveHistory />}
       </div>
       {leavesTabClose && leaveDetailsWindow && <div className={styles.leaveWindowsOverLay} onClick={(e) => {setleavesTabClose(false)}}>
         <div className={styles.leaveWindows} onClick={(e) => {e.stopPropagation()}}>
