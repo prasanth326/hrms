@@ -57,6 +57,9 @@ export default function InterviewMainpage() {
           </div>
         </div>
       </div>
+      <div className={style.image}>
+        <img src={emptyOvertime} alt="emptyOvertime" />
+      </div>
     </div>
   );
 }

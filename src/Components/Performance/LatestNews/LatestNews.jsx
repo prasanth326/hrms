@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./LatestNews.module.css";
 import benifits1 from "../../../assets/benifits1.png";
+import { Button } from "@mui/material";
 
 const LatestNews = () => {
   return (
@@ -11,13 +12,15 @@ const LatestNews = () => {
         </div>
         <div className={styles.LatestNewsTitle}>Latest Notes</div>
       </div>
-      <div className={styles.Activities} >
+      <div className={styles.Activities}>
         <div className={styles.NoActivities}>No Activities found</div>
         <div className={styles.NoNotes}>No Notes/ Conversations available</div>
       </div>
-      <div className={styles.buttondiv} >
-        <button className={styles.Addnew}> Add new</button>
-        <button className={styles.Viewall}> View All</button>
+      <div className={styles.buttondiv}>
+        <Button className={styles.Addnew} variant="outlined">
+          Add new
+        </Button>
+        <Button className={styles.Viewall}>View All</Button>
       </div>
     </div>
   );

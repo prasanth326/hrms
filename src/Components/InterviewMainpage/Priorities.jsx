@@ -6,11 +6,11 @@ import { useNavigate } from "react-router-dom";
 import styles from "./Priorities.module.css";
 
 export default function Priorities() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const navigateto=()=>{
-    navigate("/Interviews/individualFeedBack")
-  }
+  const navigateto = () => {
+    navigate("/Interviews/individualFeedBack");
+  };
   return (
     <div className={styles.prioritiesparent}>
       <div className={styles.prioritiesContainer}></div>

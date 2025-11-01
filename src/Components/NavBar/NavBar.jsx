@@ -4,6 +4,7 @@ import clockin from "../../assets/clockin.png";
 import logoaccess from "../../assets/logoaccess.png";
 import menu from "../../assets/menu.png";
 import more from "../../assets/more.png";
+import backbtn from "../../assets/leftarrow.png";
 
 import { useNavigate } from "react-router-dom";
 
@@ -16,14 +17,30 @@ import styles from "./NavBar.module.css";
 import DashBoardSideBar from "../DashBoardSideBar/DashBoardSideBar";
 
 const NavBar = ({ qrlocation }) => {
+  const [date, setDate] = useState(new Date());
+  const [clockTime, setClocktime] = useState(null);
+  console.log("date", date);
+  const today = date.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    weekday: "long",
+  });
+  const time = (date) =>
+    date.toLocaleTimeString("en-GB", {
+      hour12: false,
+    });
+  const onclickfun = () => {
+    setClocktime(time(new Date()));
+  };
+
   const [showNoti, setShowNoti] = useState(false);
   const [showPro, setShowPro] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
   const [showDashboard, setShowDashBoard] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth)
+  const [width, setWidth] = useState(window.innerWidth);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleNoti = () => {
     setShowNoti((prev) => !prev);
@@ -36,36 +53,49 @@ const NavBar = ({ qrlocation }) => {
   };
 
   const handleQr = () => {
-    navigate("/QrCode")
-    setShowPro(false)
-  }
+    navigate("/QrCode");
+    setShowPro(false);
+  };
 
   const onclickMenu = () => {
-    setShowMenu((prev) => !prev)
-  }
+    setShowMenu((prev) => !prev);
+  };
   useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth)
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (width >= 720) {
-      setShowMenu(false)
+      setShowMenu(false);
     }
-  }, [width])
+  }, [width]);
   return (
     <div className={Style.container}>
       <div className={Style.navbar}>
         <div className={Style.navbarChild}>
           <div className={Style.logo}>
-            {
-              qrlocation ?
-                <img src={menu} alt="menu" onClick={() => { setShowDashBoard(true) }} /> :
-                <Link to="/accesspage">
-                  <img src={logoaccess} alt="logo" />
-                </Link>
-            }
+            <img
+              src={backbtn}
+              className={Style.logobck}
+              onClick={() => {
+                navigate(-1);
+              }}
+            />
+            {qrlocation ? (
+              <img
+                src={menu}
+                alt="menu"
+                onClick={() => {
+                  setShowDashBoard(true);
+                }}
+              />
+            ) : (
+              <Link to="/accesspage">
+                <img src={logoaccess} alt="logo" className={Style.logobck2} />
+              </Link>
+            )}
           </div>
           <div className={Style.inputsrch}>
             <input
@@ -77,9 +107,15 @@ const NavBar = ({ qrlocation }) => {
             </div>
           </div>
           <div className={Style.profilemore2}>
-            <div className={Style.profilemore} onClick={() => onclickMenu()}><img src={more} /></div>
+            <div className={Style.profilemore} onClick={() => onclickMenu()}>
+              <img src={more} />
+            </div>
             <div className={`${showMenu ? Style.profile : Style.profileHide}`}>
-              <div className={Style.profileIconclock}>
+              <div>{clockTime ? clockTime : "00:00:00"}</div>
+              <div
+                className={Style.profileIconclock}
+                onClick={() => onclickfun()}
+              >
                 <img src={clockin} alt="clockin" />
               </div>
               <div
@@ -128,7 +164,10 @@ const NavBar = ({ qrlocation }) => {
       ) : null}
 
       {
-        <DashBoardSideBar isOpen={showDashboard} onClose={() => setShowDashBoard(false)} />
+        <DashBoardSideBar
+          isOpen={showDashboard}
+          onClose={() => setShowDashBoard(false)}
+        />
       }
     </div>
   );

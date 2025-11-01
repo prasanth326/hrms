@@ -211,7 +211,10 @@
   display: flex;
   justify-content: flex-end;
 }
-@media (max-width:1040px) {
+.logobck {
+  display: none;
+}
+@media (max-width: 1040px) {
   .dashboard {
     align-items: center;
     justify-content: center;
@@ -224,12 +227,30 @@
   }
 }
 
-
-
-@media (max-width:720px) {
+@media (max-width: 720px) {
+  .logo .logobck {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .logo {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    padding-left: 10px;
+  }
+  .navbarChild {
+    grid-template-columns: 1.2fr 2fr 1fr;
+  }
   .profileHide {
-  display: none;
-}
+    display: none;
+  }
+  .logo .logobck2 {
+    width: 100%;
+  }
 
   .profilemore {
     display: block;
@@ -248,11 +269,12 @@
     box-shadow: 1px 1px 1px 1px gray;
     margin-top: 35px;
     padding: 10px;
+    z-index: 2;
     border-radius: 10px 0 10px 0;
   }
-.profile img {
-  width: 20px;
-}
+  .profile img {
+    width: 20px;
+  }
   .card p {
     font-size: 0.7rem;
   }
@@ -277,4 +299,3 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
-

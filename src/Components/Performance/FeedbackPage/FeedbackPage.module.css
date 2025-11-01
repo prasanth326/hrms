@@ -80,6 +80,31 @@
   cursor: pointer;
 }
 
-.emptyState img{
-    width: 250px;
+.emptyState img {
+  width: 250px;
+}
+
+@media screen and (max-width: 720px) {
+  .header {
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .container {
+    box-sizing: border-box;
+    padding: 5px;
+  }
+  .header h1 {
+    font-size: 1.2rem;
+  }
+  .statsSection {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .contentSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

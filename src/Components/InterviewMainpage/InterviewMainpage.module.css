@@ -12,6 +12,9 @@
 .image img {
   width: 200px;
 }
+.image {
+  display: block;
+}
 .image2 img {
   width: 200px;
 }
@@ -79,4 +82,16 @@
   background-color: #fff;
   border-radius: 5px;
   padding: 10px;
+}
+
+@media screen and (max-width: 720px) {
+  .image {
+    display: none;
+  }
+  .cards1 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cards2 {
+    grid-template-columns: 1fr 1fr;
+  }
 }

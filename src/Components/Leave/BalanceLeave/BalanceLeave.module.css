@@ -159,3 +159,10 @@
 .LeaveDetails div{
     cursor: pointer;
 }
+@media screen and (max-width:720px) {
+    .leaveBalanceCotainer{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    
+}

@@ -31,3 +31,10 @@
 .leaveBCotainerchatliveimg img{
     width: 25px;
 }
+@media screen and (max-width:720px) {
+    .leaveBCotainer{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+}

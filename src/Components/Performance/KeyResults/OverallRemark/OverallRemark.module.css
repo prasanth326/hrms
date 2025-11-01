@@ -1,80 +1,91 @@
-.overalContainerRe{
+.overalContainerRe {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.overalContainer {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.me {
+  background-color: rgb(233, 242, 251);
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  border-radius: 20px;
+}
+
+.formeediv {
+  display: flex;
+  flex-direction: column;
+}
+.formee {
+  font-weight: 600;
+}
+.formeedivcircle {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(176, 211, 241);
+  border-radius: 100%;
+}
+.meDiver {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(210, 209, 209);
+}
+
+.whoWould,
+.whatistheFeedback {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.whoWould input,
+.whatistheFeedback input {
+  border-color: rgb(206, 206, 206);
+  height: 30px;
+  border-style: solid;
+  border-width: 1px;
+}
+.selectVisibilty {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: self-start;
+  gap: 10px;
+}
+.selectVisibiltyOptn {
+  display: flex;
+  background-color: rgb(233, 242, 251);
+  padding: 4px;
+  border-radius: 4px;
+  align-items: center;
+  gap: 5px;
+  width: 40%;
+}
+
+.activeVisibtn {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.selectVisibiltyOptn2 {
+  padding: 20px;
+}
+
+.whatistheFeedback input {
+  height: 60px;
+}
+
+@media screen and (max-width: 720px) {
+  .overalContainer {
     width: 100%;
-    display: flex;
-    justify-content:center;
-}
-.overalContainer{
-width: 60%;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-}
-.me{
-    background-color: rgb(233, 242, 251);
     padding: 10px;
-    display: flex;
     gap: 10px;
-    border-radius: 20px;
-}
-
-.formeediv{
-    display: flex;
-    flex-direction: column;
-
-}
-.formee{
-    font-weight: 600;
-}
-.formeedivcircle{
-    width: 40px;
-    height: 40px;
-    background-color: rgb(176, 211, 241);
-    border-radius: 100%;
-}
-.meDiver{
+  }
+  .selectVisibiltyOptn {
     width: 100%;
-    height: 1px;
-    background-color: rgb(210, 209, 209);
-}
-
-.whoWould,.whatistheFeedback{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-
-}
-.whoWould input,.whatistheFeedback input{
-    border-color: rgb(206, 206, 206);
-    height: 30px;
-    border-style: solid;
-    border-width: 1px;
-}
-.selectVisibilty{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: self-start;
-    gap: 10px;
-}
-.selectVisibiltyOptn{
-    display: flex;
-    background-color: rgb(233, 242, 251);
-    padding: 4px;
-    border-radius: 4px;
-    align-items: center;
-    gap: 5px;
-    width: 40%;
-}
-
-.activeVisibtn{
-    background-color: #fff;
-    border-radius: 4px;
-}
-
-.selectVisibiltyOptn2{
-    padding: 20px;
-}
-
-.whatistheFeedback input{
-    height: 60px;
+  }
 }

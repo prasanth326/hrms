@@ -1,76 +1,76 @@
 .attendanceOverview {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background-color:rgb(237 232 232);
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(237 232 232);
+  gap: 10px;
 }
-.pendingOverAttendLeave2{
-    /* overflow: hidden; */
+.pendingOverAttendLeave2 {
+  /* overflow: hidden; */
 }
 .overviewAttendance {
-    height: 10%;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
+  height: 10%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
 }
 
 .pendingOverAttendLeave {
-    display: flex;
-    flex-direction: row;
-    height: 90%;
-    width: 100%;
-    gap: 10px;
-    /* overflow-y: scroll; */
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+  width: 100%;
+  gap: 10px;
+  /* overflow-y: scroll; */
 }
 
 .pendingOver {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: 100%;
-    width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  width: 70%;
 }
 
 .attendLeave {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
 }
 
 .letUpWho {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: 100%;
-    width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  width: 30%;
 }
 
 .pendingRequest {
-    height: 30%;
+  height: 30%;
 }
 
 .overtimeDetails {
-    height: 40%;
+  height: 40%;
 }
-.letsgotoWork{
-    height: 30%;
-    padding: 20px;
+.letsgotoWork {
+  height: 30%;
+  padding: 20px;
 }
-.upcomingTimeoff{
-    /* height: 30%; */
+.upcomingTimeoff {
+  /* height: 30%; */
 }
-.whoisoutintheTeam{
-    /* height: 40%; */
-    padding: 10px;
+.whoisoutintheTeam {
+  /* height: 40%; */
+  padding: 10px;
 }
-.attendanceMetrics{
-    width: 100%;
+.attendanceMetrics {
+  width: 100%;
 }
-.leaveBalance{
-    width: 100%;
-    padding: 10px;
+.leaveBalance {
+  width: 100%;
+  padding: 10px;
 }
 .pendingRequest,
 .overtimeDetails,
@@ -79,7 +79,34 @@
 .letsgotoWork,
 .upcomingTimeoff,
 .whoisoutintheTeam {
-    background-color: #fff;
-    box-shadow: 0px 2px 6px 0px #d4d7d8;
-   border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 2px 6px 0px #d4d7d8;
+  border-radius: 10px;
+}
+@media screen and (max-width: 720px) {
+  .pendingOverAttendLeave {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .attendLeave {
+    display: flex;
+    flex-direction: column;
+  }
+  .pendingOver {
+    width: 100%;
+  }
+  .letUpWho {
+    width: 100%;
+  }
+  .overviewAttendance {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    box-sizing: border-box;
+    height: auto;
+  }
+  .leaveBalance{
+    box-sizing: border-box;
+  }
 }

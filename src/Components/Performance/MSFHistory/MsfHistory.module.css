@@ -1,4 +1,3 @@
-
 .MsfHistory {
   display: flex;
   flex-direction: column;
@@ -6,11 +5,10 @@
   gap: 40px;
   border: 1px solid rgb(235, 232, 232);
   margin-top: 10px;
-
 }
-.MsfHistoryname{
-    font-weight: bold;
-    color: rgb(72, 70, 70);
+.MsfHistoryname {
+  font-weight: bold;
+  color: rgb(72, 70, 70);
 }
 
 .MsfHistory .divider {
@@ -41,4 +39,16 @@
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
+}
+@media screen and (max-width: 720px) {
+  .MsfHistoryContainer {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .MsfHistory {
+    box-sizing: border-box;
+  }
+  .headers {
+    gap: 10px;
+  }
 }

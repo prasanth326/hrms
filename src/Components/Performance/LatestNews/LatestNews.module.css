@@ -14,8 +14,8 @@
 .LatestNews img {
   width: 40px;
 }
-.LatestNewsTitle{
-    font-weight: bold;
+.LatestNewsTitle {
+  font-weight: bold;
 }
 .Activities {
   display: flex;
@@ -30,18 +30,26 @@
   font-weight: 200;
   font-size: 13px;
 }
-.buttondiv{
-    display: flex;
-    gap: 30px;
+.buttondiv {
+  display: flex;
+  gap: 30px;
 }
 .buttondiv button {
-    width: 100px;
-    border-radius: 5px;
+  width: 100px;
+  border-radius: 5px;
 }
-.buttondiv .Viewall{
-    background-color: rgb(48, 64, 157);
-    color: white;
+.buttondiv .Viewall {
+  background-color: rgb(48, 64, 157);
+  color: white;
 }
-.buttondiv .Addnew{
-    color: rgb(48, 64, 157);
+.buttondiv .Addnew {
+  color: rgb(48, 64, 157);
+}
+
+@media screen and (max-width: 720px) {
+  .buttondiv {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+  }
 }

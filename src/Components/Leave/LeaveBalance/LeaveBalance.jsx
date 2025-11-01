@@ -21,7 +21,6 @@ export default function LeaveBalance() {
   const leaveWindowsx = () => {
     setleavesTabClose((prev) => !prev)
   }
-
   return (
     <div className={styles.leaveBCotainerMain}>
       <LeaveHeaderTab setLeaveTab={setLeaveTab} leaveTab={leaveTab} />

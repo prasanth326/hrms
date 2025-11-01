@@ -99,3 +99,9 @@ background-color: #fff;
     color: #1976d2;
     border-bottom: 2px solid #1976d2;
 }
+@media screen and (max-width:720px){
+  .Reimbursement {
+  display: grid;
+  grid-template-columns: auto;
+}
+}

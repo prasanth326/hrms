@@ -39,7 +39,7 @@ export default function MyTasks() {
             Due This week-0
           </div>
         </div>
-        <div>
+        <div className={styles.showtxt}>
           <span>Show: </span>
           <select>
             <option>All</option>

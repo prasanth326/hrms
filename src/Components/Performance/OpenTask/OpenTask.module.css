@@ -1,10 +1,10 @@
-.buttonsdiv{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    padding: 10px;
+.buttonsdiv {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 10px;
 }
-.buttons{
+.buttons {
   /* border: 1px solid black; */
   border-radius: 20px;
   height: 30%;
@@ -13,30 +13,29 @@
   padding: 12px;
   box-shadow: 1px 1px 1px 0px rgb(228, 227, 227);
 }
-.buttons img{
-    width: 50%;
-    height: 20px;
-    padding: 5px;
+.buttons img {
+  width: 50%;
+  height: 20px;
+  padding: 5px;
 }
-.OpenTask{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    
+.OpenTask {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
-.OpenTaskContainer{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.OpenTaskContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.activebtn{
-    background-color: rgb(98, 150, 176);
-    color: #fff;
+.activebtn {
+  background-color: rgb(98, 150, 176);
+  color: #fff;
 }
-.label{
+.label {
   box-shadow: 0px 0px 2px 1px rgb(228, 227, 227);
   padding: 10px;
   width: 80%;
@@ -44,16 +43,47 @@
   justify-content: center;
 }
 
-.OpenTaskdiv{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    font-weight: 600;
+.OpenTaskdiv {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 600;
 }
 
-.OpenTaskdiv img{
-    width: 30px;
-    background-color: rgb(255, 123, 0);
+.OpenTaskdiv img {
+  width: 30px;
+  background-color: rgb(255, 123, 0);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 720px) {
+  .buttons {
     padding: 5px;
-    border-radius: 5px;
+  }
+  .buttonsdiv {
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .OpenTask {
+    display: flex;
+    flex-direction: column;
+  }
+  .OpenTaskdiv {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+  }
+  .OpenTaskdiv img {
+    margin: 10px;
+  }
+  .OpenTaskdiv div {
+    margin: 10px;
+  }
+  .OpenTaskContainer {
+    padding: 10px;
+  }
 }

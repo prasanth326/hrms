@@ -57,3 +57,11 @@
 .Feedback{
   font-weight: bold;
 }
+
+
+@media screen and (max-width:370px) {
+  .SuggestionsToday .ACt {
+    
+  }
+
+}

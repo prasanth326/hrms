@@ -115,6 +115,35 @@
 .pendingItemsClockTextmsg {
   width: 80%;
 }
-.OverviewContainerbuttons{
+.OverviewContainerbuttons {
+  align-items: center;
+}
+
+@media screen and (max-width: 720px) {
+  .pendingItemsparent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+  }
+  .pendingItems {
+    border-right: none;
+    border-bottom: 1px solid rgb(206, 206, 206);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pendingItemsClockTextmsg {
+    text-align: center;
+  }
+  .pendingItems {
+    gap: 10px;
+  }
+  .summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 }

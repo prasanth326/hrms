@@ -1,147 +1,174 @@
-.container{
-    display: flex;
-    height: 100vh;
-    font-family:  "Inter", sans-serif;
-    background-color: #fafbfc;
-    color: #333;
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+  background-color: #fafbfc;
+  color: #333;
 }
 
-.sidebar{
-    width: 250px;
-    background-color: #fff;
-    border-right: 1px solid #e5e7eb;
-    padding: 20px;
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  border-right: 1px solid #e5e7eb;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebarItem {
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #4b5563;
+}
+
+.sidebarItem:hover {
+  background: #f3f4f6;
+}
+
+.active {
+  background: #eef2ff;
+  color: #4f46ef;
+  font-weight: 500;
+}
+
+.tipBox {
+  background-color: #fff7ed;
+  border: 1px solid #fcf34d;
+  padding: 14px;
+  border-radius: 10px;
+  font-family: 13px;
+  color: #92400e;
+  margin-top: auto;
+  text-align: center;
+  position: relative;
+}
+
+.tipIcon {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fcd34d;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeDot {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.main {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.addBtn {
+  margin-top: 10px;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.addBtn:hover {
+  background-color: #f3f4f6;
+}
+
+.checkboxList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancelBtn,
+.submitBtn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.submitBtn {
+  background-color: #7c3aed;
+  color: #fff;
+}
+
+.submitBtn:hover {
+  background-color: #6d28d9;
+}
+
+@media screen and (max-width: 720px) {
+  .container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.sidebarItem{
-    padding:10px;
-    border-radius: 6px;
-    cursor: pointer;
-    color: #4b5563;
-}
-
-.sidebarItem:hover{
-    background: #f3f4f6;
-}
-
-.active{
-    background: #eef2ff;
-    color: #4f46ef;
-    font-weight: 500;
-}
-
-.tipBox{
-    background-color: #fff7ed;
-    border: 1px solid #fcf34d;
-    padding: 14px;
-    border-radius: 10px;
-    font-family: 13px;
-    color: #92400e;
-    margin-top: auto;
-    text-align: center;
-    position: relative;
-}
-
-
-.tipIcon{
-    font-size: 20px;
-    margin-bottom: 6px;
-}
-
-.dots{
+  }
+  .sidebar {
     display: flex;
-    justify-content: center;
-    gap: 6px;
-    margin-top: 10px;
-}
-
-.dot{
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #fcd34d;
-    opacity: 0.4;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.activeDot{
-    opacity: 1;
-    transform: scale(1.2);
-}
-
-.main{
-    flex: 1;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.header{
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.section{
-    background: #fff;
-    border-radius: 8px;
-    padding: 24px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.sectionHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-}
-.addBtn{
-    margin-top: 10px;
-    background-color: #f9fafb;
-    border: 1px solid #d1d5db;
-    padding: 8px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-.addBtn:hover{
-    background-color: #f3f4f6;
-}
-
-.checkboxList{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-size: 14px;
-}
-
-.actions{
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-}
-
-.cancelBtn, .submitBtn{
-    padding:8px 20px;
-    border: none;
-    border-radius: 6px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.cancelBtn{
-    background-color: #f3f4f6;
-    color: #374151;
-}
-
-.submitBtn{
-    background-color: #7c3aed;
-    color: #fff;
-}
-
-.submitBtn:hover{
-    background-color: #6d28d9;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+  .tipBox {
+    display: none;
+  }
+  .header {
+    font-size: 1rem;
+  }
+  .main {
+    padding: 10px;
+  }
+  .section {
+    padding: 10px;
+  }
 }
