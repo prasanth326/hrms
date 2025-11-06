@@ -73,3 +73,14 @@
   gap: 40px;
   width: 95%;
 }
+@media screen and (max-width:720px) {
+  .PayrollDocumentstable {
+    font-size: 12px;
+    overflow: scroll
+  }
+  .PayrollDocumentstablebox {
+    font-size: 12px;
+  }
+
+  
+}

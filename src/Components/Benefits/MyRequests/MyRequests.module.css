@@ -63,3 +63,13 @@ margin-top: 20px;
 .tableExpenseimg img{
     width: 300px;
 }
+@media screen and (max-width: 720px) {
+  .MyRequestsContainer{
+    display: flex;
+    flex-direction: column;
+  }
+  .MyRequests p{
+    font-size: 12px;
+  }
+
+}

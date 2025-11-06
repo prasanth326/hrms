@@ -43,4 +43,10 @@
     width: 100%;
     justify-content: space-between;
   }
+  .financialOverview {
+    font-size: 12px;
+  }
+  .header {
+    font-size: 12px;
+  }
 }

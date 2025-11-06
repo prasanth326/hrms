@@ -39,3 +39,12 @@ padding: 15px;
     border-style: none;
     border: 1px solid #dadada;
 }
+@media screen and (max-width: 720px) {
+    .ExtraPaymentstable{
+        overflow: scroll;
+}
+    .ExtraPayments{
+   font-size: 12px;
+   gap: 20px
+}
+}

@@ -23,3 +23,12 @@
 .paySlipsYearContainer p{
         font-weight: 600;
 }
+@media screen and (max-width: 720px) {
+    .paySlipsYear{
+        font-size: 12px;
+        align-items: center;
+    }
+    .paySlipsYearContainer{
+    font-size: 12px;
+}
+}

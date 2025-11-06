@@ -53,7 +53,6 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-
 }
 .Others {
   background-color: white;
@@ -88,4 +87,29 @@
 }
 .viewversions span {
   color: black;
+}
+@media screen and (max-width: 720px) {
+  .ItDeclarationsContainer {
+    font-size: 12px;
+  }
+  .HouseParty {
+    align-items: center;
+  }
+  .firstdiv {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .Others {
+    width: fit-content;
+    height: 50px;
+  }
+  .Notenegative {
+    font-size: 12px;
+  }
+  .financialYear {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 12px;
+  }
 }

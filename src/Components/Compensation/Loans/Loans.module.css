@@ -24,15 +24,15 @@
   cursor: pointer;
 }
 .Loanstable {
-    display: grid;
-    grid-template-columns: repeat(8, auto);
-    border: 1px solid #e5e7eb;
-    background-color: rgb(243, 240, 240);
-    padding: 8px 0;
-    font-size: 14px;
-    place-items: anchor-center;
-    align-items: center;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  border: 1px solid #e5e7eb;
+  background-color: rgb(243, 240, 240);
+  padding: 8px 0;
+  font-size: 14px;
+  place-items: anchor-center;
+  align-items: center;
+  width: 100%;
 }
 .Loansimg {
   width: 250px;
@@ -42,4 +42,23 @@
 }
 .Loansimg img {
   width: 100%;
+}
+@media screen and (max-width: 720px) {
+  .Loans h2 {
+    font-size: 12px;
+  }
+  .Loans {
+    margin-top: 12px;
+  }
+  .Loans button {
+    height: 20px;
+  }
+  .Loanstable {
+    font-size: 12px;
+    overflow: scroll;
+    gap: 10px;
+  }
+  .Loanstablebox {
+    font-size: 12px;
+  }
 }

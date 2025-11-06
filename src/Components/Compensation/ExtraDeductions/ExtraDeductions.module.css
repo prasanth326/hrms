@@ -42,3 +42,23 @@
 .Deductionsimg img{
   width: 225px;
 }
+@media screen and (max-width:720px) {
+  
+  .Deductionstablebox{
+    gap: 50px;
+    font-size: 12px;
+  }
+  .Deductions h2 {
+  font-size: 12px;
+}
+.Deductions button {
+  height: 20px;
+  font-size: 12px;
+}
+.Deductionstable{
+  gap: 10px;
+  overflow: scroll;
+  font-size: 12px;
+}
+
+}

@@ -3,3 +3,9 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
+@media screen and (max-width:720px) {
+    .FlexComponents{
+    grid-template-columns: auto;
+    font-size: 12px;
+    }
+}
