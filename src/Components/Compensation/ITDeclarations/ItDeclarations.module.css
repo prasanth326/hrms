@@ -5,36 +5,44 @@
   background-color: rgb(229, 238, 238);
   padding: 10px;
 }
+
 .ItDeclarationsContainer {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
 .Financial {
   display: flex;
   flex-direction: column;
   gap: 10px;
   justify-content: flex-start;
 }
+
 .Financial p {
   text-align: start;
 }
+
 .FinancialYear {
   font-weight: bold;
 }
+
 .NoFinancialYear {
   font-weight: 400;
 }
+
 .comparebuttons {
   display: flex;
   gap: 8px;
 }
+
 .comparebuttons button {
   width: 180px;
   height: 40px;
 }
-.FinancialYear span {
+
+.FinancialYearParent span {
   margin-left: 10px;
   background-color: orange;
   border: 1px solid orange;
@@ -44,37 +52,49 @@
   font-size: 13px;
   padding: 0 5px 0 5px;
 }
+.FinancialYearParent{
+  display: flex;
+  justify-content: space-between;
+}
+
 .HouseParty {
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
+
 .TotalFinancial {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
+
 .Others {
   background-color: white;
   padding: 5px 10px;
   border-radius: 50px;
 }
+
 .activebtn {
   color: white;
   background-color: #8a80fb;
 }
+
 .NoFinancialYear span {
   font-weight: bold;
 }
+
 .section span {
   font-weight: 600;
   color: rgb(173, 171, 171);
 }
+
 .line {
   height: 1px;
   width: 100%;
   background-color: rgb(173, 171, 171);
 }
+
 .Notenegative {
   background-color: rgb(227, 200, 151);
   padding: 10px 20px;
@@ -82,34 +102,63 @@
   width: fit-content;
   font-size: 14px;
 }
+
 .viewversions {
   color: rgb(144 134 255);
 }
+
 .viewversions span {
   color: black;
 }
+
+@media screen and (max-width: 1114px) {
+  .firstdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
 @media screen and (max-width: 720px) {
   .ItDeclarationsContainer {
     font-size: 12px;
   }
-  .HouseParty {
-    align-items: center;
-  }
+
   .firstdiv {
+    display: flex;
     flex-direction: column;
     gap: 20px;
   }
+
+  .HouseParty {
+    align-items: center;
+  }
+
   .Others {
     width: fit-content;
     height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        border-radius: 10px;
   }
+
   .Notenegative {
     font-size: 12px;
   }
+
   .financialYear {
     display: flex;
     gap: 10px;
     align-items: center;
     font-size: 12px;
   }
+  .FinancialYearParent{
+  display: flex;
+  flex-direction: column;
+ }
+ .FinancialYearParent span{
+  width: fit-content;
+  margin-left: 0;
+ }
 }

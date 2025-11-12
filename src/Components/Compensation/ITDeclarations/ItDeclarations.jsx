@@ -13,10 +13,12 @@ export const ItDeclarations = () => {
         <div className={styles.firstdiv}>
           <div className={styles.TotalFinancial}>
             <div className={styles.Financial}>
-              <p className={styles.FinancialYear}>
-                IT Declaration for the Financial Year 2025-2026
+              <div  className={styles.FinancialYearParent}>
+                <p className={styles.FinancialYear}>
+                  IT Declaration for the Financial Year 2025-2026
+                </p>
                 <span> CLOSED</span>
-              </p>
+              </div>
               <p className={styles.NoFinancialYear}>
                 Go Ahead with New Tax Regime (No tax Exemption/ Deductions Under
                 Section 115BAC):
@@ -25,26 +27,23 @@ export const ItDeclarations = () => {
             </div>
             <div className={styles.HouseParty}>
               <div
-                className={`${styles.Others} ${
-                  activeHouseParty === "HouseParty" ? styles.activebtn : ""
-                }`}
+                className={`${styles.Others} ${activeHouseParty === "HouseParty" ? styles.activebtn : ""
+                  }`}
                 onClick={() => setactiveHouseParty("HouseParty")}
               >
                 House Party(U/S 24)
               </div>
               <div
-                className={`${styles.Others} ${
-                  activeHouseParty === "HouseParty80" ? styles.activebtn : ""
-                }`}
+                className={`${styles.Others} ${activeHouseParty === "HouseParty80" ? styles.activebtn : ""
+                  }`}
                 onClick={() => setactiveHouseParty("HouseParty80")}
               >
                 {" "}
                 Investment Declaration (U/S 80) & Others
               </div>
               <div
-                className={`${styles.Others} ${
-                  activeHouseParty === "Others" ? styles.activebtn : ""
-                }`}
+                className={`${styles.Others} ${activeHouseParty === "Others" ? styles.activebtn : ""
+                  }`}
                 onClick={() => setactiveHouseParty("Others")}
               >
                 Others
@@ -52,7 +51,7 @@ export const ItDeclarations = () => {
             </div>
           </div>
           <div className={styles.comparebuttons}>
-            <Button variant="contained" sx={{backgroundColor: "#8a80fb"}}>COMPARE TAX</Button>
+            <Button variant="contained" sx={{ backgroundColor: "#8a80fb" }}>COMPARE TAX</Button>
             <Button variant="outlined">Form 12BB</Button>
           </div>
         </div>

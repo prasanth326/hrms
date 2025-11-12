@@ -147,16 +147,16 @@ const NavBar = ({ qrlocation }) => {
           <div className={styles.notificat}>
             <div className={styles.notificatcontainer}>
               <div className={styles.profileicon2}></div>
-              <div className={styles.profileicon2BTN}>
+              <div className={styles.profileicon2BTN} onClick={() => { navigate("/profile/Overview"); setShowPro(false) }}>
                 <Button variant="contained">VIEW PROFILE</Button>
               </div>
               <div className={styles.MobileQR} onClick={() => handleQr(true)}>
                 <img />
                 <p>Mobile QR Code</p>
               </div>
-              <div className={styles.MobileQR}>
+              <div className={styles.MobileQR} onClick={() => { navigate("/"); setShowPro(false) }}>
                 <img />
-                <p>Logout</p>
+                <p >Logout</p>
               </div>
             </div>
           </div>

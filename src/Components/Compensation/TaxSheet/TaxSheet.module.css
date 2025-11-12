@@ -1,47 +1,65 @@
-.taxSheetMainDv{
+.taxSheetMainDv {
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
 
-.taxSheetMainbtndis{
+.taxSheetMainbtndis {
     display: flex;
     width: 100%;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.taxSheetIncome{
+.taxSheetIncome {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
-.taxSheetIncomebtn{
+.taxSheetIncomebtn {
     display: flex;
 }
 
-.taxSheetIncomebtn2,.taxSheetIncomebtn4{
+.taxSheetIncomebtn2,
+.taxSheetIncomebtn4 {
     border: 1px solid rgb(180, 180, 240);
-    height: fit-content;
     padding: 10px;
 }
-.taxSheetIncomebtn2{
+
+.taxSheetIncomebtn2 {
     border-right: none;
     background-color: rgb(240, 240, 252);
 }
 
-.taxSheetnew{
+.taxSheetnew {
     background-color: rgb(245, 218, 144);
     padding: 10px;
     border-radius: 20px;
 }
 
-.taxSheetcurnry{
+.taxSheetcurnry {
     display: flex;
     gap: 20px;
     align-items: center;
 }
-.taxSheetcurnry3{
+
+.taxSheetcurnry3 {
     color: rgb(120, 120, 243);
+}
+
+
+@media screen and (max-width: 720px) {
+    .taxSheetMainbtndis {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .taxSheetIncome{
+        font-size: 12px;
+    }
 }

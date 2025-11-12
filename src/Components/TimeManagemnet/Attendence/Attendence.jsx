@@ -100,7 +100,7 @@ export default function Attendence() {
     const formateDateKey = (date) => date.toISOString().split("T")[0];
 
     return (
-        <div>
+        <div  className={styles.leaveHeaderTabdiv}>
             <div className={styles.leaveHeaderTab}>
                 <div>Attendence</div>
                 <div className={styles.leavebtnselect}>
