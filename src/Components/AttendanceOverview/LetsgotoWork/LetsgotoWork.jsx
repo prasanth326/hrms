@@ -9,7 +9,7 @@ const LetsgotoWork = () => {
     useAttendance();
 
   const [date, setDate] = useState(new Date());
-  const [liveWorkedTime, setLiveWorkedTime] = useState(""); // 👈 live timer
+  const [liveWorkedTime, setLiveWorkedTime] = useState(""); 
 
   const todayStr = date.toLocaleDateString("en-GB", {
     day: "2-digit",
@@ -37,21 +37,18 @@ const LetsgotoWork = () => {
 
   const today = getTodayRecord();
 
-  // 🕒 LIVE UPDATE EFFECT
-  useEffect(() => {
+   useEffect(() => {
     if (!today || !isClockedIn) {
       setLiveWorkedTime(today?.totalWork || "0h 0m");
       return;
     }
 
-    // update every 30 seconds (you can set 60 * 1000 = every 1 min)
-    const interval = setInterval(() => {
+     const interval = setInterval(() => {
       const newTime = calculateProgressiveWorkedTime(today);
       setLiveWorkedTime(newTime);
     }, 30 * 1000);
 
-    // run immediately once
-    setLiveWorkedTime(calculateProgressiveWorkedTime(today));
+     setLiveWorkedTime(calculateProgressiveWorkedTime(today));
 
     return () => clearInterval(interval);
   }, [today, isClockedIn, calculateProgressiveWorkedTime]);
