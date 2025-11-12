@@ -5,7 +5,7 @@ import backbtn from "../../../assets/backbtn.png"
 import frwbtn from "../../../assets/frwbtn.png"
 import absent from "../../../assets/absent.png"
 import present from "../../../assets/present.png"
-
+import { useAttendance } from "../../../context/AttendanceContext";
 
 import styles from './Attendence.module.css';
 import { useState } from 'react';
@@ -68,7 +68,7 @@ export default function Attendence() {
     const [isOpen, setIsOpen] = useState(false)
     const [isOpenAtt, setIsOpenAtt] = useState(false)
     const [isOpenShift, setIsOpenShift] = useState(false)
-
+    const { attendance } = useAttendance();
 
     const monthStart = new Date(
         currentDate.getFullYear(),
@@ -99,8 +99,29 @@ export default function Attendence() {
 
     const formateDateKey = (date) => date.toISOString().split("T")[0];
 
+const getAttendanceStatus = (date) => {
+  const isWeekend = date.getDay() === 0 || date.getDay() === 6;  
+  if (isWeekend) return null;  
+
+  const formattedDate = date.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+
+  const record = attendance.find((a) => a.date === formattedDate);
+
+  if (record && record.records.length > 0) {
+    return { status: "Present", img: present };
+  } else {
+    return { status: "Absent", img: absent };
+  }
+};
+
+
+
     return (
-        <div  className={styles.leaveHeaderTabdiv}>
+        <div className={styles.leaveHeaderTabdiv}>
             <div className={styles.leaveHeaderTab}>
                 <div>Attendence</div>
                 <div className={styles.leavebtnselect}>
@@ -157,7 +178,19 @@ export default function Attendence() {
                             const isCurrentMonth = d.getMonth() === currentDate.getMonth();
                             const isWeekend = d.getDay() === 0 || d.getDay() === 6;
                             const key = formateDateKey(d);
-                            const dayEvents = events[key] || [];
+                         let dayEvents = events[key] || [];
+const attStatus = getAttendanceStatus(d);
+
+ if (attStatus && dayEvents.length === 0) {
+  dayEvents = [
+    {
+      title: attStatus.status,
+      img: attStatus.img,
+      time: "10:00 - 19:00",
+    },
+  ];
+}
+
                             console.log("d.getDate()", d.getDate(), days)
                             return (
                                 <div key={d} className={`${styles.day} ${!isCurrentMonth ? styles.otherMonth : ""} ${isWeekend ? styles.weekend : ""}`}>
@@ -167,6 +200,7 @@ export default function Attendence() {
                                             dayEvents.map((ev, idx) => (
                                                 <div key={idx} className={styles.imgday}>
                                                     <img src={ev.img} />
+                                                    <div className={styles.statusLabel}>{ev.title}</div>
                                                 </div>
                                             ))
                                         }

@@ -13,6 +13,22 @@
     /* font-weight: 600; */
 }
 
+.imgday {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.statusLabel {
+  font-size: 10px;
+  font-weight: 500;
+  color: #333;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+
 .leaveHeaderTab button {
     width: 150px;
     margin-right: 20px;
