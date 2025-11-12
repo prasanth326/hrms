@@ -32,6 +32,7 @@ import PersonalDetails from "./Components/Profile/PersonalDetails/PersonalDetail
 import QRcodePage from "./Components/QRcode/QRcodePage";
 import FlowRequest from "./Components/Flow/FlowRequest/FlowRequest";
 import Separation from "./Components/Flow/Separation/Separation";
+import { AttendanceProvider } from "./context/AttendanceContext";
 
 function LayoutApp() {
   const location = useLocation();
@@ -43,7 +44,7 @@ function LayoutApp() {
 
   return (
     <>
-      {!navlocation && <NavBar qrlocation={qrlocation}/>}
+      {!navlocation && <NavBar qrlocation={qrlocation} />}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/accesspage" element={<Accesspage />} />
@@ -54,7 +55,7 @@ function LayoutApp() {
           <Route path="/profile/Overview" element={<ProfilePage />} />
           <Route path="/profile/Documents" element={<Documents />} />
           <Route path="/profile/EmploymentDetails" element={<EmploymentDetails />} />
-                    <Route path="/profile/PersonalDetails" element={<PersonalDetails />} />
+          <Route path="/profile/PersonalDetails" element={<PersonalDetails />} />
 
 
           <Route path="/Attendance/leave" element={<LeaveBalance />} />
@@ -98,9 +99,12 @@ function LayoutApp() {
 
 function App() {
   return (
-    <Router>
-      <LayoutApp />
-    </Router>
+    <AttendanceProvider>
+      <Router>
+        <LayoutApp />
+      </Router>
+    </AttendanceProvider>
+
   );
 }
 

@@ -1,43 +1,109 @@
-import { styled } from "@mui/material";
-import React, { useState } from "react";
-import Styles from "./LetsgotoWork.module.css";
+import React, { useState, useEffect } from "react";
 import { Button } from "@mui/material";
+import Styles from "./LetsgotoWork.module.css";
 import clockin from "../../../assets/clockin.png";
+import { useAttendance } from "../../../context/AttendanceContext";
 
 const LetsgotoWork = () => {
-  const[date, setDate]= useState(new Date())
-  const[clockTime, setClocktime]=useState(null)
-  console.log("date",date)
-  const today= date.toLocaleDateString("en-GB",{
-    day:"2-digit",
-    month:"short",
-    weekday:"long"
-  })
-  const time= (date)=>date.toLocaleTimeString("en-GB",{
-    hour12:false
-  })
-  const onclickfun=()=>{
-     setClocktime(time(new Date()))
-  }
+  const { attendance, handleClockAction, getTodayRecord, calculateProgressiveWorkedTime } =
+    useAttendance();
+
+  const [date, setDate] = useState(new Date());
+  const [liveWorkedTime, setLiveWorkedTime] = useState(""); // 👈 live timer
+
+  const todayStr = date.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    weekday: "long",
+  });
+
+  const todayRecord = attendance.find(
+    (a) =>
+      a.date ===
+      date.toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      })
+  );
+
+  const lastRecord =
+    todayRecord && todayRecord.records[todayRecord.records.length - 1];
+  const isClockedIn = lastRecord && lastRecord.clockOut === null;
+
+  const currentClockTime = isClockedIn
+    ? lastRecord.clockIn
+    : lastRecord?.clockOut || "00:00:00";
+
+  const today = getTodayRecord();
+
+  // 🕒 LIVE UPDATE EFFECT
+  useEffect(() => {
+    if (!today || !isClockedIn) {
+      setLiveWorkedTime(today?.totalWork || "0h 0m");
+      return;
+    }
+
+    // update every 30 seconds (you can set 60 * 1000 = every 1 min)
+    const interval = setInterval(() => {
+      const newTime = calculateProgressiveWorkedTime(today);
+      setLiveWorkedTime(newTime);
+    }, 30 * 1000);
+
+    // run immediately once
+    setLiveWorkedTime(calculateProgressiveWorkedTime(today));
+
+    return () => clearInterval(interval);
+  }, [today, isClockedIn, calculateProgressiveWorkedTime]);
+
   return (
     <div className={Styles.ContainerDiv}>
       <div className={Styles.LetsgetoWork}>Let's get to Work</div>
+
       <div className={Styles.DateandTime}>
-        <div>{today}</div>
-        <div>{clockTime?clockTime:"00:00:00"}</div>
+        <div>{todayStr}</div>
+        <div>{currentClockTime}</div>
       </div>
+
       <div className={Styles.line}></div>
+
       <div className={Styles.shiftPolicy}>
         <div>Shift 10:00 - 19:00</div>
-        <div><a href="#">View Policy</a></div>
+        <div>
+          <a href="#">View Policy</a>
+        </div>
       </div>
+
       <div className={Styles.clockin}>
-        <Button variant="contained" onClick={()=>onclickfun()}>
+        <Button variant="contained" onClick={handleClockAction}>
           <img src={clockin} alt="clockin" />
-          &nbsp;{clockTime? "clockout": "clockin"}
+          &nbsp;{isClockedIn ? "Clock Out" : "Clock In"}
         </Button>
       </div>
+
+      {today && (
+        <div className={Styles.summary}>
+          <p>
+            <b>Date:</b> {today.date}
+          </p>
+          <p>
+            <b>Total Worked (Progressive):</b>{" "}
+            {isClockedIn ? liveWorkedTime : today.totalWork}
+          </p>
+          <p>
+            <b>Records:</b>
+          </p>
+          <ul>
+            {today.records.map((r, i) => (
+              <li key={i}>
+                {r.clockIn} → {r.clockOut || "Still Working"}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
+
 export default LetsgotoWork;
