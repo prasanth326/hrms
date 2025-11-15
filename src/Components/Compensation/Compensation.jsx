@@ -9,6 +9,7 @@ import { ExtraDeductions } from "./ExtraDeductions/ExtraDeductions";
 import { Loans } from "./Loans/Loans";
 import { PayrollDocuments } from "./PayrollDocuments/PayrollDocuments";
 import { ExtraPayments } from "./ExtraPayments/ExtraPayments";
+import { PayPackage } from "./PayPackage/PayPackage";
 import TaxSheet from "./TaxSheet/TaxSheet";
 
 export const Compensation = () => {
@@ -26,6 +27,7 @@ export const Compensation = () => {
         setShowValues={setShowValues}
       />
       <CompensationTab setActiveTab={setActiveTab} activeTab={activeTab} />
+      {activeTab === "Pay Package" && <PayPackage showValues={showValues} />}
       {activeTab === "Flex Components" && (
         <FlexComponents showValues={showValues} />
       )}

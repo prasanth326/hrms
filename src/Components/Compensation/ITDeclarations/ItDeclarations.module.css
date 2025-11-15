@@ -52,7 +52,8 @@
   font-size: 13px;
   padding: 0 5px 0 5px;
 }
-.FinancialYearParent{
+
+.FinancialYearParent {
   display: flex;
   justify-content: space-between;
 }
@@ -73,6 +74,8 @@
   background-color: white;
   padding: 5px 10px;
   border-radius: 50px;
+      cursor: pointer;
+
 }
 
 .activebtn {
@@ -110,7 +113,11 @@
 .viewversions span {
   color: black;
 }
-
+.section2{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 @media screen and (max-width: 1114px) {
   .firstdiv {
     display: flex;
@@ -140,7 +147,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-        border-radius: 10px;
+    border-radius: 10px;
+    cursor: pointer;
   }
 
   .Notenegative {
@@ -153,12 +161,14 @@
     align-items: center;
     font-size: 12px;
   }
-  .FinancialYearParent{
-  display: flex;
-  flex-direction: column;
- }
- .FinancialYearParent span{
-  width: fit-content;
-  margin-left: 0;
- }
+
+  .FinancialYearParent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .FinancialYearParent span {
+    width: fit-content;
+    margin-left: 0;
+  }
 }

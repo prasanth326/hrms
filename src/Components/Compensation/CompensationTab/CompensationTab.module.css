@@ -1,4 +1,5 @@
 .tabsnavigation {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -6,10 +7,24 @@
   margin-top: 20px;
   box-sizing: border-box;
 }
+
+.tabs {
+  padding: 15px 0;
+  cursor: pointer;
+  position: relative;
+  color: #555;
+}
+
 .Tabactive {
-  border-bottom: 2px solid rgb(144 134 255);
   color: rgb(144 134 255);
-  padding-bottom: 20px;
+}
+
+.slider {
+  position: absolute;
+  bottom: -1px;
+  height: 2px;
+  background: rgb(144 134 255);
+  transition: transform 0.3s ease, width 0.3s ease;
 }
 
 @media screen and (max-width: 720px) {

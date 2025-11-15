@@ -33,7 +33,7 @@ export default function OverallRemark() {
                 <p>Select Visibility</p>
                 <div className={styles.selectVisibiltyOptn}>
                     <div className={`${styles.selectVisibiltyOptn2} ${activeVisi === "meAndManager" ? styles.activeVisibtn : ""}`} onClick={() => setActiveVisi("meAndManager")}>Me and Manager</div>
-                    <div className={`${styles.selectVisibiltyOptn2}${activeVisi === "onlyMe" ? styles.activeVisibtn : ""}`} onClick={() => setActiveVisi("onlyMe")}>Only Me</div>
+                    <div className={`${styles.selectVisibiltyOptn2} ${activeVisi === "onlyMe" ? styles.activeVisibtn : ""}`} onClick={() => setActiveVisi("onlyMe")}>Only Me</div>
                 </div>
             </div>
             <div className={styles.qnes}>Questions</div>

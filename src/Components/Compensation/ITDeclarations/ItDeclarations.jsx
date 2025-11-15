@@ -1,19 +1,23 @@
 import { Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import styles from "./ItDeclarations.module.css";
+import TaxModal from "./TaxModal";
 
 export const ItDeclarations = () => {
   const [activeHouseParty, setactiveHouseParty] = useState("");
+  const [openCompareTax, setOpenCompareTax] = useState(false);
+
   useEffect(() => {
     setactiveHouseParty("HouseParty");
   }, []);
+
   return (
     <div className={styles.ItDeclarationsContainer}>
       <div className={styles.ItDeclarations}>
         <div className={styles.firstdiv}>
           <div className={styles.TotalFinancial}>
             <div className={styles.Financial}>
-              <div  className={styles.FinancialYearParent}>
+              <div className={styles.FinancialYearParent}>
                 <p className={styles.FinancialYear}>
                   IT Declaration for the Financial Year 2025-2026
                 </p>
@@ -38,7 +42,6 @@ export const ItDeclarations = () => {
                   }`}
                 onClick={() => setactiveHouseParty("HouseParty80")}
               >
-                {" "}
                 Investment Declaration (U/S 80) & Others
               </div>
               <div
@@ -51,22 +54,54 @@ export const ItDeclarations = () => {
             </div>
           </div>
           <div className={styles.comparebuttons}>
-            <Button variant="contained" sx={{ backgroundColor: "#8a80fb" }}>COMPARE TAX</Button>
+            <Button variant="contained" sx={{ backgroundColor: "#8a80fb" }} onClick={() => setOpenCompareTax(true)}
+            >COMPARE TAX</Button>
             <Button variant="outlined">Form 12BB</Button>
           </div>
         </div>
       </div>
-      <div className={styles.section}>
-        SECTION 24 - INTEREST PAID ON HOUSING LOAN FOR A LET-OUT PROPERTY
-        <span> (QUALIFIED AMOUNT: 200000 INR) &#9432;{" "}</span>
-      </div>
-      <div className={styles.line}></div>
-      <div className={styles.Notenegative}>
-        Note: Negative Values in Amount indicates Amount paid and hence will be
-        considered for exemption.
-      </div>
-      <div className={styles.viewversions}>VIEW VERSIONS OF IT DECLARATION <span>(0)</span></div>
-      <div className={styles.viewversions}>VIEW VERSIONS OF POI <span>(0)</span></div>
+      {activeHouseParty === "HouseParty" && <div className={styles.section2}>
+        <div className={styles.section}>
+          SECTION 24 - INTEREST PAID ON HOUSING LOAN FOR A LET-OUT PROPERTY
+          <span> (QUALIFIED AMOUNT: 200000 INR) &#9432;{" "}</span>
+        </div>
+        <div className={styles.line}></div>
+        <div className={styles.Notenegative}>
+          Note: Negative Values in Amount indicates Amount paid and hence will be
+          considered for exemption.
+        </div>
+        <div className={styles.viewversions}>VIEW VERSIONS OF IT DECLARATION <span>(0)</span></div>
+        <div className={styles.viewversions}>VIEW VERSIONS OF POI <span>(0)</span></div>
+      </div>}
+
+      {activeHouseParty === "HouseParty80" && <div className={styles.section2}>
+        <div className={styles.section}>
+          Investment Declaration (U/S 80) & Others
+          <span> (QUALIFIED AMOUNT: 200000 INR) &#9432;{" "}</span>
+        </div>
+        <div className={styles.line}></div>
+        <div className={styles.Notenegative}>
+          Note: Negative Values in Amount indicates Amount paid and hence will be
+          considered for exemption.
+        </div>
+        <div className={styles.viewversions}>VIEW VERSIONS OF IT DECLARATION <span>(0)</span></div>
+        <div className={styles.viewversions}>VIEW VERSIONS OF POI <span>(0)</span></div>
+      </div>}
+
+      {activeHouseParty === "Others" && <div className={styles.section2}>
+        <div className={styles.section}>
+          OTHER PAYABLE TAXES
+          <span> (QUALIFIED AMOUNT: 200000 INR) &#9432;{" "}</span>
+        </div>
+        <div className={styles.line}></div>
+        <div className={styles.Notenegative}>
+          Note: Negative Values in Amount indicates Amount paid and hence will be
+          considered for exemption.
+        </div>
+        <div className={styles.viewversions}>VIEW VERSIONS OF IT DECLARATION <span>(0)</span></div>
+        <div className={styles.viewversions}>VIEW VERSIONS OF POI <span>(0)</span></div>
+      </div>}
+      <TaxModal openCompareTax={openCompareTax} setOpenCompareTax={setOpenCompareTax}/>
     </div>
   );
 };

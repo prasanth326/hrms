@@ -49,7 +49,7 @@ const LetsgotoWork = () => {
         </Button>
       </div>
 
-      {todayRecord && (
+      {/* {todayRecord && (
         <div className={Styles.summary}>
           <p>
             <b>Date:</b> {todayRecord.date}
@@ -68,7 +68,7 @@ const LetsgotoWork = () => {
             ))}
           </ul>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
