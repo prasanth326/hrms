@@ -99,24 +99,24 @@ export default function Attendence() {
 
     const formateDateKey = (date) => date.toISOString().split("T")[0];
 
-const getAttendanceStatus = (date) => {
-  const isWeekend = date.getDay() === 0 || date.getDay() === 6;  
-  if (isWeekend) return null;  
+    const getAttendanceStatus = (date) => {
+        const isWeekend = date.getDay() === 0 || date.getDay() === 6;
+        if (isWeekend) return null;
 
-  const formattedDate = date.toLocaleDateString("en-GB", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  });
+        const formattedDate = date.toLocaleDateString("en-GB", {
+            day: "2-digit",
+            month: "short",
+            year: "numeric",
+        });
 
-  const record = attendance.find((a) => a.date === formattedDate);
+        const record = (attendance?.date === formattedDate) ? attendance : null;
 
-  if (record && record.records.length > 0) {
-    return { status: "Present", img: present };
-  } else {
-    return { status: "Absent", img: absent };
-  }
-};
+        if (record && record.records.length > 0) {
+            return { status: "Present", img: present };
+        } else {
+            return { status: "Absent", img: absent };
+        }
+    };
 
 
 
@@ -178,18 +178,18 @@ const getAttendanceStatus = (date) => {
                             const isCurrentMonth = d.getMonth() === currentDate.getMonth();
                             const isWeekend = d.getDay() === 0 || d.getDay() === 6;
                             const key = formateDateKey(d);
-                         let dayEvents = events[key] || [];
-const attStatus = getAttendanceStatus(d);
+                            let dayEvents = events[key] || [];
+                            const attStatus = getAttendanceStatus(d);
 
- if (attStatus && dayEvents.length === 0) {
-  dayEvents = [
-    {
-      title: attStatus.status,
-      img: attStatus.img,
-      time: "10:00 - 19:00",
-    },
-  ];
-}
+                            if (attStatus && dayEvents.length === 0) {
+                                dayEvents = [
+                                    {
+                                        title: attStatus.status,
+                                        img: attStatus.img,
+                                        time: "10:00 - 19:00",
+                                    },
+                                ];
+                            }
 
                             console.log("d.getDate()", d.getDate(), days)
                             return (

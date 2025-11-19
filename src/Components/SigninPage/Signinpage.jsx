@@ -15,18 +15,39 @@ const Signinpage = () => {
     setChecked(event.target.checked);
   };
 
-  const handleSignin =()=>{
-    if (email=== ""|| password=== ""){
-      setError("please enter both email and Password");
+const handleSignin = async () => {
+  setError("");
+
+  if (email === "" || password === "") {
+    setError("Please enter both email and password");
+    return;
+  }
+
+  try {
+    const response = await fetch("http://localhost:5000/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email, password })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      setError(data.message || "Incorrect email or password");
       return;
     }
-    if (email === "pranitha@gmail.com" && password=== "123456"){
-      navigate("/accesspage");
-    }
-    else{
-      setError("Incorrect email or password");
-    }
-    }
+
+    // SUCCESS
+    navigate("/accesspage");
+    
+  } catch (err) {
+    setError("Server error. Please try again.");
+    console.error(err);
+  }
+};
+
   
   return (
     <div className={Styles.signinContainer}>
