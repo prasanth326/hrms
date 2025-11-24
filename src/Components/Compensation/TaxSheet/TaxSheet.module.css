@@ -36,6 +36,7 @@
     background-color: rgb(245, 218, 144);
     padding: 10px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .taxSheetcurnry {
@@ -46,6 +47,26 @@
 
 .taxSheetcurnry3 {
     color: rgb(120, 120, 243);
+}
+.btnselect {
+    width: 250px;
+    height: fit-content;
+    box-shadow: 1px 2px 2px 2px rgb(196, 196, 196);
+    position: absolute;
+    z-index: 4;
+    background-color: #ffffff;
+    right: 10px;
+    border-radius: 5px;
+}
+
+.btnselect p {
+    padding: 10px;
+    text-align: start;
+    cursor: pointer;
+}
+
+.btnselect p:hover {
+    background-color: #e9f7ef;
 }
 
 

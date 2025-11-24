@@ -1,0 +1,45 @@
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modalTitle {
+  font-weight: 700;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.taxTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+.taxTable thead th {
+  text-align: left;
+  padding: 12px;
+  font-weight: 700;
+}
+
+.taxTable thead th:last-child {
+  text-align: right;
+}
+
+.taxRow {
+  background: #faf5fb;
+  border-radius: 6px;
+}
+
+.taxCell {
+  padding: 18px 12px;
+}
+
+.taxRate {
+  text-align: right;
+}

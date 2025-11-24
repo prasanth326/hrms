@@ -2,17 +2,26 @@ import { Button } from "@mui/material";
 import React from "react";
 import Clipath from "../../../assets/Clipath.png";
 import styles from "./Loans.module.css";
-
+import { useState } from "react";
 export const Loans = () => {
+  const [openSelectbtn, setOpenSelectbtn] = useState(false);
   return (
     <div lassName={styles.Loanstab}>
       <div className={styles.Loans}>
         <h2>Loans for FY25-26</h2>
-        <Button variant="outlined">Raise Request</Button>
+        <div>
+          <Button variant="outlined" onClick={()=>setOpenSelectbtn(!openSelectbtn)}>Raise Request</Button>
+          {openSelectbtn && (
+            <div className={styles.btnselect}>
+              <p>Loan Request</p>
+              <p>Loans</p>
+            </div>
+          )}
+        </div>
       </div>
       <div className={styles.Loanstablebox}>
         <div className={styles.Loanstable}>
-          <div>Loans  Id</div>
+          <div>Loans Id</div>
           <div>Loans Type</div>
           <div>Loans Name</div>
           <div>Number of Loans</div>

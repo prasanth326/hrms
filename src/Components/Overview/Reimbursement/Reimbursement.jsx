@@ -137,7 +137,7 @@ export default function Reimbursement() {
                   <div className={styles.expenceBrowswer}>Browse</div>
                 </div>
                 <div className={styles.expenceBrowswerbtn}>
-                  <Button variant="outlined">Cencel</Button>
+                  <Button variant="outlined">Cancel</Button>
                   <Button variant="contained">Submit</Button>
                 </div>
               </div>
