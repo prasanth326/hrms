@@ -18,6 +18,7 @@ const MOCK = [
     goalsOverallRating: "--",
     competenciesOverallRating: "--",
     performanceReview: "--",
+    status: "active",
   },
   {
     id: "2",
@@ -26,49 +27,64 @@ const MOCK = [
     goalsOverallRating: "3",
     competenciesOverallRating: "--",
     performanceReview: "--",
+    status: "completed",
   },
- ];
+];
 
 function parseDateDMY(dateStr) {
-   const [dd, mm, yyyy] = dateStr.split("-").map(Number);
+  const [dd, mm, yyyy] = (dateStr || "01-01-1970").split("-").map(Number);
   return new Date(yyyy, mm - 1, dd);
 }
 
 export const FlowPaginationTable = ({
   data = MOCK,
-  searchText,
+  searchText = "",
+  onSearch,
   sortAsc,
   toggleSort,
-  page,
-  perPage,
+  page = 1,
+  perPage = 10,
   onToggleExpand,
-  expandedMap,
-  getPageItems
+  expandedMap = {},
+  getPageItems,
 }) => {
-   const filtered = useMemo(() => {
-    const q = (searchText || "").toLowerCase().trim();
-    let arr = data.filter((r) =>
-      r.reviewCycleName.toLowerCase().includes(q)
+  const [localSearch, setLocalSearch] = useState(searchText || "");
+
+  useEffect(() => {
+    setLocalSearch(searchText || "");
+  }, [searchText]);
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      if (typeof onSearch === "function") onSearch(localSearch);
+    }, 250);
+    return () => clearTimeout(t);
+  }, [localSearch, onSearch]);
+
+  const q = (localSearch || "").toLowerCase().trim();
+
+  const filtered = useMemo(() => {
+    const arr = (data || []).filter((r) =>
+      (r.reviewCycleName || "").toLowerCase().includes(q)
     );
     arr.sort((a, b) => {
-      const da = parseDateDMY(a.completedDate || "01-01-1970");
-      const db = parseDateDMY(b.completedDate || "01-01-1970");
+      const da = parseDateDMY(a.completedDate);
+      const db = parseDateDMY(b.completedDate);
       return sortAsc ? da - db : db - da;
     });
     return arr;
-  }, [data, searchText, sortAsc]);
+  }, [data, q, sortAsc]);
 
   const total = filtered.length;
   const start = (page - 1) * perPage;
   const pageItems = filtered.slice(start, start + perPage);
 
-  const getPageItemsfn=()=>{
-    getPageItems(total)
-  }
+  useEffect(() => {
+    if (typeof getPageItems === "function") getPageItems(total);
+  }, [total, getPageItems]);
 
-  useEffect(()=>{
-    getPageItemsfn()
-  },[])
+  const noop = () => {};
+
   return (
     <div className={styles.tableWrap}>
       <div className={styles.tableHeader}>
@@ -77,16 +93,27 @@ export const FlowPaginationTable = ({
             <SearchIcon fontSize="small" />
             <input
               placeholder="Search Review Cycle Name"
-              value={searchText}
-              readOnly
+              value={localSearch}
+              onChange={(e) => setLocalSearch(e.target.value)}
             />
           </div>
 
           <div className={styles.topIcons}>
-            <button className={styles.iconBtn}><FilterListIcon /></button>
-            <button className={styles.iconBtn}><SettingsIcon /></button>
-            <button className={styles.iconBtn}><VisibilityIcon /></button>
-            <button className={styles.iconBtn}><CloudDownloadIcon /></button>
+            <button className={styles.iconBtn} onClick={noop}>
+              <FilterListIcon />
+            </button>
+
+            <button className={styles.iconBtn} onClick={noop}>
+              <SettingsIcon />
+            </button>
+
+            <button className={styles.iconBtn} onClick={noop}>
+              <VisibilityIcon />
+            </button>
+
+            <button className={styles.iconBtn} onClick={noop}>
+              <CloudDownloadIcon />
+            </button>
           </div>
         </div>
 
@@ -95,18 +122,19 @@ export const FlowPaginationTable = ({
             <tr>
               <th style={{ width: 36 }}></th>
               <th>Review Cycle Name</th>
+
               <th onClick={toggleSort} className={styles.sortable}>
                 Completed Date
-                <span className={styles.sortArrow}>
-                  {sortAsc ? "▲" : "▼"}
-                </span>
+                <span className={styles.sortArrow}>{sortAsc ? "▲" : "▼"}</span>
               </th>
+
               <th>Goals Overall Rating</th>
               <th>Competencies Overall Rating</th>
               <th>Performance Review</th>
               <th style={{ width: 96 }}>Actions</th>
             </tr>
           </thead>
+
           <tbody>
             {pageItems.map((row) => {
               const expanded = !!expandedMap[row.id];
@@ -117,7 +145,6 @@ export const FlowPaginationTable = ({
                       <button
                         className={styles.expandBtn}
                         onClick={() => onToggleExpand(row.id)}
-                        aria-label={expanded ? "collapse" : "expand"}
                       >
                         {expanded ? <ExpandMoreIcon /> : <ChevronRightIcon />}
                       </button>
@@ -128,28 +155,32 @@ export const FlowPaginationTable = ({
                     </td>
 
                     <td>{row.completedDate}</td>
+
                     <td>
                       {row.goalsOverallRating}
-                      {row.goalsOverallRating && row.goalsOverallRating !== "--" && (
+                      {row.goalsOverallRating !== "--" && (
                         <InfoOutlined className={styles.infoIcon} fontSize="small" />
                       )}
                     </td>
+
                     <td>{row.competenciesOverallRating}</td>
                     <td>{row.performanceReview}</td>
 
                     <td className={styles.actionsCell}>
-                      <button className={styles.rowAction}><CloudDownloadIcon /></button>
+                      <button className={styles.rowAction} onClick={noop}>
+                        <CloudDownloadIcon />
+                      </button>
                     </td>
                   </tr>
 
                   {expanded && (
                     <tr className={styles.expandedRow}>
                       <td />
-                      <td colSpan={6} className={styles.expandedContent}>
+                      <td colSpan={7} className={styles.expandedContent}>
                         <div>
                           <strong>Additional Details Coming Soon...</strong>
                           <div className={styles.placeholderText}>
-                            Placeholder content for expanded row — add the details you need here.
+                            Placeholder content for expanded row.
                           </div>
                         </div>
                       </td>
@@ -159,6 +190,13 @@ export const FlowPaginationTable = ({
               );
             })}
 
+            {pageItems.length === 0 && (
+              <tr>
+                <td colSpan={7} style={{ textAlign: "center", padding: 24 }}>
+                  No records found.
+                </td>
+              </tr>
+            )}
           </tbody>
         </table>
       </div>

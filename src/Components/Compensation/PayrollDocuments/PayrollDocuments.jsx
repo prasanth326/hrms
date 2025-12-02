@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Clipath from "../../../assets/Clipath.png"
+import Clipath from "../../../assets/Clipath.png";
 import filter from "../../../assets/filter.png";
 import settingicon from "../../../assets/settingicon.png";
 import FilterModal from "./FilterModal";
@@ -9,11 +9,20 @@ import styles from "./PayrollDocuments.module.css";
 export const PayrollDocuments = () => {
   const [showFilter, setShowFilter] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const isSearching = searchTerm.trim() !== "";
 
   return (
     <div className={styles.PayrollDocumentstab}>
       <div className={styles.search}>
-        <input type="text" placeholder="search" />
+        <input
+          type="text"
+          placeholder="search"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+
         <div className={styles.righticons}>
           <div className={styles.icon} onClick={() => setShowFilter(true)}>
             <img src={filter} alt="filter" />
@@ -36,10 +45,14 @@ export const PayrollDocuments = () => {
             <div>Pay Run</div>
             <div>Actions </div>
           </div>
+
           <div className={styles.PayrollDocumentsimg}>
             <img src={Clipath} alt="empty" />
           </div>
-          <div>There are no records to display</div>
+
+          <div>
+            {isSearching ? "No matching results" : "There are no records to display"}
+          </div>
         </div>
       </div>
 

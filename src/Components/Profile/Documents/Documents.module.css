@@ -157,6 +157,12 @@
   color: #6b7280;
   margin: 0;
 }
+.noResultsWrapper {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
 
 @media screen and (max-width:720px){
   .searchActions {

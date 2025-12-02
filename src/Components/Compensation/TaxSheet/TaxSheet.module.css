@@ -25,6 +25,7 @@
 .taxSheetIncomebtn4 {
     border: 1px solid rgb(180, 180, 240);
     padding: 10px;
+    cursor: pointer;
 }
 
 .taxSheetIncomebtn2 {
@@ -47,6 +48,7 @@
 
 .taxSheetcurnry3 {
     color: rgb(120, 120, 243);
+    cursor: pointer;
 }
 .btnselect {
     width: 250px;

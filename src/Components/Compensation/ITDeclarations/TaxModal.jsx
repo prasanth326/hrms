@@ -35,7 +35,6 @@ export default function TaxModal({ setOpenCompareTax, openCompareTax, items }) {
           </Typography>
 
           <div className={styles.taxmodalContainer}>
-            {/* OLD TAX REGIME */}
             <div>
               <div>Old Tax Regime</div>
               <table>

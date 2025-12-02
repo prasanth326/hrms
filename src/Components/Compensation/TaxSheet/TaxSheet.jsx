@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NewTaxRegime from "./NewTaxRegime";
 import PreviewModal from "./PreviewModal";
+import IncomeTaxComputationModal from "./IncomeTaxComputationModal";
 
 import styles from "./TaxSheet.module.css";
 import { Button } from "@mui/material";
@@ -61,12 +62,15 @@ const months = [
 ];
 
 export default function TaxSheet({ showValues }) {
-  // removed openSelectbtn state
   const [openNewTaxModal, setOpenNewTaxModal] = useState(false);
   const [openPreview, setOpenPreview] = useState(false);
+  const [openComputation, setOpenComputation] = useState(false); 
 
   const grossRow = rows.find((r) => r.name === "Gross Salary(A)");
   const monthlyEarnings = grossRow ? Number(grossRow.calories) : 0;
+
+  const dummyPDF =
+    "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
 
   return (
     <div className={styles.taxSheetMainDv}>
@@ -74,7 +78,12 @@ export default function TaxSheet({ showValues }) {
         <div className={styles.taxSheetIncome}>
           <div className={styles.taxSheetIncomebtn}>
             <div className={styles.taxSheetIncomebtn2}>Taxsheet</div>
-            <div className={styles.taxSheetIncomebtn4}>
+
+            <div
+              className={styles.taxSheetIncomebtn4}
+              onClick={() => setOpenComputation(true)}
+              role="button"
+            >
               Income Tax Computation sheet
             </div>
           </div>
@@ -91,7 +100,6 @@ export default function TaxSheet({ showValues }) {
         <div className={styles.taxSheetcurnry}>
           <div className={styles.taxSheetcurnry2}>Currency: INR</div>
 
-          {/* Direct open preview when clicking the visible text */}
           <div
             className={styles.taxSheetcurnry3}
             onClick={() => setOpenPreview(true)}
@@ -101,7 +109,20 @@ export default function TaxSheet({ showValues }) {
           </div>
 
           <div className={styles.taxSheetcurnry4}>
-            <Button variant="contained">Download</Button>
+            <Button variant="contained" sx={{ padding: 0 }}>
+              <a
+                href={dummyPDF}
+                download
+                style={{
+                  display: "inline-block",
+                  padding: "6px 14px",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                Download
+              </a>
+            </Button>
           </div>
         </div>
       </div>
@@ -114,7 +135,9 @@ export default function TaxSheet({ showValues }) {
                 <StyledTableCell>Particulars</StyledTableCell>
                 <StyledTableCell align="right">Earnings</StyledTableCell>
                 {months.map((m) => (
-                  <StyledTableCell align="right" key={m}>{m}</StyledTableCell>
+                  <StyledTableCell align="right" key={m}>
+                    {m}
+                  </StyledTableCell>
                 ))}
               </TableRow>
             </TableHead>
@@ -169,6 +192,13 @@ export default function TaxSheet({ showValues }) {
           rows={rows}
           showValues={showValues}
           months={months}
+        />
+
+        <IncomeTaxComputationModal
+          open={openComputation}
+          setOpen={setOpenComputation}
+          rows={rows}
+          showValues={showValues}
         />
       </div>
     </div>

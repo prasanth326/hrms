@@ -3,8 +3,7 @@ import styles from "./DocumentsTab.module.css";
 import { Button } from "@mui/material";
 import RequestbtnSideModal from "../RequestbtnSideModal/RequestbtnSideModal";
 
-export default function DocumentsTab() {
-  const [active, setActive] = useState("MyDocuments");
+export default function DocumentsTab({ active, setActive }) {
   const [isOpenDoc, setIsOpenDoc] = useState(false);
 
   return (
@@ -18,6 +17,7 @@ export default function DocumentsTab() {
         >
           My Documents (0)
         </div>
+
         <div
           className={`${styles.tabs} ${
             active === "Acknowledgement" ? styles.activebtn : ""
@@ -26,6 +26,7 @@ export default function DocumentsTab() {
         >
           Awaiting My Acknowledgement (0)
         </div>
+
         <div
           className={`${styles.tabs} ${
             active === "Approvals" ? styles.activebtn : ""
@@ -35,11 +36,13 @@ export default function DocumentsTab() {
           Document Approvals (0)
         </div>
       </div>
+
       <div className={styles.documentsbtn}>
         <Button variant="contained" onClick={() => setIsOpenDoc(true)}>
           +Request
         </Button>
       </div>
+
       <RequestbtnSideModal
         isOpen={isOpenDoc}
         onClose={() => setIsOpenDoc(false)}

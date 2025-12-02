@@ -31,6 +31,7 @@ export default function MyRequests() {
           </div>
         </div>
       </div>
+
       <div className={styles.tableExpense}>
         <table>
           <thead>
@@ -45,8 +46,9 @@ export default function MyRequests() {
           </thead>
         </table>
       </div>
+
       <div className={styles.tableExpenseimg}>
-        <img src={searchimg} alt="" />
+        <img src={searchimg} alt="no records" />
         <p>There are no records to display</p>
       </div>
     </div>

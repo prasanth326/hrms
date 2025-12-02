@@ -1,0 +1,98 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.28);
+  z-index: 4000;
+}
+
+.modal {
+  background: #fff;
+  width: 420px;
+  max-width: calc(100% - 32px);
+  border-radius: 8px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.12);
+  overflow: hidden;
+  font-family: inherit;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.body {
+  padding: 12px 14px 16px;
+}
+
+.lead {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.list {
+  display: grid;
+  gap: 8px;
+  max-height: 300px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.month {
+  font-size: 14px;
+  color: #111;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.linkBtn {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  text-decoration: none;
+  color: #1976d2;
+  border: 1px solid rgba(25,118,210,0.12);
+  background: white;
+}
+
+.linkBtn:hover {
+  background: rgba(25,118,210,0.04);
+}
+
+.footerNote {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #666;
+  text-align: left;
+}

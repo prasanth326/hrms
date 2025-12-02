@@ -33,6 +33,7 @@ import QRcodePage from "./Components/QRcode/QRcodePage";
 import FlowRequest from "./Components/Flow/FlowRequest/FlowRequest";
 import Separation from "./Components/Flow/Separation/Separation";
 import { AttendanceProvider } from "./context/AttendanceContext";
+import AdvanceTab from "./Components/Overview/AdvanceTab/AdvanceTab";
 
 function LayoutApp() {
   const location = useLocation();
@@ -84,6 +85,7 @@ function LayoutApp() {
             path="/Reimbursement/Reimbursement"
             element={<Reimbursement />}
           />
+          <Route path="/Reimbursement/Advances" element={<AdvanceTab />} />
           <Route path="/Benefits" element={<Benefits />} />
           <Route path="/Attendance/attendence" element={<Attendence />} />
           <Route path="/Flow/flowRequest" element={<FlowRequest />} />
